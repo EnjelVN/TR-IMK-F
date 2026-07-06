@@ -43,9 +43,13 @@
             font-weight: 600;
             color: #333 !important;
             border-bottom: 2px solid transparent;
-            transition: all 0.3s;
+            transition: color 0.3s, border-color 0.3s, transform 0.3s;
         }
-        .nav-link:hover, .nav-link.active {
+        .nav-link:hover {
+            color: var(--primary-blue) !important;
+            border-bottom-color: transparent;
+        }
+        .nav-link.active {
             color: var(--primary-blue) !important;
             border-bottom-color: var(--primary-blue);
         }
@@ -166,8 +170,8 @@
             font-size: 0.95rem;
             width: 100%;
             background: transparent;
-            appearance: none;
             cursor: pointer;
+            appearance: none;
         }
         
         .destination-select:focus {
@@ -353,31 +357,55 @@
         }
         
         /* Spacer under hero to accommodate absolute widget */
-        .hero-spacer { height: 100px; }
+        .hero-spacer { height: 220px; }
 
         /* --- Horizontal Scrollers (Hide Scrollbar) --- */
         .scroll-horizontal {
             display: flex;
             overflow-x: auto;
-            gap: 15px;
-            padding-bottom: 15px;
+            gap: 20px;
+            padding-bottom: 18px;
+            scroll-behavior: smooth;
+            scroll-snap-type: x proximity;
             scrollbar-width: none; /* Firefox */
         }
         .scroll-horizontal::-webkit-scrollbar { display: none; } /* Chrome */
 
         /* --- Popular Destinations --- */
+        .popular-destinations {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            padding-left: clamp(12px, 2.5vw, 40px);
+            padding-right: clamp(12px, 2.5vw, 40px);
+        }
+        .popular-destinations .scroll-horizontal {
+            padding-right: clamp(12px, 2.5vw, 40px);
+        }
         .dest-tall-card {
-            min-width: 160px;
-            height: 240px;
+            min-width: 190px;
+            height: 270px;
             border-radius: 16px;
             overflow: hidden;
             position: relative;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             transition: 0.3s;
+            scroll-snap-align: start;
         }
         .dest-tall-card:hover { transform: translateY(-5px); }
         .dest-tall-card img {
             width: 100%; height: 100%; object-fit: cover;
+        }
+
+        .premier-adventure {
+            margin-top: 160px;
+        }
+
+        .premier-book-btn:hover,
+        .premier-book-btn:focus {
+            background-color: #fff !important;
+            color: var(--primary-blue) !important;
+            border-color: var(--primary-blue) !important;
+            box-shadow: 0 10px 24px rgba(0, 136, 255, 0.16);
         }
 
         /* --- Overlapping Image Section --- */
@@ -420,11 +448,16 @@
 
         /* --- Tour Guide Cards --- */
         .guide-card {
-            min-width: 600px;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            width: 100%;
+            min-width: 0;
+            max-width: 960px;
+            background: #ffffff;
+            color: #111827;
+            border-radius: 18px;
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
             overflow: hidden;
+            position: relative;
+            display: flex;
         }
         .guide-img {
             width: 100%;
@@ -434,11 +467,64 @@
         }
         .lang-badge {
             font-size: 0.7rem;
-            background: #f1f5f9;
+            background: #f8fafc;
             color: #475569;
             padding: 5px 10px;
-            border-radius: 20px;
+            border-radius: 999px;
             font-weight: 600;
+        }
+
+        .guide-photo-wrap {
+            position: relative;
+            width: 340px;
+            min-height: 360px;
+            background: #d9eefc;
+            flex-shrink: 0;
+        }
+        .guide-photo-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .guide-content {
+            background: #ffffff;
+            flex: 1;
+        }
+        .guide-card::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 18px;
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background: #d9eefc;
+            z-index: -1;
+        }
+        .guide-card::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            bottom: 18px;
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background: #d9eefc;
+            z-index: -1;
+        }
+        .guide-card .text-muted {
+            color: #6b7280 !important;
+        }
+        .guide-card .btn-primary {
+            background: #0c5974;
+            border-color: #0c5974;
+        }
+        .guide-card .btn-primary:hover,
+        .guide-card .btn-primary:focus {
+            background: #fff !important;
+            color: #0c5974 !important;
+            border-color: #0c5974 !important;
+            box-shadow: 0 10px 24px rgba(12, 89, 116, 0.18);
         }
 
         /* --- Testimonial Cards --- */
@@ -448,6 +534,21 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.03);
             margin-bottom: 20px;
             background: white;
+        }
+
+        .what-they-say {
+            margin-top: 90px;
+        }
+
+        .guide-section {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            padding-left: clamp(12px, 2.5vw, 40px);
+            padding-right: clamp(12px, 2.5vw, 40px);
+        }
+        .guide-stage {
+            display: flex;
+            justify-content: center;
         }
 
         @media (max-width: 1024px) {
@@ -464,14 +565,26 @@
         }
         
         /* --- Footer (Reused) --- */
-        footer { background-color: var(--footer-bg); color: #9ca3af; }
-        footer h5 { color: white; font-weight: 700; }
+        footer { background-color: var(--footer-bg); color: #d1d5db; }
+        footer h3,
+        footer h5 { color: #ffffff; font-weight: 800; }
+        footer p,
+        footer .small,
+        footer .text-center {
+            color: #d1d5db;
+        }
         .social-circle {
             width: 40px; height: 40px; background: rgba(255,255,255,0.1);
             color: #d1d5db; display: inline-flex; align-items: center; justify-content: center;
             border-radius: 50%; margin-right: 10px; cursor: pointer; transition: 0.3s;
         }
         .social-circle:hover { background: var(--primary-blue); color: white; }
+        .footer-link {
+            color: #ffffff !important;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .footer-link:hover { color: var(--primary-blue) !important; }
     </style>
 </head>
 <body>
@@ -479,7 +592,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#" style="color: #0056b3;">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html" style="color: #0056b3;">
                 <span class="logo-icon rounded-circle"><i class="fas fa-plane"></i></span> Artemis
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -487,13 +600,13 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav gap-4">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Destination</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tour Package</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tour Guide</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../destination/destination.html">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../tour/tour.html">Tour Package</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../guide/guide.html">Tour Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../faq/faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about-us/about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about-us/about.html#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="d-none d-lg-block text-primary fs-4" style="cursor:pointer;">
@@ -548,24 +661,30 @@
     <div class="container mt-5">
         
         <!-- Most Popular Destinations -->
-        <div class="mb-5 pb-4 border-bottom">
+        <div class="popular-destinations mb-5 pb-4 border-bottom">
             <h4 class="fw-bold mb-1">Most Popular Destinations</h4>
             <p class="text-muted small mb-4">Choose and plan for a refreshing nature experience</p>
             
             <div class="scroll-horizontal">
                 <!-- Cards -->
-                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?q=80&w=300&auto=format&fit=crop" alt="Fuji"></div>
-                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?q=80&w=300&auto=format&fit=crop" alt="Raja Ampat"></div>
-                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2b50?q=80&w=300&auto=format&fit=crop" alt="Pyramids"></div>
-                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1549474705-181165bc93dd?q=80&w=300&auto=format&fit=crop" alt="Paris"></div>
-                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=300&auto=format&fit=crop" alt="Rio"></div>
-                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=300&auto=format&fit=crop" alt="Balloons"></div>
-                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=300&auto=format&fit=crop" alt="Taj Mahal"></div>
+                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?q=80&w=500&auto=format&fit=crop" alt="Fuji"></div>
+                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?q=80&w=500&auto=format&fit=crop" alt="Raja Ampat"></div>
+                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2b50?q=80&w=500&auto=format&fit=crop" alt="Pyramids"></div>
+                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1549474705-181165bc93dd?q=80&w=500&auto=format&fit=crop" alt="Paris"></div>
+                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=500&auto=format&fit=crop" alt="Rio"></div>
+                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=500&auto=format&fit=crop" alt="Balloons"></div>
+                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=500&auto=format&fit=crop" alt="Taj Mahal"></div>
+                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=500&auto=format&fit=crop" alt="Lake House"></div>
+                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=500&auto=format&fit=crop" alt="Dubai"></div>
+                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=500&auto=format&fit=crop" alt="Santorini"></div>
+                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=500&auto=format&fit=crop" alt="Beach"></div>
+                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=500&auto=format&fit=crop" alt="Mountain Road"></div>
+                <div class="dest-tall-card"><img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=500&auto=format&fit=crop" alt="India"></div>
             </div>
         </div>
 
         <!-- Premier Adventure Section -->
-        <div class="row align-items-center mb-5 pb-5">
+        <div class="row align-items-center mb-5 pb-5 premier-adventure">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="overlap-imgs">
                     <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=600&auto=format&fit=crop" class="img-back" alt="Climbing">
@@ -592,7 +711,7 @@
                     </div>
                 </div>
 
-                <button class="btn btn-primary fw-bold rounded-pill px-5 py-2 mt-2">Book Now</button>
+                <button class="btn btn-primary fw-bold rounded-pill px-5 py-2 mt-2 premier-book-btn">Book Now</button>
             </div>
         </div>
 
@@ -601,7 +720,7 @@
             <h3 class="fw-bold mb-1">Top Travel Packages</h3>
             <p class="text-muted small mb-5">Explore our featured packages for the perfect<br>environment, adventure, and memorable moments.</p>
             
-            <div class="row g-4 text-start">
+            <div class="row g-4 text-start align-items-stretch top-travel-grid">
                 <!-- Package 1 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="card package-card h-100">
@@ -618,7 +737,7 @@
                             </div>
                             <div class="d-flex justify-content-between align-items-center mt-3">
                                 <span class="fw-bold fs-5 text-primary">Rp9.500.000</span>
-                                <button class="btn btn-sm btn-primary rounded-pill px-3 fw-bold">View Details</button>
+                                <button class="btn btn-sm rounded-pill px-3 fw-bold uniform-hover-btn">View Details</button>
                             </div>
                         </div>
                     </div>
@@ -640,7 +759,7 @@
                             </div>
                             <div class="d-flex justify-content-between align-items-center mt-3">
                                 <span class="fw-bold fs-5 text-primary">Rp4.200.000</span>
-                                <button class="btn btn-sm btn-primary rounded-pill px-3 fw-bold">View Details</button>
+                                <button class="btn btn-sm rounded-pill px-3 fw-bold uniform-hover-btn">View Details</button>
                             </div>
                         </div>
                     </div>
@@ -662,89 +781,53 @@
                             </div>
                             <div class="d-flex justify-content-between align-items-center mt-3">
                                 <span class="fw-bold fs-5 text-primary">Rp3.800.000</span>
-                                <button class="btn btn-sm btn-primary rounded-pill px-3 fw-bold">View Details</button>
+                                <button class="btn btn-sm rounded-pill px-3 fw-bold uniform-hover-btn">View Details</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <button class="btn btn-outline-primary fw-bold rounded-pill px-5 py-2 mt-5">See More</button>
+            <button class="btn btn-primary fw-bold rounded-pill px-5 py-2 mt-5 premier-book-btn">See More</button>
         </div>
 
         <!-- Professional Tour Guide -->
-        <div class="text-center mb-5 pt-4">
-            <h3 class="fw-bold mb-1">Professional Tour Guide</h3>
-            <p class="text-muted small mb-4">Guide actions for a refreshing nature experience.</p>
-            
-            <!-- Horizontal scroll untuk kartu Guide agar meniru desain yang terpotong di kanan -->
-            <div class="scroll-horizontal text-start">
-                
-                <!-- Guide 1 -->
-                <div class="guide-card d-flex flex-column flex-md-row">
-                    <div class="w-100 w-md-50" style="max-width: 250px;">
-                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop" class="guide-img" alt="Guide">
+<div class="guide-section text-center mb-5 pt-4">
+    <h3 class="fw-bold mb-1">Professional Tour Guide</h3>
+    <p class="text-muted small mb-4">Guide options for a refreshing nature experience.</p>
+    
+    <div class="guide-stage">
+        <div class="guide-card">
+            <div class="d-flex flex-column flex-lg-row">
+                <div class="guide-photo-wrap">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=900&auto=format&fit=crop" alt="Guide">
+                </div>
+                <div class="guide-content p-4 p-lg-5 d-flex flex-column justify-content-center">
+                    <p class="text-uppercase small mb-1" style="color: #38bdf8; font-weight: 800; letter-spacing: 0.04em;">Featured specialist</p>
+                    <h4 class="fw-normal mb-2" style="font-size: 2rem; line-height: 1.1;">Meet your host, Riji Cassanova</h4>
+                    <div class="small mb-3" style="color: #0c5974;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="text-muted">(120+ Positive Reviews)</span></div>
+                    <p class="text-muted mb-4" style="max-width: 560px; line-height: 1.6;">Discover expertly crafted travel packages featuring breathtaking destinations, personalized itineraries, and unforgettable experiences designed to make every journey seamless and extraordinary for travelers seeking comfort, adventure, and lasting memories together.</p>
+                    <div class="d-flex gap-3 flex-wrap mb-4">
+                        <div class="lang-badge" style="min-width: 190px;">
+                            <div class="text-uppercase small" style="font-size: 0.62rem; color: #94a3b8;">Languages</div>
+                            <div>English, Japanese, ID</div>
+                        </div>
+                        <div class="lang-badge" style="min-width: 190px;">
+                            <div class="text-uppercase small" style="font-size: 0.62rem; color: #94a3b8;">Experience</div>
+                            <div>12+ Years Professional</div>
+                        </div>
                     </div>
-                    <div class="p-4 d-flex flex-column justify-content-center flex-grow-1">
-                        <p class="text-primary fw-bold small mb-1">FEATURED TOUR GUIDE</p>
-                        <h4 class="fw-bold mb-1">Meet your host, Riji Cassanova</h4>
-                        <div class="small mb-3" style="color: #f59e0b;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="text-muted">(124+ Hosted Reviews)</span></div>
-                        <p class="text-muted small mb-3">Well-versed in over 15 years of experience exclusively in nature adventure travel. I aim to ensure you have a memorable and safe journey, while providing insight and preserving the natural beauty.</p>
-                        <div class="d-flex gap-2 mb-4 flex-wrap">
-                            <span class="lang-badge"><i class="fas fa-language text-muted me-1"></i> English, Japanese, ID</span>
-                            <span class="lang-badge"><i class="fas fa-medal text-muted me-1"></i> Highly Professional</span>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary rounded-pill px-4 fw-bold">Book Private</button>
-                        </div>
+                    <div>
+                        <button class="btn btn-primary rounded-pill px-4 fw-bold" style="min-width: 150px; background:#0c5974; border-color:#0c5974;">Book This Guide</button>
                     </div>
                 </div>
-
-                <!-- Guide 2 -->
-                <div class="guide-card d-flex flex-column flex-md-row">
-                    <div class="w-100 w-md-50" style="max-width: 250px;">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop" class="guide-img" alt="Guide">
-                    </div>
-                    <div class="p-4 d-flex flex-column justify-content-center flex-grow-1">
-                        <p class="text-primary fw-bold small mb-1">FEATURED TOUR GUIDE</p>
-                        <h4 class="fw-bold mb-1">Meet your host, Leon Kenzo</h4>
-                        <div class="small mb-3" style="color: #f59e0b;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="text-muted">(98+ Hosted Reviews)</span></div>
-                        <p class="text-muted small mb-3">Passionate about mountains and cultural heritage. Leon will take you to hidden gems and share fascinating local stories that you won't find in any guidebook.</p>
-                        <div class="d-flex gap-2 mb-4 flex-wrap">
-                            <span class="lang-badge"><i class="fas fa-language text-muted me-1"></i> English, Mandarin, ID</span>
-                            <span class="lang-badge"><i class="fas fa-medal text-muted me-1"></i> Certified Guide</span>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary rounded-pill px-4 fw-bold">Book Private</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Guide 3 -->
-                <div class="guide-card d-flex flex-column flex-md-row">
-                    <div class="w-100 w-md-50" style="max-width: 250px;">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop" class="guide-img" alt="Guide">
-                    </div>
-                    <div class="p-4 d-flex flex-column justify-content-center flex-grow-1">
-                        <p class="text-primary fw-bold small mb-1">FEATURED TOUR GUIDE</p>
-                        <h4 class="fw-bold mb-1">Meet your host, Liam Smith</h4>
-                        <div class="small mb-3" style="color: #f59e0b;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="text-muted">(210+ Hosted Reviews)</span></div>
-                        <p class="text-muted small mb-3">Specialist in coastal and underwater tours. Certified diver and marine biologist ready to show you the best of Indonesia's spectacular marine life safely.</p>
-                        <div class="d-flex gap-2 mb-4 flex-wrap">
-                            <span class="lang-badge"><i class="fas fa-language text-muted me-1"></i> English, French, ID</span>
-                            <span class="lang-badge"><i class="fas fa-medal text-muted me-1"></i> Dive Master</span>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary rounded-pill px-4 fw-bold">Book Private</button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
+    </div>
+</div>
 
         <!-- What They Say (Testimonials) -->
-        <div class="text-center mb-5 pb-5">
+        <div class="text-center mb-5 pb-5 what-they-say">
             <h3 class="fw-bold mb-1">What They Say</h3>
             <p class="text-muted small mb-4">Read incredible reviews from traveler who have traveled and satisfied with us.</p>
             
@@ -811,7 +894,7 @@
         <div class="container mt-4">
             <div class="row gy-4 border-bottom border-secondary pb-4 mb-4" style="border-color: rgba(255,255,255,0.1) !important;">
                 <div class="col-lg-5 pe-lg-5">
-                    <h3 class="text-white fw-bold mb-3">Artemis</h3>
+                    <h3 class="fw-bold mb-3">Artemis</h3>
                     <p class="small lh-lg mb-4">Experience exceptional travel, authentic cultural moments, and unforgettable adventures. Let your dream destination become a reality.</p>
                     <div>
                         <a href="#" class="social-circle"><i class="fab fa-facebook-f"></i></a>
@@ -824,17 +907,17 @@
                 <div class="col-lg-2 col-md-4">
                     <h5 class="mb-4">Explore</h5>
                     <ul class="list-unstyled small d-flex flex-column gap-3">
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Home</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Destination</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Tour Package</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Tour Guide</a></li>
+                        <li><a href="index.html" class="text-decoration-none text-muted footer-link">Home</a></li>
+                        <li><a href="../destination/destination.html" class="text-decoration-none text-muted footer-link">Destination</a></li>
+                        <li><a href="../tour/tour.html" class="text-decoration-none text-muted footer-link">Tour Package</a></li>
+                        <li><a href="../guide/guide.html" class="text-decoration-none text-muted footer-link">Tour Guide</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-4">
                     <h5 class="mb-4">Support</h5>
                     <ul class="list-unstyled small d-flex flex-column gap-3">
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Contact Us</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">FAQ</a></li>
+                        <li><a href="../about-us/about.html#contact" class="text-decoration-none text-muted footer-link">Contact Us</a></li>
+                        <li><a href="../faq/faq.html" class="text-decoration-none text-muted footer-link">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-4">
