@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis - Home</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #007c9c; 
+            --secondary-color: #3bb2d0;
+            --dark-color: #1a2530;
+            --text-muted: #6c757d;
+            --bg-light: #f8fbfa;
+            --footer-bg: #293441;
+            --border-color: #eaedf1;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+        }
+        .navbar-brand i {
+            color: var(--secondary-color);
+        }
+        .nav-link {
+            font-weight: 500;
+            color: var(--dark-color);
+            margin: 0 10px;
+            font-size: 0.95rem;
+        }
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        .nav-link.active {
+            color: var(--primary-color) !important;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 550px;
+            background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 120px; /* Space for absolute search box */
+        }
+        .hero-title {
+            color: white;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            font-size: 3.5rem;
+        }
+        .hero-title span {
+            color: #6edbf6;
+        }
+
+        /* Search Booking Widget */
+        .search-widget {
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 1100px;
+            z-index: 10;
+        }
+        .trip-type-btn {
+            border: 1px solid var(--border-color);
+            background: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .trip-type-btn.active {
+            background: #e6f6fa;
+            color: var(--primary-color);
+            border-color: #e6f6fa;
+        }
+        .search-input-group {
+            border-right: 1px solid var(--border-color);
+            padding: 0 15px;
+        }
+        .search-input-group:last-child {
+            border-right: none;
+        }
+        .search-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+            display: block;
+        }
+        .search-val {
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            outline: none;
+            width: 100%;
+        }
+        .search-icon {
+            color: var(--primary-color);
+            margin-right: 8px;
+        }
+        .btn-find {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 8px;
+            padding: 10px 25px;
+            font-weight: 500;
+            border: none;
+        }
+        
+        /* Section Titles */
+        .section-title {
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        /* Horizontal Scroll Containers */
+        .horizontal-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding-bottom: 15px;
+            scrollbar-width: none; /* Firefox */
+        }
+        .horizontal-scroll::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
+
+        /* Popular Destinations */
+        .dest-card {
+            min-width: 140px;
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        .dest-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+        }
+        .about-img-container {
+            position: relative;
+            z-index: 1;
+        }
+        .about-img-bg {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 80%;
+            height: 90%;
+            background-color: #e6f6fa;
+            border-radius: 20px;
+            z-index: -1;
+        }
+        .about-img {
+            width: 90%;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .feature-icon-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #e6f6fa;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+
+        /* Packages */
+        .card-custom {
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            overflow: hidden;
+        }
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+            position: relative;
+        }
+        .heart-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.3);
+            backdrop-filter: blur(5px);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+        }
+        .package-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .stars {
+            color: #ffc107;
+            font-size: 0.8rem;
+        }
+        .package-info {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .package-price {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+        .btn-outline-custom {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 5px 15px;
+            border-radius: 6px;
+        }
+
+        /* Tour Guides */
+        .guide-section {
+            background-color: #fafbfc;
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+        .guide-card-wide {
+            display: flex;
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            min-width: 600px;
+            border: 1px solid var(--border-color);
+            gap: 20px;
+        }
+        .guide-img-box {
+            position: relative;
+            min-width: 200px;
+            height: 250px;
+        }
+        .guide-img-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #e2eff3;
+            border-radius: 16px;
+            transform: translate(-10px, 10px);
+            z-index: 0;
+        }
+        .guide-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .guide-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .guide-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 5px 0;
+        }
+        .guide-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .guide-stats {
+            background: var(--bg-light);
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Testimonials */
+        .review-card {
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            background: white;
+            height: 100%;
+        }
+        .review-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .review-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        .review-footer {
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .verified-badge {
+            color: #0d6efd;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .review-actions i {
+            color: var(--text-muted);
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: white;
+            padding-top: 4rem;
+            padding-bottom: 1.5rem;
+            margin-top: 5rem;
+        }
+        .footer-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .footer-desc {
+            font-size: 0.9rem;
+            color: #adb5bd;
+            line-height: 1.6;
+        }
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+        }
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+        .footer-links a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <i class="fa-solid fa-chart-pie"></i> Artemis
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tour Package</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tour Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="d-none d-lg-block">
+                <a href="#" style="color: var(--primary-color); font-size: 1.25rem;"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Search Widget -->
+    <section class="hero-section">
+        <div class="container text-center text-white pb-5">
+            <h1 class="hero-title">Explore the World Closer with<br><span>Artemis</span></h1>
+        </div>
+
+        <!-- Search Widget -->
+        <div class="search-widget">
+            <div class="d-flex mb-4">
+                <button class="trip-type-btn"><i class="fa-solid fa-arrow-right me-2"></i>One-way</button>
+                <button class="trip-type-btn active"><i class="fa-solid fa-arrow-right-arrow-left me-2"></i>Round-trip</button>
+            </div>
+            <div class="row align-items-center g-3">
+                <div class="col-md-3 search-input-group">
+                    <span class="search-label">Origin of Departure</span>
+                    <div class="d-flex align-items-center mt-2">
+                        <i class="fa-solid fa-location-dot search-icon"></i>
+                        <input type="text" class="search-val" placeholder="Select Home City">
+                    </div>
+                </div>
+                <div class="col-md-3 search-input-group">
+                    <span class="search-label">Destination</span>
+                    <div class="d-flex align-items-center mt-2">
+                        <i class="fa-solid fa-map-location-dot search-icon"></i>
+                        <input type="text" class="search-val" placeholder="Select Destination">
+                    </div>
+                </div>
+                <div class="col-md-3 search-input-group">
+                    <span class="search-label">Departure Date</span>
+                    <div class="d-flex align-items-center mt-2">
+                        <i class="fa-solid fa-calendar-days search-icon"></i>
+                        <input type="date" class="search-val">
+                    </div>
+                </div>
+                <div class="col-md-3 search-input-group">
+                    <span class="search-label">Return Date</span>
+                    <div class="d-flex align-items-center mt-2">
+                        <i class="fa-solid fa-calendar-days search-icon"></i>
+                        <input type="date" class="search-val">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+                <span style="font-size: 0.85rem; color: var(--primary-color);">
+                    <i class="fa-regular fa-circle-check me-1"></i> Best price guarantee for your nature adventure!
+                </span>
+                <button class="btn-find">Find Tickets</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Most Popular Destinations -->
+    <section class="container mt-5 pt-5">
+        <h2 class="section-title">Most Popular Destinations</h2>
+        <p class="section-subtitle">Choice selection for a refreshing nature experience.</p>
+        
+        <div class="horizontal-scroll">
+            <div class="dest-card"><img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=300&q=80" alt="Fuji"></div>
+            <div class="dest-card"><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=300&q=80" alt="Desert"></div>
+            <div class="dest-card"><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=300&q=80" alt="Pyramids"></div>
+            <div class="dest-card"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=300&q=80" alt="City"></div>
+            <div class="dest-card"><img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=300&q=80" alt="Christ Redeemer"></div>
+            <div class="dest-card"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=300&q=80" alt="Balloons"></div>
+            <div class="dest-card"><img src="https://images.unsplash.com/photo-1516483638261-f408282ea084?auto=format&fit=crop&w=300&q=80" alt="Ruins"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container about-section">
+        <div class="row align-items-center g-5">
+            <div class="col-md-6 pe-md-5">
+                <div class="about-img-container ms-4">
+                    <div class="about-img-bg"></div>
+                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80" class="about-img" alt="Adventure">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <span style="color: var(--primary-color); font-weight: 600;">Artemis</span>
+                <h2 class="fw-bold mb-4" style="color: var(--secondary-color); font-size: 2.5rem;">Premier Adventure<br>Travel Company</h2>
+                
+                <div class="d-flex mb-4">
+                    <div class="feature-icon-box"><i class="fa-solid fa-plane-departure"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1">Eksklusif Travel</h5>
+                        <p class="text-muted small mb-0">Travel options for refreshing and exclusive<br>nature experiences.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex mb-4">
+                    <div class="feature-icon-box"><i class="fa-solid fa-user-tie"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1">Personal Guide</h5>
+                        <p class="text-muted small mb-0">Your Gateway to Refreshing<br>and Exclusive Nature Getaways.</p>
+                    </div>
+                </div>
+
+                <button class="btn btn-find mt-2 px-5">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Travel Packages -->
+    <section class="container mt-4">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Top Travel Packages</h2>
+            <p class="section-subtitle">Explore our featured packages designed to bring you the perfect<br>blend of comfort, adventure, and memorable moments.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Package 1 -->
+            <div class="col-md-4">
+                <div class="card card-custom h-100">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Bali">
+                        <div class="heart-icon"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="package-title">Bali Luxury Family Escape</h5>
+                        <div class="stars mb-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-muted ms-1" style="font-size: 0.75rem;">4.8 (124 Komentar)</span>
+                        </div>
+                        <div class="package-info">
+                            <div><i class="fa-regular fa-clock me-1"></i> 4 Days</div>
+                            <div><i class="fa-solid fa-user-group me-1"></i> Up to 6 People</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-end mt-4 pt-3 border-top">
+                            <div>
+                                <div style="font-size: 0.7rem; color: var(--text-muted);">Starting from</div>
+                                <div class="package-price">IDR 4.500.000</div>
+                            </div>
+                            <button class="btn-outline-custom">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="col-md-4">
+                <div class="card card-custom h-100">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1584810359583-96fc3448beaa?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Yogyakarta">
+                        <div class="heart-icon"><i class="fa-solid fa-heart" style="color: #ff4757;"></i></div>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="package-title">Heritage Love in Yogyakarta</h5>
+                        <div class="stars mb-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span class="text-muted ms-1" style="font-size: 0.75rem;">4.1 (300 Komentar)</span>
+                        </div>
+                        <div class="package-info">
+                            <div><i class="fa-regular fa-clock me-1"></i> 3 Days</div>
+                            <div><i class="fa-solid fa-user-group me-1"></i> Couple Only</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-end mt-4 pt-3 border-top">
+                            <div>
+                                <div style="font-size: 0.7rem; color: var(--text-muted);">Starting from</div>
+                                <div class="package-price">IDR 4.500.000</div>
+                            </div>
+                            <button class="btn-outline-custom">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="col-md-4">
+                <div class="card card-custom h-100">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1602154663343-89fe0bf541ab?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Bromo">
+                        <div class="heart-icon"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="package-title">Bromo Volcanic Adventure</h5>
+                        <div class="stars mb-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-muted ms-1" style="font-size: 0.75rem;">4.9 (2k3 Komentar)</span>
+                        </div>
+                        <div class="package-info">
+                            <div><i class="fa-regular fa-clock me-1"></i> 1 Days</div>
+                            <div><i class="fa-solid fa-user-group me-1"></i> Open Trip</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-end mt-4 pt-3 border-top">
+                            <div>
+                                <div style="font-size: 0.7rem; color: var(--text-muted);">Starting from</div>
+                                <div class="package-price">IDR 350.000</div>
+                            </div>
+                            <button class="btn-outline-custom">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <button class="btn btn-find px-5">See More</button>
+        </div>
+    </section>
+
+    <!-- Professional Tour Guide (Horizontal Scroll) -->
+    <section class="guide-section">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Professional Tour Guide</h2>
+                <p class="section-subtitle">Guide options for a refreshing nature experience.</p>
+            </div>
+
+            <div class="horizontal-scroll pb-4">
+                
+                <!-- Guide 1 -->
+                <div class="guide-card-wide">
+                    <div class="guide-img-box">
+                        <div class="guide-img-bg"></div>
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" class="guide-img" alt="Guide">
+                    </div>
+                    <div class="d-flex flex-column justify-content-between p-2">
+                        <div>
+                            <div class="guide-tag">Featured Specialist</div>
+                            <h4 class="guide-name">Meet your host, Riji Cassanova</h4>
+                            <div class="stars mb-2">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="text-muted ms-1" style="font-size: 0.75rem;">(120+ Positive Reviews)</span>
+                            </div>
+                            <p class="guide-desc">Discover expertly crafted travel packages featuring breathtaking destinations, personalized itineraries, and unforgettable experiences designed to make every journey seamless and extraordinary for travelers seeking comfort, adventure, and lasting memories together.</p>
+                        </div>
+                        <div class="d-flex gap-3 mb-3">
+                            <div class="guide-stats w-50">
+                                <div class="text-muted" style="font-size: 0.65rem;">Languages</div>
+                                English, Japanese, ID
+                            </div>
+                            <div class="guide-stats w-50">
+                                <div class="text-muted" style="font-size: 0.65rem;">Experience</div>
+                                12+ Years Professional
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-find btn-sm px-4">Book This Guide</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 2 -->
+                <div class="guide-card-wide">
+                    <div class="guide-img-box">
+                        <div class="guide-img-bg"></div>
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" class="guide-img" alt="Guide">
+                    </div>
+                    <div class="d-flex flex-column justify-content-between p-2">
+                        <div>
+                            <div class="guide-tag">Featured Specialist</div>
+                            <h4 class="guide-name">Meet your host, Souta</h4>
+                            <div class="stars mb-2">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="text-muted ms-1" style="font-size: 0.75rem;">(100+ Positive Reviews)</span>
+                            </div>
+                            <p class="guide-desc">With over 10 years of experience navigating the hidden corners of Bali and beyond, Wayan specializes in curated photography tours and cultural immersions. He speaks fluent English, Japanese, and Indonesian.</p>
+                        </div>
+                        <div class="d-flex gap-3 mb-3">
+                            <div class="guide-stats w-50">
+                                <div class="text-muted" style="font-size: 0.65rem;">Languages</div>
+                                English, Japanese, ID, Chinese
+                            </div>
+                            <div class="guide-stats w-50">
+                                <div class="text-muted" style="font-size: 0.65rem;">Experience</div>
+                                10+ Years Professional
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-find btn-sm px-4">Book This Guide</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 3 -->
+                <div class="guide-card-wide">
+                    <div class="guide-img-box">
+                        <div class="guide-img-bg"></div>
+                        <img src="https://images.unsplash.com/photo-1528892952291-009c663ce843?auto=format&fit=crop&w=300&q=80" class="guide-img" alt="Guide">
+                    </div>
+                    <div class="d-flex flex-column justify-content-between p-2">
+                        <div>
+                            <div class="guide-tag">Featured Specialist</div>
+                            <h4 class="guide-name">Meet your host, Lee See Ho</h4>
+                            <div class="stars mb-2">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="text-muted ms-1" style="font-size: 0.75rem;">(150+ Positive Reviews)</span>
+                            </div>
+                            <p class="guide-desc">Explore our handpicked travel packages designed to offer exceptional destinations, seamless planning, and unforgettable moments for travelers seeking comfort, adventure, authenticity, and meaningful experiences.</p>
+                        </div>
+                        <div class="d-flex gap-3 mb-3">
+                            <div class="guide-stats w-50">
+                                <div class="text-muted" style="font-size: 0.65rem;">Languages</div>
+                                English, Japanese, ID, Germany
+                            </div>
+                            <div class="guide-stats w-50">
+                                <div class="text-muted" style="font-size: 0.65rem;">Experience</div>
+                                8+ Years Professional
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-find btn-sm px-4">Book This Guide</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more guides as needed (omitted exact duplication of 4 & 5 for brevity, but they will perfectly align horizontally) -->
+            </div>
+        </div>
+    </section>
+
+    <!-- What They Say (Testimonials) -->
+    <section class="container mb-5 pb-5">
+        <div class="text-center mb-5">
+            <h2 class="section-title">What They Say</h2>
+            <p class="section-subtitle">Read incredible reviews from those who have trusted and worked with us</p>
+        </div>
+
+        <!-- Row 1 (3 items) -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=100&q=80" class="review-avatar" alt="User">
+                        <div>
+                            <h6 class="mb-0 fw-bold">Richard B.</h6>
+                            <span class="text-muted" style="font-size: 0.75rem;">Adventure Seeker</span>
+                        </div>
+                    </div>
+                    <div class="stars mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="review-text">Great value for money. The tour guides were extremely knowledgeable and shared fascinating local insights.</p>
+                    <div class="review-footer">
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check me-1"></i> VERIFIED REVIEW</span>
+                        <div class="review-actions">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80" class="review-avatar" alt="User">
+                        <div>
+                            <h6 class="mb-0 fw-bold">Suegeng</h6>
+                            <span class="text-muted" style="font-size: 0.75rem;">Solo Travel</span>
+                        </div>
+                    </div>
+                    <div class="stars mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="review-text">All flights were smooth and on time according to the schedule provided.</p>
+                    <div class="review-footer">
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check me-1"></i> VERIFIED REVIEW</span>
+                        <div class="review-actions">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=80" class="review-avatar" alt="User">
+                        <div>
+                            <h6 class="mb-0 fw-bold">Big Girl</h6>
+                            <span class="text-muted" style="font-size: 0.75rem;">Luxury Travel</span>
+                        </div>
+                    </div>
+                    <div class="stars mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="review-text">Booking was seamless. The website is user-friendly and pricing is completely transparent.</p>
+                    <div class="review-footer">
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check me-1"></i> VERIFIED REVIEW</span>
+                        <div class="review-actions">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2 (2 items, Centered) -->
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" class="review-avatar" alt="User">
+                        <div>
+                            <h6 class="mb-0 fw-bold">Rara Lee</h6>
+                            <span class="text-muted" style="font-size: 0.75rem;">Traveler</span>
+                        </div>
+                    </div>
+                    <div class="stars mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+                    <p class="review-text">Great value for money. The tour guides were extremely knowledgeable and shared fascinating local insights.</p>
+                    <div class="review-footer">
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check me-1"></i> VERIFIED REVIEW</span>
+                        <div class="review-actions">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" class="review-avatar" alt="User">
+                        <div>
+                            <h6 class="mb-0 fw-bold">Sha White</h6>
+                            <span class="text-muted" style="font-size: 0.75rem;">Luxury Travel</span>
+                        </div>
+                    </div>
+                    <div class="stars mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>
+                    <p class="review-text">An absolutely incredible experience! Artemis provided professional and friendly service throughout the trip.</p>
+                    <div class="review-footer">
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check me-1"></i> VERIFIED REVIEW</span>
+                        <div class="review-actions">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <h2 class="footer-brand">Artemis</h2>
+                    <p class="footer-desc mb-4">
+                        Experience exceptional travel, authentic cultural moments, and unforgettable adventures. Let your dream destination become a reality.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mt-lg-0 mt-5">
+                    <h4 class="fw-bold mb-4" style="font-size: 1.1rem;">Explore</h4>
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#">Destination</a>
+                        <a href="#">Tour Package</a>
+                        <a href="#">Tour Guide</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-lg-0 mt-4">
+                    <h4 class="fw-bold mb-4" style="font-size: 1.1rem;">Support</h4>
+                    <div class="footer-links">
+                        <a href="#">Contact Us</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-lg-0 mt-4">
+                    <h4 class="fw-bold mb-4" style="font-size: 1.1rem;">Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Condition</a>
+                        <a href="#">Cookie Policy</a>
+                        <a href="#">Disclaimer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center border-top pt-4" style="border-color: rgba(255,255,255,0.1) !important; font-size: 0.85rem; color: #adb5bd;">
+                &copy; 2024 SkyHorizon Travel Marketplace. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
