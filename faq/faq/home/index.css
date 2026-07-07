@@ -45,11 +45,7 @@ body {
 .hero-section {
     position: relative;
     height: 600px;
-<<<<<<< HEAD
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../asset/img/home.avif') center/cover;
-=======
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../asset/img/home.avif') center/cover;
->>>>>>> 1c996fa5835436f958482e3e140e2c39b7bbd494
     display: flex;
     align-items: center;
     justify-content: center;
@@ -480,7 +476,6 @@ body {
     border-top-right-radius: 16px;
 }
 
-<<<<<<< HEAD
 .heart-btn {
     position: absolute;
     top: 15px;
@@ -594,9 +589,6 @@ body {
     box-shadow: 0 10px 24px rgba(12, 89, 116, 0.18);
 }
 
-=======
-/* Tour Guide */
->>>>>>> 1c996fa5835436f958482e3e140e2c39b7bbd494
 .object-fit-cover{
     object-fit: cover;
 }
