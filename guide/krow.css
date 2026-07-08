@@ -1,0 +1,27 @@
+body {
+    background-color: #f8f9fa;
+    font-family: sans-serif;
+}
+
+.card {
+    border-radius: 15px;
+    border: none;
+}
+
+.progress {
+    height: 8px;
+    background-color: #e9ecef;
+}
+
+.progress-bar {
+    background-color: #046b82;
+}
+
+.text-primary {
+    color: #046b82 !important;
+}
+
+.btn-primary {
+    background-color: #046b82;
+    border: none;
+}
