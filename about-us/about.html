@@ -306,11 +306,13 @@
 
         /* --- Our Team Section --- */
         .team-card {
+            position: relative;
             text-align: center;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
             padding: 10px;
             border-radius: 16px;
+            overflow: visible;
         }
         .team-card:hover {
             transform: translateY(-10px);
@@ -373,43 +375,93 @@
             overflow: hidden;
         }
         .team-hover-info {
-            position: absolute;
-            inset: 12px;
-            background: rgba(12, 89, 116, 0.93);
-            color: white;
-            border-radius: 16px;
-            padding: 18px 16px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: left;
-            opacity: 0;
-            transform: translateY(12px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            pointer-events: none;
-            z-index: 5;
-        }
-        .team-card:hover .team-hover-info {
-            opacity: 1;
-            transform: translateY(0);
+            display: none;
         }
         .team-hover-info h6 {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 700;
             margin-bottom: 8px;
-            color: #bae6fd;
+            color: var(--primary-blue);
         }
         .team-hover-info p {
             font-size: 0.78rem;
             line-height: 1.55;
             margin-bottom: 6px;
-            color: rgba(255, 255, 255, 0.95);
+            color: #475569;
         }
         .team-hover-info span {
             font-size: 0.72rem;
-            color: rgba(255, 255, 255, 0.75);
+            color: #64748b;
             display: block;
             margin-top: 4px;
+        }
+        .team-popup-modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            padding: 24px;
+        }
+        .team-popup-modal.active {
+            display: flex;
+        }
+        .team-popup-content {
+            position: relative;
+            width: min(700px, 92vw);
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        .team-popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            padding: 0;
+            border: 0;
+            background: none;
+            color: #999999;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+        }
+        .team-popup-close:hover {
+            color: #333333;
+        }
+        .team-popup-body {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 28px;
+            align-items: center;
+        }
+        .team-popup-body img {
+            width: 180px;
+            aspect-ratio: 1 / 1.1;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+        .team-popup-role {
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .team-popup-copy {
+            color: #475569;
+            line-height: 1.65;
+            margin-bottom: 14px;
+        }
+        .team-popup-meta span {
+            display: block;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 6px;
         }
 
         /* --- CTA Banner --- */
@@ -564,48 +616,42 @@
             .cta-banner { padding: 30px; }
             .cta-collage { height: 180px; }
             .cta-img-1, .cta-img-2 { height: 120px; }
+            .team-popup-content { padding: 32px 24px; }
+            .team-popup-body {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .team-popup-body img {
+                margin: 0 auto;
+            }
         }
     </style>
+    <link rel="stylesheet" href="../asset/css/common.css">
 </head>
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="/home/index.html">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
             <i class="fa-solid fa-chart-pie"></i>
             Artemis
         </a>
-        <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center"
-            id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/home/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/destination/destination.html">Destination</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/tour/tour.html">Tour Package</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/guide/guide.html">Tour Guide</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/faq/faq.html">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about-us/about.html">About Us</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../destination/destination.html">Destination</a></li>
+                <li class="nav-item"><a class="nav-link" href="../tour/tour.html">Tour Package</a></li>
+                <li class="nav-item"><a class="nav-link" href="../guide/guide.html">Tour Guide</a></li>
+                <li class="nav-item"><a class="nav-link" href="../faq/faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../about-us/about.html">About Us</a></li>
             </ul>
         </div>
         <div class="d-none d-lg-block">
-            <a href="/akun/akun.html" class="profile-icon">
+            <a href="../akun/akun.html" class="profile-icon">
                 <i class="fa-solid fa-user"></i>
             </a>
         </div>
@@ -794,6 +840,21 @@
         </div>
     </div>
 
+    <div class="team-popup-modal" id="teamPopupModal" aria-hidden="true">
+        <div class="team-popup-content" role="dialog" aria-modal="true" aria-labelledby="teamPopupName">
+            <button class="team-popup-close" type="button" id="teamPopupClose">&times;</button>
+            <div class="team-popup-body">
+                <img id="teamPopupImg" src="" alt="">
+                <div>
+                    <h3 class="fw-bold mb-1" id="teamPopupName"></h3>
+                    <div class="team-popup-role" id="teamPopupRole"></div>
+                    <p class="team-popup-copy" id="teamPopupCopy"></p>
+                    <div class="team-popup-meta" id="teamPopupMeta"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- CTA Banner Section -->
     <div class="container mb-5 pb-5">
         <div class="cta-banner scroll-reveal">
@@ -804,8 +865,8 @@
                         We began by organizing boutique expeditions to the Andes, focusing on immersion rather than just observation.
                     </p>
                     <div class="d-flex gap-3 flex-wrap">
-                        <a href="/tour/tour.html" class="btn btn-outline-white">Browse Expedition</a>
-                        <a href="/guide/guide.html" class="btn btn-outline-white">Contact An Expert</a>
+                        <a href="../tour/tour.html" class="btn btn-outline-white">Browse Expedition</a>
+                        <a href="../guide/guide.html" class="btn btn-outline-white">Contact An Expert</a>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -836,26 +897,26 @@
                 <div class="col-lg-2 col-md-4">
                     <h5 class="mb-4">Explore</h5>
                     <ul class="list-unstyled small d-flex flex-column gap-3">
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Home</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Destination</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Tour Package</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Tour Guide</a></li>
+                        <li><a href="../index.html" class="text-decoration-none text-muted footer-link">Home</a></li>
+                        <li><a href="../destination/destination.html" class="text-decoration-none text-muted footer-link">Destination</a></li>
+                        <li><a href="../tour/tour.html" class="text-decoration-none text-muted footer-link">Tour Package</a></li>
+                        <li><a href="../guide/guide.html" class="text-decoration-none text-muted footer-link">Tour Guide</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-4">
                     <h5 class="mb-4">Support</h5>
                     <ul class="list-unstyled small d-flex flex-column gap-3">
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Contact Us</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">FAQ</a></li>
+                        <li><a href="../faq/contact.html" class="text-decoration-none text-muted footer-link">Contact Us</a></li>
+                        <li><a href="../faq/faq.html" class="text-decoration-none text-muted footer-link">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-4">
                     <h5 class="mb-4">Legal</h5>
                     <ul class="list-unstyled small d-flex flex-column gap-3">
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Privacy Policy</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Terms & Condition</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Cookie Policy</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted footer-link">Disclaimer</a></li>
+                        <li><a href="../Legal/privacy.html" class="text-decoration-none text-muted footer-link">Privacy Policy</a></li>
+                        <li><a href="../Legal/term.html" class="text-decoration-none text-muted footer-link">Terms & Condition</a></li>
+                        <li><a href="../Legal/cookie.html" class="text-decoration-none text-muted footer-link">Cookie Policy</a></li>
+                        <li><a href="../Legal/disclamer.html" class="text-decoration-none text-muted footer-link">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
@@ -930,6 +991,53 @@
 
         document.querySelectorAll('.stat-number').forEach(el => {
             statObserver.observe(el);
+        });
+
+        const teamModal = document.getElementById('teamPopupModal');
+        const teamClose = document.getElementById('teamPopupClose');
+        const teamPopupImg = document.getElementById('teamPopupImg');
+        const teamPopupName = document.getElementById('teamPopupName');
+        const teamPopupRole = document.getElementById('teamPopupRole');
+        const teamPopupCopy = document.getElementById('teamPopupCopy');
+        const teamPopupMeta = document.getElementById('teamPopupMeta');
+
+        function closeTeamModal() {
+            teamModal.classList.remove('active');
+            teamModal.setAttribute('aria-hidden', 'true');
+        }
+
+        document.querySelectorAll('.team-card').forEach((card) => {
+            card.addEventListener('click', () => {
+                const image = card.querySelector('.team-img');
+                const details = card.querySelector('.team-hover-info');
+                const role = details.querySelector('h6');
+                const copy = details.querySelector('p');
+
+                teamPopupImg.src = image.src;
+                teamPopupImg.alt = image.alt;
+                teamPopupName.textContent = card.querySelector('h5').textContent.trim();
+                teamPopupRole.textContent = role.textContent.trim();
+                teamPopupCopy.textContent = copy.textContent.trim();
+                teamPopupMeta.innerHTML = Array.from(details.querySelectorAll('span'))
+                    .map((item) => `<span>${item.textContent.trim()}</span>`)
+                    .join('');
+
+                teamModal.classList.add('active');
+                teamModal.setAttribute('aria-hidden', 'false');
+            });
+        });
+
+        teamClose.addEventListener('click', closeTeamModal);
+        teamModal.addEventListener('click', (event) => {
+            if (event.target === teamModal) {
+                closeTeamModal();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && teamModal.classList.contains('active')) {
+                closeTeamModal();
+            }
         });
     </script>
 </body>

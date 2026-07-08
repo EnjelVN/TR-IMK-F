@@ -837,8 +837,8 @@
             border-radius: 50%;
             object-fit: cover;
         }
-x
-        .review-text {
+
+        x .review-text {
             font-size: 0.9rem;
             line-height: 1.6;
             margin-top: 10px;
@@ -952,6 +952,7 @@ x
             color: white;
         }
     </style>
+    <link rel="stylesheet" href="asset/css/common.css">
 </head>
 
 <body>
@@ -959,40 +960,25 @@ x
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="/home/index.html">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
             <i class="fa-solid fa-chart-pie"></i>
             Artemis
         </a>
-        <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center"
-            id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/home/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/destination/destination.html">Destination</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/tour/tour.html">Tour Package</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/guide/guide.html">Tour Guide</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/faq/faq.html">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about-us/about.html">About Us</a>
-                </li>
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="destination/destination.html">Destination</a></li>
+                <li class="nav-item"><a class="nav-link" href="tour/tour.html">Tour Package</a></li>
+                <li class="nav-item"><a class="nav-link" href="guide/guide.html">Tour Guide</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq/faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="about-us/about.html">About Us</a></li>
             </ul>
         </div>
         <div class="d-none d-lg-block">
-            <a href="/akun/akun.html" class="profile-icon">
+            <a href="akun/akun.html" class="profile-icon">
                 <i class="fa-solid fa-user"></i>
             </a>
         </div>
@@ -1217,7 +1203,7 @@ x
                     </div>
                 </div>
 
-                <a href="../about-us/about.html"
+                <a href="about-us/about.html"
                     class="btn btn-primary fw-bold rounded-pill px-5 py-2 mt-2 premier-book-btn">Book Now</a>
             </div>
         </div>
@@ -1374,8 +1360,10 @@ x
                             </div>
                         </div>
                         <div>
-                            <button class="btn btn-find btn-sm px-4">Book This Guide</button>
-                        </div>
+    <a href="guide/riji.html" class="btn btn-find btn-sm px-4">
+        Book This Guide
+    </a>
+</div>
                     </div>
                 </div>
 
@@ -1383,7 +1371,7 @@ x
                 <div class="guide-card-wide">
                     <div class="guide-img-box">
                         <div class="guide-img-bg"></div>
-                        <img src="https://i.pinimg.com/736x/8a/fa/8f/8afa8f1838bbfea519ce1d26434339b0.jpg"
+                        <img src="https://i.pinimg.com/1200x/87/17/e1/8717e10f1de9cece362988c51616a4cd.jpg"
                             class="guide-img" alt="Guide">
                     </div>
                     <div class="d-flex flex-column justify-content-between p-2">
@@ -1411,15 +1399,17 @@ x
                             </div>
                         </div>
                         <div>
-                            <button class="btn btn-find btn-sm px-4">Book This Guide</button>
-                        </div>
+    <a href="guide/souta.html" class="btn btn-find btn-sm px-4">
+        Book This Guide
+    </a>
+</div>
                     </div>
                 </div>
                 <!-- Guide 3 -->
                 <div class="guide-card-wide">
                     <div class="guide-img-box">
                         <div class="guide-img-bg"></div>
-                        <img src="https://i.pinimg.com/736x/c7/4b/23/c74b23ce1ac42c5e2271e6a34e4ba86d.jpg"
+                        <img src="https://i.pinimg.com/1200x/d0/96/f4/d096f452eba10f13ee23582cd9589b67.jpg"
                             class="guide-img" alt="Guide">
                     </div>
                     <div class="d-flex flex-column justify-content-between p-2">
@@ -1447,8 +1437,10 @@ x
                             </div>
                         </div>
                         <div>
-                            <button class="btn btn-find btn-sm px-4">Book This Guide</button>
-                        </div>
+    <a href="guide/lee.html" class="btn btn-find btn-sm px-4">
+        Book This Guide
+    </a>
+</div>
                     </div>
                 </div>
 
@@ -1606,56 +1598,7 @@ x
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row g-5 mb-5">
-                <div class="col-lg-4">
-                    <h2 class="footer-brand">Artemis</h2>
-                    <p class="footer-desc mb-4">
-                        Experience exceptional travel, authentic cultural moments, and unforgettable adventures. Let
-                        your dream destination become a reality.
-                    </p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 mt-lg-0 mt-5">
-                    <h4 class="fw-bold mb-4" style="font-size: 1.1rem;">Explore</h4>
-                    <div class="footer-links">
-                        <a href="../home/index.html">Home</a>
-                        <a href="../destination/destination.html">Destination</a>
-                        <a href="../tour/tour.html">Tour Package</a>
-                        <a href="../guide/guide.html">Tour Guide</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mt-lg-0 mt-4">
-                    <h4 class="fw-bold mb-4" style="font-size: 1.1rem;">Support</h4>
-                    <div class="footer-links">
-                        <a href="../about-us/about.html#contact">Contact Us</a>
-                        <a href="../faq/faq.html">FAQ</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mt-lg-0 mt-4">
-                    <h4 class="fw-bold mb-4" style="font-size: 1.1rem;">Legal</h4>
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms & Condition</a>
-                        <a href="#">Cookie Policy</a>
-                        <a href="#">Disclaimer</a>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center border-top pt-4"
-                style="border-color: rgba(255,255,255,0.1) !important; font-size: 0.85rem; color: #adb5bd;">
-                &copy; 2024 SkyHorizon Travel Marketplace. All rights reserved.
-            </div>
-        </div>
-    </footer>
+
 
     <!-- Destination Modal -->
     <div class="destination-modal" id="destinationModal">
@@ -1724,6 +1667,53 @@ x
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-3">
+    <div class="container mt-4">
+        <div class="row gy-4 border-bottom border-secondary pb-4 mb-4" style="border-color: rgba(255,255,255,0.1) !important;">
+            <div class="col-lg-5 pe-lg-5">
+                <h3 class="fw-bold mb-3">Artemis</h3>
+                <p class="small lh-lg mb-4">Experience exceptional travel, authentic cultural moments, and unforgettable adventures. Let your dream destination become a reality.</p>
+                <div>
+                    <a href="#" class="social-circle"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-circle"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-circle"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-circle"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-circle"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+                <h5 class="mb-4">Explore</h5>
+                <ul class="list-unstyled small d-flex flex-column gap-3">
+                    <li><a href="index.html" class="text-decoration-none text-muted footer-link">Home</a></li>
+                    <li><a href="destination/destination.html" class="text-decoration-none text-muted footer-link">Destination</a></li>
+                    <li><a href="tour/tour.html" class="text-decoration-none text-muted footer-link">Tour Package</a></li>
+                    <li><a href="guide/guide.html" class="text-decoration-none text-muted footer-link">Tour Guide</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4">
+                <h5 class="mb-4">Support</h5>
+                <ul class="list-unstyled small d-flex flex-column gap-3">
+                    <li><a href="faq/contact.html" class="text-decoration-none text-muted footer-link">Contact Us</a></li>
+                    <li><a href="faq/faq.html" class="text-decoration-none text-muted footer-link">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h5 class="mb-4">Legal</h5>
+                <ul class="list-unstyled small d-flex flex-column gap-3">
+                    <li><a href="Legal/privacy.html" class="text-decoration-none text-muted footer-link">Privacy Policy</a></li>
+                    <li><a href="Legal/term.html" class="text-decoration-none text-muted footer-link">Terms & Condition</a></li>
+                    <li><a href="Legal/cookie.html" class="text-decoration-none text-muted footer-link">Cookie Policy</a></li>
+                    <li><a href="Legal/disclamer.html" class="text-decoration-none text-muted footer-link">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center small">
+            &copy; 2024 SkyHorizon Travel Marketplace. All rights reserved.
+        </div>
+    </div>
+</footer>
 
     <!-- Bootstrap 5 Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -1933,26 +1923,26 @@ x
 
 
             // ===== Atur tanggal minimal =====
-const departureDate = document.getElementById("departureDate");
-const returnDate = document.getElementById("returnDate");
+            const departureDate = document.getElementById("departureDate");
+            const returnDate = document.getElementById("returnDate");
 
-const today = new Date().toISOString().split("T")[0];
+            const today = new Date().toISOString().split("T")[0];
 
-departureDate.min = today;
-returnDate.min = today;
+            departureDate.min = today;
+            returnDate.min = today;
 
-departureDate.addEventListener("change", function () {
-    returnDate.min = this.value;
+            departureDate.addEventListener("change", function () {
+                returnDate.min = this.value;
 
-    if (returnDate.value < this.value) {
-        returnDate.value = "";
-    }
-});
+                if (returnDate.value < this.value) {
+                    returnDate.value = "";
+                }
+            });
         });
-    
-        
+
+
     </script>
-    
+
 </body>
 
 </html>

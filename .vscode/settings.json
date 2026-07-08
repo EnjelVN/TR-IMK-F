@@ -1,4 +1,5 @@
 {
-    "livePreview.defaultPreviewPath": "/home/index.html",
-    "CodeGPT.apiKey": "Anthropic"
+    "livePreview.defaultPreviewPath": "index.html",
+    "CodeGPT.apiKey": "Anthropic",
+    "chat.disableAIFeatures": false
 }
