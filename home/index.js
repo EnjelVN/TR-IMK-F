@@ -1,4 +1,4 @@
-﻿// Destination Data
+// Destination Data
         const destinationData = {
             Asia: ['Bangkok, Thailand', 'Tokyo, Japan', 'Singapore', 'Bali, Indonesia', 'Phuket, Thailand'],
             Europe: ['Paris, France', 'London, UK', 'Rome, Italy', 'Barcelona, Spain', 'Amsterdam, Netherlands'],
@@ -17,12 +17,21 @@
             const regionButtons = document.querySelectorAll('.region-btn');
             const destinationsGrid = document.getElementById('destinationsGrid');
 
-            // Open modal saat input diklik
-            destinationInput.addEventListener('click', () => {
-                destinationModal.classList.add('active');
-                regionStep.style.display = 'block';
-                destinationStep.style.display = 'none';
-            });
+            // Open modal saat input atau seluruh widget-input-group Destination diklik
+            const destinationInputGroup = destinationInput ? destinationInput.closest('.widget-input-group') : null;
+            if (destinationInputGroup) {
+                destinationInputGroup.addEventListener('click', () => {
+                    destinationModal.classList.add('active');
+                    regionStep.style.display = 'block';
+                    destinationStep.style.display = 'none';
+                });
+            } else if (destinationInput) {
+                destinationInput.addEventListener('click', () => {
+                    destinationModal.classList.add('active');
+                    regionStep.style.display = 'block';
+                    destinationStep.style.display = 'none';
+                });
+            }
 
             // Close modal
             modalClose.addEventListener('click', () => {
