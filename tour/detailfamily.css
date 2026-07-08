@@ -1,0 +1,25 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.hero-section {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.unsplash.com/photo-1604537466158-719b1972feb8?q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    border-radius: 20px;
+    border: none;
+}
+
+.text-primary {
+    color: #046b82 !important;
+}
+
+.btn-primary {
+    background-color: #046b82;
+    border: none;
+}

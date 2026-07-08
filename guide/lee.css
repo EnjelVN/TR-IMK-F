@@ -1,0 +1,35 @@
+body {
+    background-color: #fafbfc;
+    font-family: 'Inter', sans-serif;
+}
+
+.card {
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+}
+
+.stat-box {
+    background-color: #e6f4f6;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.progress {
+    height: 10px;
+    background-color: #f3f4f6;
+}
+
+.progress-bar {
+    background-color: #046b82;
+}
+
+.text-primary {
+    color: #046b82 !important;
+}
+
+.btn-primary {
+    background-color: #046b82;
+    border: none;
+    padding: 12px;
+}
