@@ -126,7 +126,7 @@ body {
 /* Overlapping Images (Payment Section) */
 .overlap-image-container {
     position: relative;
-    height: 220px;
+    height: 350px;
 }
 
 .overlap-img-1 {
@@ -157,7 +157,6 @@ body {
 .light-blue-card {
     background-color: var(--light-blue-bg);
     border-radius: 16px;
-    
     padding: 30px;
 }
 

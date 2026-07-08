@@ -15,7 +15,7 @@ body {
 }
 
 /* GRADIENT BIRU DI BAGIAN ATAS
-  Ini membuat efek biru muda di area Navbar dan Judul, 
+  Ini membuat efek biru muda di area Navbar dan Judul,
   lalu memudar perlahan ke bawah menyatu dengan background utama.
 */
 .top-gradient-bg {
@@ -51,6 +51,48 @@ body {
 /* Main Content Container */
 .privacy-container {
     max-width: 900px; /* Lebar dibatasi agar teks nyaman dibaca */
+}
+
+/* Back Button */
+.btn-back{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:132px;
+    height:132px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    border:none;
+    background:transparent;
+
+    color:var(--text-dark);
+
+    font-size:4.2rem;
+
+    padding:0;
+    text-decoration:none;
+    cursor:pointer;
+    z-index:3;
+    transition:color .2s ease, transform .2s ease;
+}
+
+.btn-back:hover{
+    color:var(--primary-color);
+    transform:translateX(-4px);
+}
+
+@media (max-width:992px){
+    .btn-back{
+        position:static;
+        width:96px;
+        height:96px;
+        font-size:3rem;
+        margin-bottom:1.5rem;
+    }
 }
 
 .privacy-container ul {
