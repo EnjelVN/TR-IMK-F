@@ -27,7 +27,7 @@ body {
 
 .navbar-brand{
     font-size:1.55rem;
-    font-weight:700;
+    font-weight:1000;
     color:var(--primary-color)!important;
 }
 
@@ -42,8 +42,8 @@ body {
 
 .nav-link{
     color:var(--dark-color)!important;
-    font-weight:500;
-    font-size:.95rem;
+    font-weight:1000;
+    font-size:1.3rem;
     padding:10px 8px!important;
     border-bottom:2px solid transparent;
     transition:.3s;
