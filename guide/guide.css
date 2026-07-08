@@ -42,8 +42,8 @@ body {
 
 .nav-link{
     color:var(--dark-color)!important;
-    font-weight:1000;
-    font-size:1.3rem;
+    font-weight:700;
+    font-size:1.2rem;
     padding:10px 8px!important;
     border-bottom:2px solid transparent;
     transition:.3s;
