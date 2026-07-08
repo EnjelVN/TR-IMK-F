@@ -231,3 +231,235 @@ footer h5 {
 .footer-link:hover {
     color: white;
 }
+
+/* --- Subscribe Success Popup --- */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 16px;
+}
+
+.overlay.show {
+    display: flex;
+}
+
+.subscribe-modal {
+    background: #ffffff;
+    border: 1px solid #e2ecf5;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 360px;
+    padding: 24px;
+    text-align: center;
+    animation: subscribePop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes subscribePop {
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.check-badge {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 3px solid #10b981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6px auto 18px;
+    color: #10b981;
+    font-size: 32px;
+    background: rgba(16, 185, 129, 0.08);
+}
+
+.subscribe-modal h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.subscribe-modal p {
+    color: #64748b;
+    font-size: 13.5px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.subscribe-close-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    border: 1.5px solid #e2ecf5;
+    background: transparent;
+    color: #3d4f60;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+}
+
+.subscribe-close-btn:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    background: rgba(0, 136, 255, 0.08);
+}
+
+.email-error {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 0.2rem rgba(239, 68, 68, 0.15) !important;
+}
+
+.email-error-msg {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin-top: 4px;
+    display: none;
+}
+
+.email-error-msg.show {
+    display: block;
+}
+
+.subscribe-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #ffffff;
+    border: 1px solid #e2ecf5;
+    color: var(--text-dark);
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 13px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1100;
+    box-shadow: 0 8px 40px rgba(0, 136, 255, 0.10);
+    font-weight: 500;
+}
+
+.subscribe-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* --- Smooth Animations (About Us style) --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-faq .hero-title {
+    animation: fadeInUp 1s ease;
+}
+
+.hero-faq .hero-subtitle {
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.custom-accordion .accordion-item {
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-accordion .accordion-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.faq-image {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 16px 40px rgba(0, 136, 255, 0.12);
+}
+
+.overlap-img-1,
+.overlap-img-2 {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlap-img-1:hover,
+.overlap-img-2:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.light-blue-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.light-blue-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(56, 189, 248, 0.15);
+}
+
+.section-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-section-title {
+    transition: color 0.3s ease;
+}
+
+.row.align-items-center:hover .section-icon {
+    transform: scale(1.1);
+}
+
+.btn-accent {
+    transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.35);
+}
+
+.social-circle {
+    transition: all 0.3s ease;
+}
+
+.social-circle:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 136, 255, 0.3);
+}
+
+.footer-link {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    transform: translateX(5px);
+}

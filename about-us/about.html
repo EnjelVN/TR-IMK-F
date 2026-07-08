@@ -369,6 +369,48 @@
         .team-card:hover h5 {
             color: var(--primary-blue);
         }
+        .team-img-wrapper {
+            overflow: hidden;
+        }
+        .team-hover-info {
+            position: absolute;
+            inset: 12px;
+            background: rgba(12, 89, 116, 0.93);
+            color: white;
+            border-radius: 16px;
+            padding: 18px 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            opacity: 0;
+            transform: translateY(12px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            z-index: 5;
+        }
+        .team-card:hover .team-hover-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .team-hover-info h6 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #bae6fd;
+        }
+        .team-hover-info p {
+            font-size: 0.78rem;
+            line-height: 1.55;
+            margin-bottom: 6px;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .team-hover-info span {
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.75);
+            display: block;
+            margin-top: 4px;
+        }
 
         /* --- CTA Banner --- */
         .cta-banner {
@@ -663,6 +705,12 @@
                 <div class="team-card">
                     <div class="team-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" class="team-img" alt="Soo-yeon Lee">
+                        <div class="team-hover-info">
+                            <h6>Itinerary Specialist</h6>
+                            <p>Designs custom travel routes across Asia-Pacific with a focus on cultural immersion and hidden gems.</p>
+                            <span>8+ years experience · English, Korean</span>
+                            <span>120+ curated itineraries</span>
+                        </div>
                     </div>
                     <h5 class="fw-bold mb-1 mt-2">Soo-yeon Lee</h5>
                     <p class="small m-0" style="color: var(--accent-blue);">Itinerary Specialist</p>
@@ -672,6 +720,12 @@
                 <div class="team-card">
                     <div class="team-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" class="team-img" alt="Bum-hyun Lim">
+                        <div class="team-hover-info">
+                            <h6>Reservation Manager</h6>
+                            <p>Manages bookings, payments, and logistics to ensure every reservation runs smoothly from start to finish.</p>
+                            <span>6+ years experience · English, Korean</span>
+                            <span>Expert in group & private tours</span>
+                        </div>
                     </div>
                     <h5 class="fw-bold mb-1 mt-2">Bum-hyun Lim</h5>
                     <p class="small m-0" style="color: var(--accent-blue);">Reservation Manager</p>
@@ -681,6 +735,12 @@
                 <div class="team-card">
                     <div class="team-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop" class="team-img" alt="Soo-bin Han">
+                        <div class="team-hover-info">
+                            <h6>Guest Relations Officer</h6>
+                            <p>Dedicated to guest satisfaction, handling inquiries, feedback, and on-trip support with warmth and care.</p>
+                            <span>5+ years experience · English, Korean</span>
+                            <span>98% guest satisfaction rate</span>
+                        </div>
                     </div>
                     <h5 class="fw-bold mb-1 mt-2">Soo-bin Han</h5>
                     <p class="small m-0" style="color: var(--accent-blue);">Guest Relations Officer</p>
@@ -690,6 +750,12 @@
                 <div class="team-card">
                     <div class="team-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop" class="team-img" alt="Oliver Bennett">
+                        <div class="team-hover-info">
+                            <h6>Founder & Head Explorer</h6>
+                            <p>Founded Artemis in 2013 with a vision to create transformative off-the-beaten-path adventures worldwide.</p>
+                            <span>15+ years experience · English, Spanish</span>
+                            <span>Led 200+ expeditions across 7 continents</span>
+                        </div>
                     </div>
                     <h5 class="fw-bold mb-1 mt-2">Oliver Bennett</h5>
                     <p class="small m-0" style="color: var(--accent-blue);">Founder & Head Explorer</p>
@@ -699,6 +765,12 @@
                 <div class="team-card">
                     <div class="team-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop" class="team-img" alt="Lucas Martin">
+                        <div class="team-hover-info">
+                            <h6>Travel Consultant</h6>
+                            <p>Helps travelers find the perfect adventure package tailored to their budget, interests, and travel style.</p>
+                            <span>7+ years experience · English, French</span>
+                            <span>Specialist in adventure & eco-tourism</span>
+                        </div>
                     </div>
                     <h5 class="fw-bold mb-1 mt-2">Lucas Martin</h5>
                     <p class="small m-0" style="color: var(--accent-blue);">Travel Consultant</p>
@@ -708,6 +780,12 @@
                 <div class="team-card">
                     <div class="team-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop" class="team-img" alt="Mia Collins">
+                        <div class="team-hover-info">
+                            <h6>Tour Coordinator</h6>
+                            <p>Coordinates on-ground operations, guides, and schedules to deliver seamless travel experiences.</p>
+                            <span>4+ years experience · English, Indonesian</span>
+                            <span>Managed 80+ successful tour departures</span>
+                        </div>
                     </div>
                     <h5 class="fw-bold mb-1 mt-2">Mia Collins</h5>
                     <p class="small m-0" style="color: var(--accent-blue);">Tour Coordinator</p>
@@ -726,8 +804,8 @@
                         We began by organizing boutique expeditions to the Andes, focusing on immersion rather than just observation.
                     </p>
                     <div class="d-flex gap-3 flex-wrap">
-                        <button class="btn btn-outline-white">Browse Expedition</button>
-                        <button class="btn btn-outline-white">Contact An Expert</button>
+                        <a href="/tour/tour.html" class="btn btn-outline-white">Browse Expedition</a>
+                        <a href="/guide/guide.html" class="btn btn-outline-white">Contact An Expert</a>
                     </div>
                 </div>
                 <div class="col-lg-5">
