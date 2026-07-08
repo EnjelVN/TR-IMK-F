@@ -523,6 +523,43 @@
             object-fit: cover;
         }
 
+        .destination-popup {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            background: #fff;
+            border-radius: 0;
+            padding: 18px 20px;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, .1);
+            transform: translateY(120%);
+            opacity: 0;
+            transition: .35s;
+        }
+
+        .dest-tall-card:hover .destination-popup {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .destination-popup h6 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .destination-popup small {
+            color: #777;
+            display: block;
+        }
+
+        .destination-popup h5 {
+            color: #1b74e4;
+            font-weight: 700;
+            margin: 0;
+        }
+
         .premier-adventure {
             margin-top: 160px;
         }
@@ -800,7 +837,7 @@
             border-radius: 50%;
             object-fit: cover;
         }
-
+x
         .review-text {
             font-size: 0.9rem;
             line-height: 1.6;
@@ -1011,44 +1048,122 @@
 
             <div class="scroll-horizontal">
                 <!-- Cards -->
-                <div class="dest-tall-card"><img
-                        src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?q=80&w=500&auto=format&fit=crop"
-                        alt="Fuji"></div>
-                <div class="dest-tall-card"><img
-                        src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?q=80&w=500&auto=format&fit=crop"
-                        alt="Raja Ampat"></div>
-                <div class="dest-tall-card"><img
-                        src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?q=80&w=500&auto=format&fit=crop"
-                        alt="Pyramids"></div>
-                <div class="dest-tall-card"><img
-                        src="https://i.pinimg.com/736x/77/cf/c0/77cfc0f1417bfed013d059a92e187da0.jpg" alt="Paris"></div>
-                <div class="dest-tall-card"><img
-                        src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=500&auto=format&fit=crop"
-                        alt="Rio"></div>
-                <div class="dest-tall-card"><img
-                        src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=500&auto=format&fit=crop"
-                        alt="Balloons"></div>
-                <div class="dest-tall-card"><img
-                        src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=500&auto=format&fit=crop"
-                        alt="Taj Mahal"></div>
-                <div class="dest-tall-card"><img
-                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=500&auto=format&fit=crop"
-                        alt="Lake House"></div>
-                <div class="dest-tall-card"><img
-                        src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=500&auto=format&fit=crop"
-                        alt="Dubai"></div>
-                <div class="dest-tall-card"><img
-                        src="https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=500&auto=format&fit=crop"
-                        alt="Santorini"></div>
-                <div class="dest-tall-card"><img
-                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=500&auto=format&fit=crop"
-                        alt="Beach"></div>
-                <div class="dest-tall-card"><img
-                        src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=500&auto=format&fit=crop"
-                        alt="Mountain Road"></div>
-                <div class="dest-tall-card"><img
-                        src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=500&auto=format&fit=crop"
-                        alt="India"></div>
+                <div class="dest-tall-card">
+                    <img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?q=80&w=500&auto=format&fit=crop"
+                        alt="Fuji">
+                    <div class="destination-popup">
+                        <h6>Mount Fuji, Japan</h6>
+                        <small>Start from</small>
+                        <h5>$650</h5>
+                    </div>
+                </div>
+                <div class="dest-tall-card">
+                    <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?q=80&w=500&auto=format&fit=crop"
+                        alt="Raja Ampat">
+                    <div class="destination-popup">
+                        <h6>Raja Ampat, Indonesia</h6>
+                        <small>Start from</small>
+                        <h5>$520</h5>
+                    </div>
+                </div>
+                <div class="dest-tall-card">
+                    <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?q=80&w=500&auto=format&fit=crop"
+                        alt="Pyramids">
+                    <div class="destination-popup">
+                        <h6>Cairo, Egypt</h6>
+                        <small>Start from</small>
+                        <h5>$480</h5>
+                    </div>
+                </div>
+                <div class="dest-tall-card">
+                    <img src="https://i.pinimg.com/736x/77/cf/c0/77cfc0f1417bfed013d059a92e187da0.jpg" alt="Paris">
+                    <div class="destination-popup">
+                        <h6>Paris, France</h6>
+                        <small>Start from</small>
+                        <h5>$890</h5>
+                    </div>
+                </div>
+                <div class="dest-tall-card">
+                    <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=500&auto=format&fit=crop"
+                        alt="Rio">
+                    <div class="destination-popup">
+                        <h6>Rio de Janeiro, Brazil</h6>
+                        <small>Start from</small>
+                        <h5>$720</h5>
+                    </div>
+                </div>
+                <div class="dest-tall-card">
+                    <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=500&auto=format&fit=crop"
+                        alt="Balloons">
+                    <div class="destination-popup">
+                        <h6>Cappadocia, Turkey</h6>
+                        <small>Start from</small>
+                        <h5>$610</h5>
+                    </div>
+                </div>
+                <div class="dest-tall-card">
+                    <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=500&auto=format&fit=crop"
+                        alt="Taj Mahal">
+                    <div class="destination-popup">
+                        <h6>Agra, India</h6>
+                        <small>Start from</small>
+                        <h5>$430</h5>
+                    </div>
+                </div>
+                <div class="dest-tall-card">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=500&auto=format&fit=crop"
+                        alt="Lake House">
+                    <div class="destination-popup">
+                        <h6>Lake Bled, Slovenia</h6>
+                        <small>Start from</small>
+                        <h5>$540</h5>
+                    </div>
+                </div>
+                <div class="dest-tall-card">
+                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=500&auto=format&fit=crop"
+                        alt="Dubai">
+                    <div class="destination-popup">
+                        <h6>Dubai, UAE</h6>
+                        <small>Start from</small>
+                        <h5>$780</h5>
+                    </div>
+                </div>
+                <div class="dest-tall-card">
+                    <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=500&auto=format&fit=crop"
+                        alt="Santorini">
+                    <div class="destination-popup">
+                        <h6>Santorini, Greece</h6>
+                        <small>Start from</small>
+                        <h5>$950</h5>
+                    </div>
+                </div>
+                <div class="dest-tall-card">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=500&auto=format&fit=crop"
+                        alt="Beach">
+                    <div class="destination-popup">
+                        <h6>Bora Bora, Polynesia</h6>
+                        <small>Start from</small>
+                        <h5>$1,200</h5>
+                    </div>
+                </div>
+                <div class="dest-tall-card">
+                    <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=500&auto=format&fit=crop"
+                        alt="Mountain Road">
+                    <div class="destination-popup">
+                        <h6>Swiss Alps</h6>
+                        <small>Start from</small>
+                        <h5>$680</h5>
+                    </div>
+                </div>
+                <div class="dest-tall-card">
+                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=500&auto=format&fit=crop"
+                        alt="India">
+                    <div class="destination-popup">
+                        <h6>Jaipur, India</h6>
+                        <small>Start from</small>
+                        <h5>$410</h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1800,8 +1915,29 @@
                     }
                 });
             });
+
+
+            // ===== Atur tanggal minimal =====
+const departureDate = document.getElementById("departureDate");
+const returnDate = document.getElementById("returnDate");
+
+const today = new Date().toISOString().split("T")[0];
+
+departureDate.min = today;
+returnDate.min = today;
+
+departureDate.addEventListener("change", function () {
+    returnDate.min = this.value;
+
+    if (returnDate.value < this.value) {
+        returnDate.value = "";
+    }
+});
         });
+    
+        
     </script>
+    
 </body>
 
 </html>
