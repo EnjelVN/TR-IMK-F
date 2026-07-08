@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/home/index.html"
+    "livePreview.defaultPreviewPath": "/home/index.html",
+    "CodeGPT.apiKey": "Anthropic"
 }
