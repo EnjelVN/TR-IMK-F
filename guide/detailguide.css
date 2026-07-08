@@ -1,17 +1,22 @@
 /* Variables */
 :root {
-    --primary-color: #046b82;      /* Warna biru utama Artemis */
-    --primary-light: #e8f4f6;      /* Warna background biru muda */
-    --bg-color: #fafbfc;           /* Warna background halaman */
-    --text-dark: #1f2937;
-    --border-color: #e5e7eb;
-    --footer-bg: #2b3544;
+    --primary-color: #007c9c;
+    --secondary-color: #3bb2d0;
+    --dark-color: #1a2530;
+    --text-muted: #6c757d;
+    --bg-light: #f8fbfa;
+    --footer-bg: #293441;
+    --border-color: #eaedf1;
+    --primary-blue: #0088ff;
+    --accent-blue: #38bdf8;
+    --teal-dark: #0c5974;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-dark);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--dark-color);
+    background-color: #ffffff;
+    overflow-x: hidden;
 }
 
 /* Utilities */
