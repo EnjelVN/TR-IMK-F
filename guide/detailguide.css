@@ -277,3 +277,76 @@ body {
             background-color: var(--primary-color);
             color: white;
         }
+
+/* Consultation Success Popup */
+.consultation-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 16px;
+}
+.consultation-overlay.show { display: flex; }
+.consultation-modal {
+    background: #ffffff;
+    border: 1px solid #e2ecf5;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 360px;
+    padding: 24px;
+    text-align: center;
+    animation: consultPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+@keyframes consultPop {
+    from { opacity: 0; transform: scale(0.92) translateY(12px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.consultation-check {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 3px solid #10b981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6px auto 18px;
+    color: #10b981;
+    font-size: 32px;
+    background: rgba(16, 185, 129, 0.08);
+}
+.consultation-modal h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1e293b;
+    font-weight: 700;
+}
+.consultation-modal p {
+    color: #64748b;
+    font-size: 13.5px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+.consultation-close-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    border: 1.5px solid #e2ecf5;
+    background: transparent;
+    color: #3d4f60;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+}
+.consultation-close-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(4, 102, 124, 0.08);
+}
