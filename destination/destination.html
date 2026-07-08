@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artemis - Tour & Destination (Bootstrap Version)</title>
     
-    <!-- Bootstrap 5 CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Font Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome untuk Ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
+
     <link rel="stylesheet" href="destination.css">
 <style>
 .navbar {
@@ -79,6 +76,30 @@
 </style></head>
 <body>
 
+<<<<<<< HEAD
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../home/index.html" style="color: #0056b3;">
+                <span class="logo-icon rounded-circle"><i class="fas fa-plane"></i></span> Artemis
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item"><a class="nav-link" href="../home/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../destination/destination.html">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../tour/tour.html">Tour Package</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../guide/guide.html">Tour Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../faq/faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about-us/about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about-us/about.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="d-none d-lg-block text-primary fs-4" style="cursor:pointer;">
+                <i class="fas fa-user-circle"></i>
+            </div>
+=======
     <!-- Navbar Bootstrap -->
     <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
@@ -113,6 +134,7 @@
                     <a class="nav-link" href="/about-us/about.html">About Us</a>
                 </li>
             </ul>
+>>>>>>> 63147442ac1c45be1bad1a6a15b46a3348b4162b
         </div>
         <div class="d-none d-lg-block">
             <a href="/akun/akun.html" class="profile-icon">
@@ -122,7 +144,6 @@
     </div>
 </nav>
 
-    <!-- Hero Section -->
     <section class="hero-section d-flex flex-column justify-content-center align-items-center text-white text-center">
         <h1 class="display-3 fw-bold mb-4 shadow-sm">Tour & Destination</h1>
         
@@ -142,10 +163,8 @@
         <button class="btn btn-primary-custom rounded-pill px-5 py-3 shadow">See More</button>
     </section>
 
-    <!-- Main Content Container -->
     <div class="container mt-5 pt-4">
-        
-        <!-- Tabs Menu Interactive -->
+
         <div class="bg-white rounded p-4 shadow-sm d-flex justify-content-around align-items-center tab-menu mx-auto mb-5" style="max-width: 900px;">
             <a href="#trending-section" class="active-tab fs-5">Trending Destinations</a>
             <div class="vr text-secondary"></div>
@@ -154,19 +173,17 @@
             <a href="#review-section" class="fs-5">Our Review</a>
         </div>
 
-        <!-- Section 1: Trending -->
         <div id="trending-section" class="text-center mb-5">
             <h2 class="fw-bold" style="color: var(--primary-blue);">Trending Destination</h2>
             <p class="text-muted">Choice selection for a refreshing nature experience.</p>
         </div>
 
-        <!-- Trending Grid (Bootstrap Row) -->
         <div class="row g-4 mb-5 pb-4">
-            <!-- Card 1 -->
+
             <div class="col-lg-3 col-md-6">
                 <div class="card card-custom h-100 shadow-sm border-0">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1515091943-9d5c0ad28b81?q=80&w=600&auto=format&fit=crop" alt="South Korea">
+                        <img src="../asset/img/Korean pavilion.png" alt="South Korea">
                         <div class="ribbon"><i class="fas fa-tag"></i> Save Up To 57%</div>
                     </div>
                     <div class="card-body d-flex flex-column">
@@ -189,7 +206,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="card card-custom h-100 shadow-sm border-0">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=600&auto=format&fit=crop" alt="Vietnam">
+                        <img src="../asset/img/vietnamh.png" alt="Vietnam">
                         <div class="ribbon"><i class="fas fa-tag"></i> Save Up To 57%</div>
                     </div>
                     <div class="card-body d-flex flex-column">
@@ -212,7 +229,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="card card-custom h-100 shadow-sm border-0">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=600&auto=format&fit=crop" alt="Thailand">
+                        <img src="../asset/img/Gtailan.png" alt="Thailand">
                         <div class="ribbon"><i class="fas fa-tag"></i> Save Up To 57%</div>
                     </div>
                     <div class="card-body d-flex flex-column">
@@ -235,7 +252,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="card card-custom h-100 shadow-sm border-0">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1581017415178-57778b056da6?q=80&w=600&auto=format&fit=crop" alt="China">
+                        <img src="../asset/img/kapancina.png" alt="China">
                         <div class="ribbon"><i class="fas fa-tag"></i> Save Up To 57%</div>
                     </div>
                     <div class="card-body d-flex flex-column">
@@ -255,7 +272,6 @@
             </div>
         </div>
 
-        <!-- Section 2: Our Tour Filters -->
         <div id="tour-section" class="d-flex gap-3 mb-4 flex-wrap">
             <button class="btn filter-btn rounded-pill px-4 active">Asia</button>
             <button class="btn filter-btn rounded-pill px-4">Europe</button>
@@ -264,13 +280,12 @@
             <button class="btn filter-btn rounded-pill px-4">Australia</button>
         </div>
 
-        <!-- 6 Tour Grid -->
         <div class="row g-4 mb-5">
-            <!-- Tour 1 -->
+
             <div class="col-lg-4 col-md-6">
                 <div class="card card-custom h-100 shadow-sm border-0">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?q=80&w=600&auto=format&fit=crop" alt="Raja Ampat">
+                        <img src="../asset/img/raja4.png" alt="Raja Ampat">
                         <div class="heart-btn"><i class="far fa-heart"></i></div>
                     </div>
                     <div class="card-body d-flex flex-column">
@@ -290,11 +305,10 @@
                 </div>
             </div>
             
-            <!-- Tour 2 -->
             <div class="col-lg-4 col-md-6">
                 <div class="card card-custom h-100 shadow-sm border-0">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?q=80&w=600&auto=format&fit=crop" alt="Mount Fuji">
+                        <img src="../asset/img/fuji.png" alt="Mount Fuji">
                         <div class="heart-btn"><i class="far fa-heart"></i></div>
                     </div>
                     <div class="card-body d-flex flex-column">
@@ -314,11 +328,10 @@
                 </div>
             </div>
 
-            <!-- Tour 3 -->
             <div class="col-lg-4 col-md-6">
                 <div class="card card-custom h-100 shadow-sm border-0">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1548673752-19e05f6e8557?q=80&w=600&auto=format&fit=crop" alt="Shanghai">
+                        <img src="../asset/img/Shanghai Yangtze Cruise.jpg" alt="Shanghai">
                         <div class="heart-btn"><i class="far fa-heart"></i></div>
                     </div>
                     <div class="card-body d-flex flex-column">
@@ -338,11 +351,10 @@
                 </div>
             </div>
 
-            <!-- Tour 4 -->
             <div class="col-lg-4 col-md-6">
                 <div class="card card-custom h-100 shadow-sm border-0">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=600&auto=format&fit=crop" alt="Chiang Mai">
+                        <img src="../asset/img/chiang.png" alt="Chiang Mai">
                         <div class="heart-btn"><i class="far fa-heart"></i></div>
                     </div>
                     <div class="card-body d-flex flex-column">
@@ -362,11 +374,10 @@
                 </div>
             </div>
 
-            <!-- Tour 5 -->
             <div class="col-lg-4 col-md-6">
                 <div class="card card-custom h-100 shadow-sm border-0">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?q=80&w=600&auto=format&fit=crop" alt="Kuala Lumpur">
+                        <img src="../asset/img/kuala lumpur.png" alt="Kuala Lumpur">
                         <div class="heart-btn"><i class="far fa-heart"></i></div>
                     </div>
                     <div class="card-body d-flex flex-column">
@@ -386,11 +397,10 @@
                 </div>
             </div>
 
-            <!-- Tour 6 -->
             <div class="col-lg-4 col-md-6">
                 <div class="card card-custom h-100 shadow-sm border-0">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?q=80&w=600&auto=format&fit=crop" alt="Cebu">
+                        <img src="../asset/img/cebu.png" alt="Cebu">
                         <div class="heart-btn"><i class="far fa-heart"></i></div>
                     </div>
                     <div class="card-body d-flex flex-column">
@@ -416,7 +426,6 @@
         </div>
     </div>
 
-    <!-- Section 3: Reviews (Teal Banner) -->
     <div id="review-section" class="rating-bg text-center text-white">
         <div class="container">
             <h2 class="fw-bold display-6 mb-2">Rating and Review</h2>
@@ -424,12 +433,10 @@
         </div>
     </div>
 
-    <!-- Overlap Rating Card -->
     <div class="container">
         <div class="card bg-white p-4 shadow rating-overlap-card border-0 mb-5 pb-4">
             <div class="row text-dark text-start p-3">
                 
-                <!-- Overall -->
                 <div class="col-lg-4 border-end pe-4 mb-4 mb-lg-0">
                     <h5 class="fw-bold mb-3">Overall Rating</h5>
                     <div class="d-flex align-items-center gap-3">
@@ -444,7 +451,6 @@
                     <p class="mt-4 mb-0 fw-semibold text-decoration-underline" style="color: var(--teal-dark); font-size: 0.85rem; cursor: pointer;">Based on 154937 independent reviews</p>
                 </div>
 
-                <!-- Trip Rating -->
                 <div class="col-lg-4 border-end px-4 mb-4 mb-lg-0">
                     <h5 class="fw-bold mb-2">Trip Rating</h5>
                     <p class="text-muted mb-4" style="font-size: 0.85rem;">Trip rating is the overall quality of the itinerary and trip</p>
@@ -464,7 +470,6 @@
                     </div>
                 </div>
 
-                <!-- Customer Exp -->
                 <div class="col-lg-4 px-4">
                     <h5 class="fw-bold mb-2">Customer Experience</h5>
                     <p class="text-muted mb-4" style="font-size: 0.85rem;">Customer experience is the standard of service you receive</p>
@@ -487,7 +492,6 @@
             </div>
         </div>
 
-        <!-- Info Section -->
         <div class="row align-items-center mb-5 pb-5">
             <div class="col-lg-6 mb-4 mb-lg-0 pe-lg-5">
                 <h2 class="display-6 fw-bold lh-sm mb-2">Other things to<br>know before you go</h2>
@@ -495,11 +499,10 @@
                 <h4 class="text-muted fw-normal lh-base">Before you travel, make sure to check the passport and visa requirements for your destination. Some countries have specific entry regulations, so it is important to verify all necessary documents in advance.</h4>
             </div>
             <div class="col-lg-6">
-                <img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?q=80&w=600&auto=format&fit=crop" class="img-fluid rounded-4 shadow-sm w-100" style="height: 380px; object-fit: cover;" alt="Monk">
+                <img src="../asset/img/other.png" class="img-fluid rounded-4 shadow-sm w-100" style="height: 380px; object-fit: cover;" alt="Monk">
             </div>
         </div>
 
-        <!-- Asia Destinations -->
         <div class="text-center mb-5 pb-4">
             <h2 class="fw-bold" style="color: var(--teal-dark);">Our Asia Destination</h2>
             <p class="text-muted mb-4 pb-2">Checkout Other Destination</p>
@@ -507,25 +510,25 @@
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
                     <div class="card card-custom border-0 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?q=80&w=400&auto=format&fit=crop" style="height: 250px; object-fit: cover;" alt="Japan">
+                        <img src="../asset/img/japan.png" style="height: 250px; object-fit: cover;" alt="Japan">
                         <div class="card-body text-start"><h5 class="fw-bold mb-0">Japan</h5></div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="card card-custom border-0 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f71?q=80&w=400&auto=format&fit=crop" style="height: 250px; object-fit: cover;" alt="China">
+                        <img src="../asset/img/cina.png" style="height: 250px; object-fit: cover;" alt="China">
                         <div class="card-body text-start"><h5 class="fw-bold mb-0">China</h5></div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="card card-custom border-0 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?q=80&w=400&auto=format&fit=crop" style="height: 250px; object-fit: cover;" alt="Indonesia">
+                        <img src="../asset/img/indonesia.png" style="height: 250px; object-fit: cover;" alt="Indonesia">
                         <div class="card-body text-start"><h5 class="fw-bold mb-0">Indonesia</h5></div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="card card-custom border-0 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=400&auto=format&fit=crop" style="height: 250px; object-fit: cover;" alt="India">
+                        <img src="../asset/img/indiaa.png" style="height: 250px; object-fit: cover;" alt="India">
                         <div class="card-body text-start"><h5 class="fw-bold mb-0">India</h5></div>
                     </div>
                 </div>
@@ -533,7 +536,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="pt-5 pb-3 mt-5">
         <div class="container mt-4">
             <div class="row gy-4 border-bottom border-secondary pb-4 mb-4" style="border-color: rgba(255,255,255,0.1) !important;">
@@ -580,9 +582,7 @@
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
     <script src="destination.js"></script>
 </body>
 </html>
