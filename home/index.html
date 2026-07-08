@@ -146,6 +146,14 @@
             background: var(--primary-blue);
         }
 
+        .widget-inputs-container {
+            transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), gap 0.45s ease;
+        }
+
+        .widget-inputs-container.round-trip-active {
+            transform: translateX(-4px);
+        }
+
         .widget-input-group {
             border: 1px solid #dee2e6;
             border-radius: 12px;
@@ -153,7 +161,12 @@
             flex: 1;
             min-width: 150px;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.35s ease;
+            position: relative;
+        }
+
+        .widget-input-group.date-group {
+            cursor: default;
         }
 
         .widget-input-group:hover {
@@ -183,14 +196,25 @@
             outline: none;
         }
 
-        /* Hilangkan ikon kalender di input date */
-        .widget-input-group input::-webkit-calendar-picker-indicator {
-            display: none;
+        /* Style ikon kalender di input date (tampilkan kembali, bisa diklik) */
+        .widget-input-group input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            display: block;
         }
 
         .widget-input-group input[type="date"]::-webkit-outer-spin-button,
         .widget-input-group input[type="date"]::-webkit-inner-spin-button {
             display: none;
+        }
+
+        .date-trigger {
+            cursor: pointer;
         }
 
         .destination-select {
@@ -304,8 +328,8 @@
 
         .destinations-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px 40px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px 28px;
         }
 
         .destination-option {
@@ -340,8 +364,34 @@
                 flex-direction: column !important;
             }
 
+            .widget-inputs-container.round-trip-active {
+                transform: none;
+            }
+
             .widget-input-group {
                 min-width: auto;
+            }
+
+            .return-date-field.visible {
+                max-width: none;
+                min-width: auto !important;
+            }
+
+            .guide-card-wide {
+                min-width: 90vw;
+                flex-direction: column;
+            }
+
+            .guide-img-box {
+                width: 100%;
+                min-width: auto;
+                height: 260px;
+            }
+
+            .guide-section .scroll-horizontal {
+                scroll-padding-left: 16px;
+                padding-left: 16px;
+                padding-right: 16px;
             }
         }
 
@@ -372,36 +422,40 @@
         }
 
         .return-date-field {
-            transition: all 0.3s ease;
-            animation: slideInField 0.3s ease;
+            flex: 0 0 0;
+            min-width: 0 !important;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding-left: 0;
+            padding-right: 0;
+            border-width: 0;
+            margin: 0;
+            pointer-events: none;
+            transition: flex 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+                max-width 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.35s ease,
+                padding 0.45s ease,
+                border-width 0.45s ease,
+                margin 0.45s ease;
         }
 
-        @keyframes slideInField {
-            from {
-                opacity: 0;
-                transform: translateX(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .return-date-field.visible {
+            flex: 1;
+            min-width: 150px !important;
+            max-width: 280px;
+            opacity: 1;
+            padding: 10px 15px;
+            border-width: 1px;
+            pointer-events: auto;
         }
 
-        @keyframes slideOutField {
-            from {
-                opacity: 1;
-                transform: translateX(0);
-            }
-
-            to {
-                opacity: 0;
-                transform: translateX(-10px);
-            }
+        .price-guarantee {
+            color: var(--primary-blue);
         }
 
-        .return-date-field.fade-out {
-            animation: slideOutField 0.3s ease forwards;
+        .price-guarantee i {
+            color: var(--primary-blue);
         }
 
         /* Spacer under hero to accommodate absolute widget */
@@ -430,6 +484,7 @@
         /* --- Popular Destinations --- */
         .popular-destinations {
             width: 100vw;
+            padding-top: 50px;
             margin-left: calc(50% - 50vw);
             padding-left: clamp(12px, 2.5vw, 40px);
             padding-right: clamp(12px, 2.5vw, 40px);
@@ -439,13 +494,21 @@
             padding-right: clamp(12px, 2.5vw, 40px);
         }
 
+        .popular-destinations h4 {
+            font-size: 1.6rem;
+        }
+
+        .popular-destinations>p {
+            font-size: 0.95rem;
+        }
+
         .dest-tall-card {
-            min-width: 190px;
-            height: 270px;
-            border-radius: 16px;
+            min-width: 260px;
+            height: 390px;
+            border-radius: 18px;
             overflow: hidden;
             position: relative;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
             transition: 0.3s;
             scroll-snap-align: start;
         }
@@ -515,6 +578,7 @@
             object-fit: cover;
             position: relative;
         }
+
         .heart-icon {
             position: absolute;
             top: 15px;
@@ -529,6 +593,21 @@
             justify-content: center;
             color: white;
             cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.2s ease;
+        }
+
+        .heart-icon:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.08);
+        }
+
+        .heart-icon.liked {
+            background: white;
+        }
+
+        .heart-icon.liked i {
+            color: #ff4757;
         }
 
         .package-title {
@@ -556,23 +635,25 @@
         }
 
         .btn-outline-custom {
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
+            border: 2px solid var(--primary-blue);
+            color: #fff;
             font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 600;
             padding: 5px 15px;
-            border-radius: 6px;
+            border-radius: 25px;
             transition: all 0.3s ease;
             cursor: pointer;
-            background: transparent;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-color));
+            box-shadow: 0 4px 14px rgba(0, 136, 255, 0.2);
         }
 
         .btn-outline-custom:hover,
         .btn-outline-custom:focus {
-            background-color: var(--primary-color);
-            color: #fff;
+            background: #fff;
+            color: var(--primary-blue);
+            border-color: var(--primary-blue);
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 124, 156, 0.25);
+            box-shadow: 0 8px 22px rgba(0, 136, 255, 0.22);
         }
 
         /* --- btn-find (Book This Guide / See More) --- */
@@ -618,20 +699,36 @@
             margin: 60px 0;
         }
 
+        .guide-section .scroll-horizontal {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            scroll-snap-type: x mandatory;
+            scroll-padding-left: clamp(16px, 2.5vw, 40px);
+            padding-left: clamp(16px, 2.5vw, 40px);
+            padding-right: clamp(16px, 2.5vw, 40px);
+            gap: 24px;
+        }
+
         .guide-card-wide {
             display: flex;
             background: white;
-            border-radius: 16px;
-            padding: 20px;
-            min-width: 600px;
+            border-radius: 20px;
+            padding: 32px;
+            min-width: 80vw;
+            max-width: 1200px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
             border: 1px solid var(--border-color);
-            gap: 20px;
+            gap: 32px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
         }
 
         .guide-img-box {
             position: relative;
-            min-width: 200px;
-            height: 250px;
+            min-width: 280px;
+            width: 280px;
+            height: 330px;
+            flex-shrink: 0;
         }
 
         .guide-img-bg {
@@ -664,13 +761,13 @@
         }
 
         .guide-name {
-            font-size: 1.3rem;
+            font-size: 1.45rem;
             font-weight: 700;
             margin: 5px 0;
         }
 
         .guide-desc {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
             line-height: 1.6;
             margin-bottom: 15px;
@@ -725,10 +822,44 @@
             font-weight: 600;
         }
 
-        .review-actions i {
+        .review-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .review-actions .like-btn {
+            background: none;
+            border: none;
             color: var(--text-muted);
-            margin-left: 10px;
+            padding: 6px 10px;
+            border-radius: 8px;
             cursor: pointer;
+            transition: all 0.25s ease;
+            font-size: 0.95rem;
+            line-height: 1;
+        }
+
+        .review-actions .like-btn:hover {
+            color: var(--primary-blue);
+            background: rgba(0, 136, 255, 0.1);
+            transform: scale(1.1);
+        }
+
+        .review-actions .like-btn.liked {
+            color: var(--primary-blue);
+            background: rgba(0, 136, 255, 0.15);
+        }
+
+        .review-actions .share-icon {
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 6px;
+            transition: color 0.2s ease;
+        }
+
+        .review-actions .share-icon:hover {
+            color: var(--primary-blue);
         }
 
         /* Footer */
@@ -830,30 +961,42 @@
                         class="fas fa-exchange-alt me-2"></i>Round-trip</button>
             </div>
             <div class="d-flex flex-column flex-lg-row gap-2 widget-inputs-container">
-                <div class="widget-input-group d-flex align-items-center gap-2">
+                <div class="widget-input-group d-flex align-items-center gap-2 origin-trigger">
                     <i class="fas fa-map-marker-alt text-primary"></i>
                     <div style="flex: 1;">
                         <label>Origin of Departure</label>
                         <input type="text" class="origin-input" placeholder="Select Home City" readonly>
                     </div>
                 </div>
-                <div class="widget-input-group d-flex align-items-center gap-2">
+                <div class="widget-input-group d-flex align-items-center gap-2 destination-trigger">
                     <i class="fas fa-exchange-alt text-primary"></i>
                     <div style="flex: 1;">
                         <label>Destination</label>
                         <input type="text" class="destination-input" placeholder="Select Destination" readonly>
                     </div>
                 </div>
-                <div class="widget-input-group d-flex align-items-center gap-2">
+                <div class="widget-input-group date-group d-flex align-items-center gap-2 date-trigger"
+                    data-target="departureDate">
                     <i class="far fa-calendar text-primary"></i>
                     <div style="flex: 1;">
                         <label>Departure Date</label>
-                        <input type="date" value="2026-07-10" placeholder="mm/dd/yyyy">
+                        <input type="date" id="departureDate" class="departure-date-input" value="2026-07-10"
+                            placeholder="mm/dd/yyyy">
+                    </div>
+                </div>
+                <div class="widget-input-group date-group return-date-field d-flex align-items-center gap-2 date-trigger"
+                    id="returnDateField" data-target="returnDate">
+                    <i class="far fa-calendar-check text-primary"></i>
+                    <div style="flex: 1;">
+                        <label>Return Date</label>
+                        <input type="date" id="returnDate" class="return-date-input" value="2026-07-17"
+                            placeholder="mm/dd/yyyy">
                     </div>
                 </div>
             </div>
             <div class="d-flex justify-content-between align-items-center mt-3 flex-wrap gap-2">
-                <small class="text-success fw-semibold"><i class="fas fa-check-circle me-1"></i>Best price guarantee for
+                <small class="price-guarantee fw-semibold"><i class="fas fa-check-circle me-1"></i>Best price guarantee
+                    for
                     your nature adventure!</small>
                 <button class="btn btn-primary fw-bold px-4 rounded-pill">Find Tickets</button>
             </div>
@@ -862,9 +1005,9 @@
 
     <!-- Most Popular Destinations -->
     <div class="container">
-        <div class="popular-destinations mb-5 pb-4 border-bottom">
-            <h4 class="fw-bold mb-1">Most Popular Destinations</h4>
-            <p class="text-muted small mb-4">Choose and plan for a refreshing nature experience</p>
+        <div class="popular-destinations mt-1 mb-5 pb-2 border-bottom">
+            <h4 class="fw-bold fs-2 mb-2">Most Popular Destinations</h4>
+            <p class="text-muted fs-4 mb-5">Choose and plan for a refreshing nature experience</p>
 
             <div class="scroll-horizontal">
                 <!-- Cards -->
@@ -878,8 +1021,7 @@
                         src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?q=80&w=500&auto=format&fit=crop"
                         alt="Pyramids"></div>
                 <div class="dest-tall-card"><img
-                        src="https://i.pinimg.com/736x/77/cf/c0/77cfc0f1417bfed013d059a92e187da0.jpg"
-                        alt="Paris"></div>
+                        src="https://i.pinimg.com/736x/77/cf/c0/77cfc0f1417bfed013d059a92e187da0.jpg" alt="Paris"></div>
                 <div class="dest-tall-card"><img
                         src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=500&auto=format&fit=crop"
                         alt="Rio"></div>
@@ -944,7 +1086,8 @@
                     </div>
                 </div>
 
-                <a href="../about-us/about.html" class="btn btn-primary fw-bold rounded-pill px-5 py-2 mt-2 premier-book-btn">Book Now</a>
+                <a href="../about-us/about.html"
+                    class="btn btn-primary fw-bold rounded-pill px-5 py-2 mt-2 premier-book-btn">Book Now</a>
             </div>
         </div>
     </div>
@@ -995,7 +1138,7 @@
                     <div class="position-relative">
                         <img src="https://images.unsplash.com/photo-1584810359583-96fc3448beaa?auto=format&fit=crop&w=600&q=80"
                             class="card-img-top" alt="Yogyakarta">
-                        <div class="heart-icon"><i class="fa-solid fa-heart" style="color: #ff4757;"></i></div>
+                        <div class="heart-icon liked"><i class="fa-solid fa-heart"></i></div>
                     </div>
                     <div class="card-body p-4">
                         <h5 class="package-title">Heritage Love in Yogyakarta</h5>
@@ -1212,8 +1355,9 @@
                         <span class="verified-badge"><i class="fa-solid fa-circle-check me-1"></i> VERIFIED
                             REVIEW</span>
                         <div class="review-actions">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                            <i class="fa-solid fa-share-nodes"></i>
+                            <button type="button" class="like-btn" aria-label="Like review"><i
+                                    class="fa-regular fa-thumbs-up"></i></button>
+                            <i class="fa-solid fa-share-nodes share-icon"></i>
                         </div>
                     </div>
                 </div>
@@ -1232,13 +1376,15 @@
                     <div class="stars mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                             class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                             class="fa-solid fa-star"></i></div>
-                    <p class="review-text">All flights were smooth and on time according to the schedule provided. its so really goods</p>
+                    <p class="review-text">All flights were smooth and on time according to the schedule provided. its
+                        so really goods</p>
                     <div class="review-footer">
                         <span class="verified-badge"><i class="fa-solid fa-circle-check me-1"></i> VERIFIED
                             REVIEW</span>
                         <div class="review-actions">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                            <i class="fa-solid fa-share-nodes"></i>
+                            <button type="button" class="like-btn" aria-label="Like review"><i
+                                    class="fa-regular fa-thumbs-up"></i></button>
+                            <i class="fa-solid fa-share-nodes share-icon"></i>
                         </div>
                     </div>
                 </div>
@@ -1263,8 +1409,9 @@
                         <span class="verified-badge"><i class="fa-solid fa-circle-check me-1"></i> VERIFIED
                             REVIEW</span>
                         <div class="review-actions">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                            <i class="fa-solid fa-share-nodes"></i>
+                            <button type="button" class="like-btn" aria-label="Like review"><i
+                                    class="fa-regular fa-thumbs-up"></i></button>
+                            <i class="fa-solid fa-share-nodes share-icon"></i>
                         </div>
                     </div>
                 </div>
@@ -1292,8 +1439,9 @@
                         <span class="verified-badge"><i class="fa-solid fa-circle-check me-1"></i> VERIFIED
                             REVIEW</span>
                         <div class="review-actions">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                            <i class="fa-solid fa-share-nodes"></i>
+                            <button type="button" class="like-btn" aria-label="Like review"><i
+                                    class="fa-regular fa-thumbs-up"></i></button>
+                            <i class="fa-solid fa-share-nodes share-icon"></i>
                         </div>
                     </div>
                 </div>
@@ -1318,8 +1466,9 @@
                         <span class="verified-badge"><i class="fa-solid fa-circle-check me-1"></i> VERIFIED
                             REVIEW</span>
                         <div class="review-actions">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                            <i class="fa-solid fa-share-nodes"></i>
+                            <button type="button" class="like-btn" aria-label="Like review"><i
+                                    class="fa-regular fa-thumbs-up"></i></button>
+                            <i class="fa-solid fa-share-nodes share-icon"></i>
                         </div>
                     </div>
                 </div>
@@ -1461,12 +1610,66 @@
             };
 
             const origins = {
-                'Asia': ['Jakarta, Indonesia', 'Kuala Lumpur, Malaysia', 'Manila, Philippines', 'Hanoi, Vietnam', 'New Delhi, India', 'Beijing, China'],
-                'Europe': ['Berlin, Germany', 'Madrid, Spain', 'Lisbon, Portugal', 'Vienna, Austria', 'Zurich, Switzerland', 'Stockholm, Sweden'],
-                'Africa': ['Johannesburg, South Africa', 'Casablanca, Morocco', 'Algiers, Algeria', 'Tunis, Tunisia', 'Dakar, Senegal', 'Abidjan, Ivory Coast'],
-                'America': ['Chicago, USA', 'Miami, USA', 'Mexico City, Mexico', 'Bogota, Colombia', 'Lima, Peru', 'Santiago, Chile'],
-                'Australia': ['Wellington, New Zealand', 'Christchurch, New Zealand', 'Adelaide, Australia', 'Canberra, Australia', 'Hobart, Australia'],
+                'Asia': [
+                    'Jakarta, Indonesia', 'Surabaya, Indonesia', 'Bali, Indonesia', 'Bandung, Indonesia',
+                    'Kuala Lumpur, Malaysia', 'Penang, Malaysia', 'Singapore', 'Bangkok, Thailand',
+                    'Chiang Mai, Thailand', 'Manila, Philippines', 'Cebu, Philippines', 'Hanoi, Vietnam',
+                    'Ho Chi Minh City, Vietnam', 'New Delhi, India', 'Mumbai, India', 'Beijing, China',
+                    'Shanghai, China', 'Hong Kong', 'Seoul, South Korea', 'Tokyo, Japan', 'Osaka, Japan'
+                ],
+                'Europe': [
+                    'London, UK', 'Manchester, UK', 'Paris, France', 'Lyon, France', 'Berlin, Germany',
+                    'Munich, Germany', 'Madrid, Spain', 'Barcelona, Spain', 'Rome, Italy', 'Milan, Italy',
+                    'Amsterdam, Netherlands', 'Brussels, Belgium', 'Vienna, Austria', 'Zurich, Switzerland',
+                    'Stockholm, Sweden', 'Oslo, Norway', 'Copenhagen, Denmark', 'Lisbon, Portugal',
+                    'Prague, Czech Republic', 'Warsaw, Poland', 'Athens, Greece', 'Istanbul, Turkey'
+                ],
+                'Africa': [
+                    'Johannesburg, South Africa', 'Cape Town, South Africa', 'Cairo, Egypt', 'Alexandria, Egypt',
+                    'Casablanca, Morocco', 'Marrakech, Morocco', 'Nairobi, Kenya', 'Lagos, Nigeria',
+                    'Accra, Ghana', 'Addis Ababa, Ethiopia', 'Algiers, Algeria', 'Tunis, Tunisia',
+                    'Dakar, Senegal', 'Abidjan, Ivory Coast', 'Kampala, Uganda', 'Dar es Salaam, Tanzania'
+                ],
+                'America': [
+                    'New York, USA', 'Los Angeles, USA', 'Chicago, USA', 'Miami, USA', 'San Francisco, USA',
+                    'Toronto, Canada', 'Vancouver, Canada', 'Mexico City, Mexico', 'Cancun, Mexico',
+                    'Bogota, Colombia', 'Lima, Peru', 'Santiago, Chile', 'Buenos Aires, Argentina',
+                    'Sao Paulo, Brazil', 'Rio de Janeiro, Brazil', 'Panama City, Panama', 'San Jose, Costa Rica'
+                ],
+                'Australia': [
+                    'Sydney, Australia', 'Melbourne, Australia', 'Brisbane, Australia', 'Perth, Australia',
+                    'Adelaide, Australia', 'Canberra, Australia', 'Hobart, Australia', 'Auckland, New Zealand',
+                    'Wellington, New Zealand', 'Christchurch, New Zealand', 'Queenstown, New Zealand', 'Fiji'
+                ],
             };
+
+            // Round-trip / One-way toggle
+            const tripTabs = document.querySelectorAll('.trip-tab');
+            const widgetInputs = document.querySelector('.widget-inputs-container');
+            const returnDateField = document.getElementById('returnDateField');
+            tripTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tripTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    const isRoundTrip = tab.dataset.trip === 'roundtrip';
+                    widgetInputs.classList.toggle('round-trip-active', isRoundTrip);
+                    returnDateField.classList.toggle('visible', isRoundTrip);
+                });
+            });
+            // Date picker trigger - klik seluruh area kotak untuk buka kalender
+            document.querySelectorAll('.date-trigger').forEach(group => {
+                const input = group.querySelector('input[type="date"]');
+                group.addEventListener('click', (e) => {
+                    // Hindari double trigger saat input itu sendiri diklik
+                    if (e.target !== input) {
+                        try {
+                            input.showPicker();
+                        } catch (err) {
+                            input.focus();
+                        }
+                    }
+                });
+            });
 
             // Destination Modal
             const destinationModal = document.getElementById('destinationModal');
@@ -1475,9 +1678,20 @@
             const destinationRegionStep = document.getElementById('destinationRegionStep');
             const destinationStep = document.getElementById('destinationStep');
             const destinationsGrid = document.getElementById('destinationsGrid');
-
-            destinationInput.addEventListener('click', () => destinationModal.classList.add('active'));
+            const destinationTrigger = document.querySelector('.destination-trigger');
+            destinationTrigger.addEventListener('click', (e) => {
+                // Don't open if the user clicks somewhere else (e.g. the modal is already open)
+                if (!destinationModal.classList.contains('active')) {
+                    destinationModal.classList.add('active');
+                }
+            });
             destinationModalClose.addEventListener('click', () => destinationModal.classList.remove('active'));
+            // Close modal when clicking outside content
+            destinationModal.addEventListener('click', (e) => {
+                if (e.target === destinationModal) {
+                    destinationModal.classList.remove('active');
+                }
+            });
 
             document.querySelectorAll('#destinationRegionStep .region-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
@@ -1516,9 +1730,19 @@
             const originRegionStep = document.getElementById('originRegionStep');
             const originStep = document.getElementById('originStep');
             const originsGrid = document.getElementById('originsGrid');
-
-            originInput.addEventListener('click', () => originModal.classList.add('active'));
+            const originTrigger = document.querySelector('.origin-trigger');
+            originTrigger.addEventListener('click', (e) => {
+                if (!originModal.classList.contains('active')) {
+                    originModal.classList.add('active');
+                }
+            });
             originModalClose.addEventListener('click', () => originModal.classList.remove('active'));
+            // Close modal when clicking outside content
+            originModal.addEventListener('click', (e) => {
+                if (e.target === originModal) {
+                    originModal.classList.remove('active');
+                }
+            });
 
             document.querySelectorAll('#originRegionStep .region-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
@@ -1549,6 +1773,33 @@
                     originsGrid.appendChild(button);
                 });
             }
+
+            // Heart icon toggle on Top Travel Packages
+            document.querySelectorAll('.heart-icon').forEach(heartBtn => {
+                heartBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    heartBtn.classList.toggle('liked');
+                    const icon = heartBtn.querySelector('i');
+                    if (heartBtn.classList.contains('liked')) {
+                        icon.className = 'fa-solid fa-heart';
+                    } else {
+                        icon.className = 'fa-regular fa-heart';
+                    }
+                });
+            });
+
+            // Like button on testimonials
+            document.querySelectorAll('.like-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    btn.classList.toggle('liked');
+                    const icon = btn.querySelector('i');
+                    if (btn.classList.contains('liked')) {
+                        icon.className = 'fa-solid fa-thumbs-up';
+                    } else {
+                        icon.className = 'fa-regular fa-thumbs-up';
+                    }
+                });
+            });
         });
     </script>
 </body>
