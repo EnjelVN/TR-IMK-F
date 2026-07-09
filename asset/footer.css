@@ -1,5 +1,5 @@
-        :root {
-            /* Jika variabel ini belum ada di css utama, kita set backup warnanya di sini */
+﻿        :root {
+            
             --footer-bg: #1f2937; 
             --primary-blue: #007c9c;
         }

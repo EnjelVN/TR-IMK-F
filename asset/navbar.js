@@ -1,7 +1,4 @@
-/* ==========================================
-   COMPONENT LOADER - JavaScript
-   File: asset/navbar.js (Bisa kamu rename jadi components.js jika mau)
-   ========================================== */
+﻿
 
 function loadComponent(componentPath, targetId, callback) {
     const target = document.getElementById(targetId);
@@ -20,10 +17,7 @@ function loadComponent(componentPath, targetId, callback) {
         .then(html => {
             target.innerHTML = html;
             
-            /* DI SINI KUNCINYA:
-               Kita cek, jika ID kontainernya adalah 'navbar-container', 
-               baru jalankan fungsi active link. Kalau footer, abaikan saja.
-            */
+            
             if (targetId === 'navbar-container') {
                 setActiveNavLink();
             }
@@ -38,9 +32,7 @@ function loadComponent(componentPath, targetId, callback) {
         });
 }
 
-/**
- * Set active class pada nav link (Hanya untuk Navbar)
- */
+
 function setActiveNavLink() {
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-link');
@@ -59,9 +51,7 @@ function setActiveNavLink() {
     });
 }
 
-/**
- * Mendeteksi semua tag HTML yang punya atribut [data-component]
- */
+
 function loadAllComponents() {
     const components = document.querySelectorAll('[data-component]');
     
@@ -71,7 +61,6 @@ function loadAllComponents() {
     });
 }
 
-// Jalankan otomatis
 document.addEventListener('DOMContentLoaded', function() {
     loadAllComponents();
 });

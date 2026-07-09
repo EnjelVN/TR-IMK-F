@@ -18,7 +18,7 @@
 
         a { text-decoration: none; }
 
-        /* --- Hero Section --- */
+        
         .hero-about {
             height: 450px;
             background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 100%), 
@@ -65,7 +65,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- Our Story Section --- */
+        
         .story-badge {
             color: var(--accent-blue);
             font-weight: 700;
@@ -144,7 +144,7 @@
             letter-spacing: 1px;
         }
 
-        /* --- Our Mission Section --- */
+        
         .mission-card {
             background: white;
             border-radius: 16px;
@@ -177,7 +177,7 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             border-color: var(--accent-blue);
         }
-        /* HAPUS efek pada icon */
+        
         .mission-icon {
             color: var(--accent-blue);
             font-size: 2rem;
@@ -248,7 +248,7 @@
             transform: scale(1.08);
         }
 
-        /* --- Our Team Section --- */
+        
         .team-card {
             position: relative;
             text-align: center;
@@ -408,7 +408,7 @@
             margin-top: 6px;
         }
 
-        /* --- CTA Banner --- */
+        
         .cta-banner {
             background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
             border-radius: 24px;
@@ -493,7 +493,7 @@
             box-shadow: 0 8px 25px rgba(255,255,255,0.2);
         }
 
-        /* Scroll Animation */
+        
         .scroll-reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -504,7 +504,7 @@
             transform: translateY(0);
         }
 
-        /* Responsive */
+        
         @media (max-width: 992px) {
             .hero-title { font-size: 2.5rem; }
             .collage-container { height: 300px; }
@@ -530,3 +530,4 @@
                 margin: 0 auto;
             }
         }
+

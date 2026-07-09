@@ -1,9 +1,6 @@
-        document.addEventListener('DOMContentLoaded', function() {
+﻿        document.addEventListener('DOMContentLoaded', function() {
 
-            // ========================================
-            // DATA PACKAGES PER CATEGORY
-            // ========================================
-            const packagesData = {
+                                                const packagesData = {
                 all: [
                     {
                         id: 1,
@@ -229,17 +226,13 @@
                 corporate: []
             };
 
-            // Populate category data
-            packagesData.all.forEach(pkg => {
+                        packagesData.all.forEach(pkg => {
                 if (packagesData[pkg.category]) {
                     packagesData[pkg.category].push(pkg);
                 }
             });
 
-            // ========================================
-            // RENDER PACKAGES
-            // ========================================
-            const packageGrid = document.getElementById('packageGrid');
+                                                const packageGrid = document.getElementById('packageGrid');
             const emptyState = document.getElementById('emptyState');
 
             function renderPackages(category) {
@@ -253,8 +246,7 @@
 
                 emptyState.style.display = 'none';
 
-                // Generate star rating HTML
-                function getStars(rating) {
+                                function getStars(rating) {
                     let html = '';
                     const fullStars = Math.floor(rating);
                     const halfStar = rating % 1 >= 0.5 ? 1 : 0;
@@ -307,8 +299,7 @@
 
                 packageGrid.innerHTML = html;
 
-                // Heart icon toggle
-                document.querySelectorAll('.heart-icon').forEach(icon => {
+                                document.querySelectorAll('.heart-icon').forEach(icon => {
                     icon.addEventListener('click', function(e) {
                         e.stopPropagation();
                         this.classList.toggle('liked');
@@ -322,15 +313,11 @@
                 });
             }
 
-            // ========================================
-            // CATEGORY FILTER
-            // ========================================
-            const categoryCards = document.querySelectorAll('.category-card');
+                                                const categoryCards = document.querySelectorAll('.category-card');
 
             categoryCards.forEach(card => {
                 card.addEventListener('click', function() {
-                    // Remove active from all
-                    categoryCards.forEach(c => c.classList.remove('active'));
+                                        categoryCards.forEach(c => c.classList.remove('active'));
                     this.classList.add('active');
 
                     const category = this.dataset.category;
@@ -338,10 +325,7 @@
                 });
             });
 
-            // ========================================
-            // TRIP TOGGLE (One-way / Round-trip)
-            // ========================================
-            const tripTabs = document.querySelectorAll('.trip-tab');
+                                                const tripTabs = document.querySelectorAll('.trip-tab');
             const returnDateField = document.getElementById('returnDateField');
 
             tripTabs.forEach(tab => {
@@ -353,10 +337,7 @@
                 });
             });
 
-            // ========================================
-            // DATE PICKER TRIGGER
-            // ========================================
-            document.querySelectorAll('.date-trigger').forEach(group => {
+                                                document.querySelectorAll('.date-trigger').forEach(group => {
                 const input = group.querySelector('input[type="date"]');
                 if (input) {
                     group.addEventListener('click', function(e) {
@@ -371,10 +352,7 @@
                 }
             });
 
-            // ========================================
-            // DATE MIN
-            // ========================================
-            const today = new Date().toISOString().split('T')[0];
+                                                const today = new Date().toISOString().split('T')[0];
             const departureDate = document.getElementById('departureDate');
             const returnDate = document.getElementById('returnDate');
 
@@ -393,9 +371,6 @@
                 returnDate.min = today;
             }
 
-            // ========================================
-            // INITIAL RENDER - Show all packages
-            // ========================================
-            renderPackages('all');
+                                                renderPackages('all');
 
         });
