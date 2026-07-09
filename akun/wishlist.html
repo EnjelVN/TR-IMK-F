@@ -1,210 +1,57 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artemis - Wishlist</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-blue: #0A72B4;
-            --soft-bg: #f4f6fa;
-            --dark-footer: #2b3340;
-            --text-main: #333;
-            --border-color: #eaeaea;
-        }
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--text-main);
-            background-color: #fbfbfb;
-            padding-top: 70px;
-        }
-
-        
-        .sidebar-nav {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .sidebar-link {
-            display: flex;
-            align-items: center;
-            padding: 12px 15px;
-            color: #666;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-            border-radius: 8px 0 0 8px;
-            transition: 0.3s;
-        }
-        .sidebar-link i {
-            width: 25px;
-            font-size: 1.1rem;
-        }
-        .sidebar-link:hover {
-            color: var(--primary-blue);
-            background-color: #f0f8ff;
-        }
-        .sidebar-link.active {
-            color: var(--primary-blue);
-            background-color: transparent;
-            border-right: 3px solid var(--primary-blue);
-            font-weight: 600;
-        }
-
-        
-        .wishlist-card {
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            transition: transform 0.2s;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        .wishlist-card:hover {
-            transform: translateY(-5px);
-        }
-        .img-container {
-            position: relative;
-            height: 220px;
-            width: 100%;
-        }
-        .img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .heart-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: white;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ff3b3b;
-            font-size: 1.3rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            cursor: pointer;
-            border: none;
-            transition: 0.2s;
-        }
-        .heart-btn:hover {
-            transform: scale(1.1);
-        }
-        
-        .card-body-custom {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .card-title {
-            font-weight: 700;
-            font-size: 1.25rem;
-            margin-bottom: 8px;
-        }
-        .card-desc {
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.4;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-        
-        
-        .card-meta-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-top: auto;
-        }
-        .meta-left .duration {
-            font-size: 0.8rem;
-            color: #666;
-            margin-bottom: 5px;
-        }
-        .meta-left .rating {
-            font-size: 0.8rem;
-            color: #666;
-        }
-        .rating i {
-            color: var(--primary-blue);
-            font-size: 0.75rem;
-            margin-left: 3px;
-            margin-right: 2px;
-        }
-        
-        .meta-right {
-            text-align: right;
-        }
-        .starting-from {
-            font-size: 0.75rem;
-            color: #888;
-            margin-bottom: 2px;
-            display: block;
-        }
-        .price {
-            font-weight: 700;
-            color: var(--primary-blue);
-            font-size: 1rem;
-        }
-
-    </style>
-    <link rel="stylesheet" href="../asset/css/common.css">
-<link rel="stylesheet" href="/asset/navbar.css">
-<link rel="stylesheet" href="/asset/footer.css">
-    <script src="/asset/navbar.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../asset/navbar.css">
+    <!-- <link rel="stylesheet" href="../asset/css/common.css"> -->
+    <link rel="stylesheet" href="../asset/css/akun.css">
+    <link rel="stylesheet" href="../asset/footer.css">
 </head>
 
 <body>
 
     <div id="navbar-container" data-component="/asset/navbar.html"></div>
 
-    
+
     <div class="container mt-5">
         <div class="row">
-            
-            
+
+            <!-- Sidebar -->
             <div class="col-lg-2 col-md-3 mb-4">
                 <ul class="sidebar-nav">
                     <li>
-                        <a href="#" class="sidebar-link">
+                        <a href="akun.html" class="sidebar-link">
                             <i class="fa-solid fa-border-all"></i> Dashboard
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="sidebar-link active">
+                        <a href="wishlist.html" class="sidebar-link active">
                             <i class="fa-solid fa-heart"></i> Wishlist
                         </a>
                     </li>
                 </ul>
             </div>
 
-            
+            <!-- Wishlist Content -->
             <div class="col-lg-10 col-md-9">
-                <div class="row g-4">
-                    
-                    
-                    <div class="col-lg-6 col-md-6">
+                <div class="row g-4" id="wishlistContainer">
+
+                    <div class="col-lg-6 col-md-6 wishlist-item" data-id="1">
                         <div class="wishlist-card">
                             <div class="img-container">
-                                <img src="https://images.unsplash.com/photo-1606556191410-d023f03b22e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Victoria Falls">
-                                <button class="heart-btn"><i class="fa-solid fa-heart"></i></button>
+                                <img src="https://images.unsplash.com/photo-1666732566977-8805c13a6ce2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Victoria Falls">
+                                <button class="heart-btn liked" data-id="1"><i class="fa-solid fa-heart"></i></button>
                             </div>
                             <div class="card-body-custom">
                                 <h3 class="card-title">Victoria Falls</h3>
@@ -223,12 +70,12 @@
                         </div>
                     </div>
 
-                    
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-6 col-md-6 wishlist-item" data-id="2">
                         <div class="wishlist-card">
                             <div class="img-container">
-                                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pyramids">
-                                <button class="heart-btn"><i class="fa-solid fa-heart"></i></button>
+                                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Pyramids">
+                                <button class="heart-btn liked" data-id="2"><i class="fa-solid fa-heart"></i></button>
                             </div>
                             <div class="card-body-custom">
                                 <h3 class="card-title">Sharm El Sheikh</h3>
@@ -247,12 +94,12 @@
                         </div>
                     </div>
 
-                    
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-6 col-md-6 wishlist-item" data-id="3">
                         <div class="wishlist-card">
                             <div class="img-container">
-                                <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Iceland">
-                                <button class="heart-btn"><i class="fa-solid fa-heart"></i></button>
+                                <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Iceland">
+                                <button class="heart-btn liked" data-id="3"><i class="fa-solid fa-heart"></i></button>
                             </div>
                             <div class="card-body-custom">
                                 <h3 class="card-title">Iceland Glacier Adventure</h3>
@@ -271,12 +118,12 @@
                         </div>
                     </div>
 
-                    
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-6 col-md-6 wishlist-item" data-id="4">
                         <div class="wishlist-card">
                             <div class="img-container">
-                                <img src="https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="New York">
-                                <button class="heart-btn"><i class="fa-solid fa-heart"></i></button>
+                                <img src="https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="New York">
+                                <button class="heart-btn liked" data-id="4"><i class="fa-solid fa-heart"></i></button>
                             </div>
                             <div class="card-body-custom">
                                 <h3 class="card-title">New York Explorer</h3>
@@ -295,12 +142,12 @@
                         </div>
                     </div>
 
-                    
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-6 col-md-6 wishlist-item" data-id="5">
                         <div class="wishlist-card">
                             <div class="img-container">
-                                <img src="https://images.unsplash.com/photo-1549422501-c88f117c06eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Chiang Mai">
-                                <button class="heart-btn"><i class="fa-solid fa-heart"></i></button>
+                                <img src="https://images.unsplash.com/photo-1578335144141-069e13ef7890?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Chiang Mai">
+                                <button class="heart-btn liked" data-id="5"><i class="fa-solid fa-heart"></i></button>
                             </div>
                             <div class="card-body-custom">
                                 <h3 class="card-title">Chiang Mai</h3>
@@ -324,11 +171,142 @@
         </div>
     </div>
 
-     <div id="footer-container" data-component="/asset/footer.html"></div>
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification">
+        <div class="toast-icon" id="toastIcon"><i class="fa-solid fa-heart"></i></div>
+        <div class="toast-content">
+            <h6 id="toastTitle">Wishlist Updated</h6>
+            <p id="toastMessage">Item has been removed from your wishlist.</p>
+        </div>
+        <button class="toast-close" onclick="closeToast()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <div id="footer-container" data-component="/asset/footer.html"></div>
 
 
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    <script src="/asset/navbar.js"></script>
+    <script>
+        (function () {
+            'use strict';
 
+            // ========== TOAST SYSTEM ==========
+            const toastEl = document.getElementById('toastNotification');
+            const toastTitle = document.getElementById('toastTitle');
+            const toastMessage = document.getElementById('toastMessage');
+            const toastIcon = document.getElementById('toastIcon');
+            let toastTimer = null;
+
+            function showToast(title, message, iconClass = 'fa-solid fa-heart', iconBg = 'e8f5e9', iconColor = '#2e7d32') {
+                toastTitle.textContent = title || 'Wishlist Updated';
+                toastMessage.innerHTML = message || 'Item has been updated.';
+                toastIcon.className = 'toast-icon ' + (iconBg ? '' : '');
+                // kita set background dan warna langsung di elemen
+                toastIcon.style.background = iconBg || '#e8f5e9';
+                toastIcon.style.color = iconColor || '#2e7d32';
+                const iconEl = toastIcon.querySelector('i');
+                if (iconEl) {
+                    iconEl.className = iconClass || 'fa-solid fa-heart';
+                } else {
+                    // jika tidak ada i, buat
+                    toastIcon.innerHTML = `<i class="${iconClass || 'fa-solid fa-heart'}"></i>`;
+                }
+
+                toastEl.classList.add('show');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(function () {
+                    toastEl.classList.remove('show');
+                }, 3500);
+            }
+
+            window.closeToast = function () {
+                toastEl.classList.remove('show');
+                clearTimeout(toastTimer);
+            };
+
+            // ========== WISHLIST TOGGLE ==========
+            function toggleWishlist(btn, card) {
+                const isLiked = btn.classList.contains('liked');
+                const icon = btn.querySelector('i');
+                const itemName = card ? card.querySelector('.card-title')?.textContent || 'Item' : 'Item';
+
+                if (isLiked) {
+                    // REMOVE FROM WISHLIST
+                    btn.classList.remove('liked');
+                    icon.className = 'fa-regular fa-heart';
+                    // Hapus card dengan animasi
+                    if (card) {
+                        card.style.transition = 'opacity 0.3s, transform 0.3s';
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.9)';
+                        setTimeout(() => {
+                            card.remove();
+                            showToast(
+                                'Removed from Wishlist',
+                                `<strong>${itemName}</strong> has been removed from your wishlist.`,
+                                'fa-regular fa-heart',
+                                '#fce4ec',
+                                '#c62828'
+                            );
+                            // Jika wishlist kosong, tampilkan pesan
+                            const container = document.getElementById('wishlistContainer');
+                            if (container && container.querySelectorAll('.wishlist-item').length === 0) {
+                                container.innerHTML = `
+                                    <div class="col-12 text-center py-5">
+                                        <i class="fa-regular fa-heart" style="font-size:3rem;color:#ccc;display:block;margin-bottom:15px;"></i>
+                                        <h5>Your wishlist is empty</h5>
+                                        <p class="text-muted">Start adding your favorite destinations!</p>
+                                    </div>
+                                `;
+                            }
+                        }, 300);
+                    }
+                } else {
+                    // ADD TO WISHLIST (misal dari tombol heart di card)
+                    btn.classList.add('liked');
+                    icon.className = 'fa-solid fa-heart';
+                    showToast(
+                        'Added to Wishlist',
+                        `<strong>${itemName}</strong> has been added to your wishlist.`,
+                        'fa-solid fa-heart',
+                        '#e8f5e9',
+                        '#2e7d32'
+                    );
+                }
+
+                // animasi pop
+                btn.classList.add('pop');
+                setTimeout(() => btn.classList.remove('pop'), 300);
+            }
+
+            // ========== ATTACH EVENT LISTENERS ==========
+            document.querySelectorAll('.heart-btn').forEach(function (btn) {
+                btn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const card = this.closest('.wishlist-item');
+                    toggleWishlist(this, card);
+                });
+            });
+
+            // ========== CLOSE TOAST ON OUTSIDE CLICK ==========
+            document.addEventListener('click', function (e) {
+                if (toastEl.classList.contains('show') && !toastEl.contains(e.target)) {
+                    closeToast();
+                }
+            });
+
+            // ========== CLOSE TOAST ON ESC ==========
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && toastEl.classList.contains('show')) {
+                    closeToast();
+                }
+            });
+
+            console.log('✅ Wishlist page initialized.');
+        })();
+    </script>
+</body>
+
+</html>

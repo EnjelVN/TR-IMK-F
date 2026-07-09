@@ -8,289 +8,62 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../asset/navbar.css">
+    <!-- <link rel="stylesheet" href="../asset/css/common.css"> -->
+    <link rel="stylesheet" href="../asset/css/akun.css">
+    <link rel="stylesheet" href="../asset/footer.css">
     
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-blue: #0A72B4;
-            --soft-bg: #f4f6fa;
-            --dark-footer: #2b3340;
-            --text-main: #333;
-            --border-color: #eaeaea;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--text-main);
-            background-color: #fbfbfb;
-            padding-top: 70px;
-        }
-
-        
-        .sidebar-nav {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .sidebar-link {
-            display: flex;
-            align-items: center;
-            padding: 12px 15px;
-            color: #666;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-            border-radius: 8px 0 0 8px;
-            transition: 0.3s;
-        }
-        .sidebar-link i {
-            width: 25px;
-            font-size: 1.1rem;
-        }
-        .sidebar-link:hover {
-            color: var(--primary-blue);
-            background-color: #f0f8ff;
-        }
-        .sidebar-link.active {
-            color: var(--primary-blue);
-            background-color: transparent;
-            border-right: 3px solid var(--primary-blue);
-            font-weight: 600;
-        }
-
-        
-        .profile-card {
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            background: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            overflow: visible; 
-        }
-        .banner-img {
-            height: 180px;
-            background: url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-            border-radius: 15px 15px 0 0;
-        }
-        .avatar-wrapper {
-            position: relative;
-            margin-top: -50px;
-            z-index: 2;
-            display: inline-block;
-        }
-        .profile-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 4px solid white;
-            object-fit: cover;
-            background-color: #e2f0d9; 
-        }
-        .status-dot {
-            width: 20px;
-            height: 20px;
-            background-color: #4CAF50;
-            border: 3px solid white;
-            border-radius: 50%;
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-        }
-        .quote-box {
-            background-color: #f1f3f5;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            color: #666;
-            max-width: 280px;
-            text-align: right;
-        }
-
-        
-        .stat-card {
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            height: 100%;
-            transition: transform 0.2s;
-        }
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-        .stat-card i {
-            font-size: 2rem;
-            color: var(--primary-blue);
-            margin-bottom: 15px;
-        }
-        .stat-card p {
-            color: #666;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-        .stat-card h3 {
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 0;
-        }
-
-        
-        .activities-card {
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-            height: 100%;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-        }
-        .activity-item {
-            display: flex;
-            padding: 15px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .activity-item:last-child {
-            border-bottom: none;
-        }
-        .activity-icon-wrapper {
-            width: 40px;
-            height: 40px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            color: #555;
-            flex-shrink: 0;
-        }
-        .activity-content h6 {
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 2px;
-        }
-        .activity-content p {
-            font-size: 0.7rem;
-            color: #888;
-            margin-bottom: 0;
-            line-height: 1.2;
-        }
-
-        
-        .booking-card {
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            margin-top: 30px;
-        }
-        .table-custom th {
-            font-weight: 600;
-            color: var(--text-main);
-            border-bottom: 2px solid #eee;
-            padding-bottom: 15px;
-        }
-        .table-custom td {
-            vertical-align: middle;
-            padding: 20px 10px;
-            font-size: 0.95rem;
-            color: #444;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .table-custom tr:last-child td {
-            border-bottom: none;
-        }
-        .text-blue { color: var(--primary-blue); font-weight: 500; }
-        .text-light-blue { color: #5dade2; }
-        .btn-download {
-            color: var(--primary-blue);
-            background: transparent;
-            border: none;
-            font-size: 1.2rem;
-            transition: 0.2s;
-        }
-        .btn-download:hover {
-            color: #085a90;
-        }
-
-        
-        @media (max-width: 768px) {
-            .quote-box {
-                display: none; 
-            }
-            .profile-card .card-body {
-                flex-direction: column;
-                align-items: flex-start !important;
-                text-align: left;
-            }
-            .table-responsive {
-                border: 0;
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="../asset/css/common.css">
-<link rel="stylesheet" href="/asset/navbar.css">
-<link rel="stylesheet" href="/asset/footer.css">
-    <script src="/asset/navbar.js"></script>
 </head>
-
 <body>
+<div id="navbar-container" data-component="/asset/navbar.html"></div>
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row g-4">
 
-    <div id="navbar-container" data-component="/asset/navbar.html"></div>
-
-    
-    <div class="container mt-5">
-        <div class="row">
-            
-            
             <div class="col-lg-2 col-md-3 mb-4">
                 <ul class="sidebar-nav">
                     <li>
-                        <a href="#" class="sidebar-link active">
+                        <a href="akun.html" class="sidebar-link active">
                             <i class="fa-solid fa-border-all"></i> Dashboard
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="sidebar-link">
-                            <i class="fa-regular fa-heart"></i> Wishlist
+                        <a href="wishlist.html" class="sidebar-link">
+                            <i class="fa-solid fa-heart"></i> Wishlist
                         </a>
                     </li>
                 </ul>
             </div>
 
-            
+            <!-- Dashboard Content (Right) -->
             <div class="col-lg-10 col-md-9">
                 
                 
                 <div class="profile-card mb-4">
                     <div class="banner-img"></div>
-                    <div class="card-body px-4 pb-4 pt-0 d-flex justify-content-between align-items-end">
+                    <div class="card-body px-4 pb-3 pt-0 d-flex justify-content-between align-items-end">
                         <div class="d-flex align-items-end">
                             <div class="avatar-wrapper">
-                                
                                 <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Budi" alt="Budi" class="profile-avatar">
                                 <span class="status-dot"></span>
                             </div>
-                            <div class="ms-3 mb-1 pb-1">
-                                <h4 class="mb-0 fw-bold">Welcome Back, Budi</h4>
+                            <div class="ms-3 mb-1">
+                                <h4 class="mb-0 fw-bold" style="font-size: 1.2rem;">Welcome Back, Budi</h4>
                                 <p class="text-muted mb-0 small"><i class="fa-regular fa-envelope me-1"></i> Budi01@gmail.com</p>
                             </div>
                         </div>
-                        <div class="quote-box mb-2">
+                        <div class="quote-box mb-1">
                             ready to visit a place even more fun than before?
                         </div>
                     </div>
                 </div>
 
-                
+                <!-- Stats & Recent Activities -->
                 <div class="row g-4 mb-4">
-                    
                     <div class="col-xl-8 col-lg-7">
                         <div class="row g-4 h-100">
-                            
                             <div class="col-md-4 col-sm-4">
                                 <div class="stat-card">
                                     <i class="fa-regular fa-map"></i>
@@ -298,7 +71,6 @@
                                     <h3>9</h3>
                                 </div>
                             </div>
-                            
                             <div class="col-md-4 col-sm-4">
                                 <div class="stat-card">
                                     <i class="fa-regular fa-heart"></i>
@@ -306,7 +78,6 @@
                                     <h3>5</h3>
                                 </div>
                             </div>
-                            
                             <div class="col-md-4 col-sm-4">
                                 <div class="stat-card">
                                     <i class="fa-regular fa-flag"></i>
@@ -317,43 +88,38 @@
                         </div>
                     </div>
 
-                    
                     <div class="col-xl-4 col-lg-5">
                         <div class="activities-card">
-                            <p class="text-muted small mb-3">Recent Activies</p>
-                            
+                            <p class="text-muted small mb-3"><i class="fa-regular fa-clock me-1"></i> Recent Activities</p>
                             
                             <div class="activity-item">
                                 <div class="activity-icon-wrapper"><i class="fa-solid fa-money-bill-wave"></i></div>
                                 <div class="activity-content">
-                                    <h6>Booking confirm</h6>
-                                    <p>Lorem ipsum<br>Lorem ipsum</p>
+                                    <h6>Booking confirmed</h6>
+                                    <p><span>Tokyo Luxury Escape</span> · 2 days ago</p>
                                 </div>
                             </div>
-                            
                             
                             <div class="activity-item">
                                 <div class="activity-icon-wrapper"><i class="fa-regular fa-comment"></i></div>
                                 <div class="activity-content">
                                     <h6>New review left</h6>
-                                    <p>Lorem ipsum<br>Lorem ipsum</p>
+                                    <p>You rated <span>Bromo Adventure</span> · 5 days ago</p>
                                 </div>
                             </div>
-                            
                             
                             <div class="activity-item border-bottom-0 pb-0">
                                 <div class="activity-icon-wrapper"><i class="fa-regular fa-heart"></i></div>
                                 <div class="activity-content">
                                     <h6>Wishlist added</h6>
-                                    <p>Lorem ipsum<br>Lorem ipsum</p>
+                                    <p>Added <span>Raja Ampat</span> to wishlist · 1 week ago</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
-                
+                <!-- Booking Table -->
                 <div class="booking-card">
                     <h5 class="fw-bold mb-4">Your Booking</h5>
                     <div class="table-responsive">
@@ -369,28 +135,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                
                                 <tr>
-                                    <td class="text-blue">#VQ- 2024-001</td>
+                                    <td class="text-blue">#VQ-2024-001</td>
                                     <td class="fw-bold">Tokyo Luxury<br>Escape</td>
                                     <td class="text-light-blue">12 Oct 2024</td>
                                     <td class="text-light-blue">2 People</td>
                                     <td class="fw-bold">Rp 15.400.000</td>
                                     <td>
-                                        <button class="btn-download" title="Download Invoice">
+                                        <button class="btn-download" data-booking="Tokyo Luxury Escape" title="Download Invoice">
                                             <i class="fa-solid fa-download"></i>
                                         </button>
                                     </td>
                                 </tr>
-                                
                                 <tr>
-                                    <td class="text-blue">#VQ- 2024-001</td>
+                                    <td class="text-blue">#VQ-2024-002</td>
                                     <td class="fw-bold">Bromo Volcanic<br>Adventure</td>
                                     <td class="text-light-blue">17 Oct 2024</td>
                                     <td class="text-light-blue">10 People</td>
                                     <td class="fw-bold">Rp 15.400.000</td>
                                     <td>
-                                        <button class="btn-download" title="Download Invoice">
+                                        <button class="btn-download" data-booking="Bromo Volcanic Adventure" title="Download Invoice">
                                             <i class="fa-solid fa-download"></i>
                                         </button>
                                     </td>
@@ -404,11 +168,94 @@
         </div>
     </div>
 
-    
-<div id="footer-container" data-component="/asset/footer.html"></div>
-
-    
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification">
+        <div class="toast-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="toast-content">
+            <h6 id="toastTitle">Invoice Downloaded</h6>
+            <p id="toastMessage">Your invoice for <strong>Tokyo Luxury Escape</strong> has been downloaded.</p>
+        </div>
+        <button class="toast-close" onclick="closeToast()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div id="footer-container" data-component="/asset/footer.html"></div>
+<script src="../asset/navbar.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        (function() {
+            'use strict';
+
+            // --- Toast Notification ---
+            const toastEl = document.getElementById('toastNotification');
+            const toastTitle = document.getElementById('toastTitle');
+            const toastMessage = document.getElementById('toastMessage');
+            let toastTimer = null;
+
+            function showToast(title, message, icon = 'fa-solid fa-check') {
+                toastTitle.textContent = title || 'Success';
+                toastMessage.innerHTML = message || 'Action completed successfully.';
+                const iconEl = toastEl.querySelector('.toast-icon i');
+                if (iconEl) iconEl.className = icon;
+                toastEl.classList.add('show');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(function() {
+                    toastEl.classList.remove('show');
+                }, 4000);
+            }
+
+            window.closeToast = function() {
+                toastEl.classList.remove('show');
+                clearTimeout(toastTimer);
+            };
+
+            // --- Download Button ---
+            document.querySelectorAll('.btn-download').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const bookingName = this.dataset.booking || 'your booking';
+                    showToast(
+                        'Invoice Downloaded',
+                        'Your invoice for <strong>' + bookingName + '</strong> has been downloaded successfully.',
+                        'fa-solid fa-file-pdf'
+                    );
+                    this.style.transform = 'scale(0.88)';
+                    setTimeout(() => { this.style.transform = ''; }, 250);
+                    console.log('Downloading invoice for:', bookingName);
+                });
+            });
+
+            // --- Sidebar Active ---
+            document.querySelectorAll('.sidebar-link').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    document.querySelectorAll('.sidebar-link').forEach(function(l) {
+                        l.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+
+            // --- Close toast on outside click ---
+            document.addEventListener('click', function(e) {
+                if (toastEl.classList.contains('show') && !toastEl.contains(e.target)) {
+                    closeToast();
+                }
+            });
+
+            // --- ESC key to close ---
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && toastEl.classList.contains('show')) {
+                    closeToast();
+                }
+            });
+
+            console.log('✅ Dashboard initialized.');
+        })();
+    </script>
+
 </body>
 </html>
-
