@@ -1,0 +1,293 @@
+        :root {
+            --teal-dark: #007c9c;
+            --primary-blue: #007c9c;
+            --soft-bg: #f4f6fa;
+            --dark-footer: #2b3340;
+            --text-main: #333;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-main);
+        }
+
+        /* Navbar */
+        .navbar-brand img {
+            height: 30px;
+        }
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-main);
+            margin: 0 10px;
+        }
+        .nav-link.active {
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 50px;
+        }
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            backdrop-filter: blur(5px);
+        }
+        .hero-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .btn-custom-primary {
+            background-color: var(--teal-dark);
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-weight: 500;
+        }
+        .btn-custom-primary:hover {
+            background-color: #085a90;
+            color: white;
+        }
+
+        /* Quick Info Cards */
+        .quick-info-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+        .quick-info-card i {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        /* Pricing Cards */
+        .pricing-card {
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            position: relative;
+        }
+        .pricing-card.premium {
+            border: 2px solid var(--primary-blue);
+            box-shadow: 0 10px 30px rgba(10, 114, 180, 0.15);
+            transform: scale(1.02);
+        }
+        .badge-popular {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #56CCF2;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        .feature-list li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        .feature-list i {
+            color: #27ae60;
+            margin-right: 10px;
+        }
+        .btn-outline-custom {
+            border: 1px solid #ddd;
+            color: var(--primary-blue);
+            border-radius: 25px;
+            width: 100%;
+            font-weight: 500;
+        }
+        .pricing-card.premium .btn-outline-custom {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+        }
+
+        /* Facilities Section */
+        .facilities-section {
+            background-color: var(--soft-bg);
+            padding: 60px 0;
+        }
+        .facility-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .facility-icon {
+            background: #e3f2fd;
+            color: var(--primary-blue);
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        /* Itinerary Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #ddd;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-item.left {
+            left: 0;
+            text-align: right;
+        }
+        .timeline-item.right {
+            left: 50%;
+        }
+        .timeline-item::after {
+            content: attr(data-day);
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: -15px;
+            background-color: var(--primary-blue);
+            border: 4px solid white;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+            color: white;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .timeline-item.right::after {
+            left: -15px;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: var(--soft-bg);
+            padding: 60px 0;
+        }
+        .guide-img {
+            border-radius: 15px;
+            width: 100%;
+            max-width: 300px;
+            object-fit: cover;
+        }
+        .guide-tag {
+            color: var(--primary-blue);
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .btn-outline-blue {
+            border: 1px solid var(--primary-blue);
+            color: var(--primary-blue);
+            border-radius: 20px;
+            padding: 8px 30px;
+        }
+
+        /* Reviews */
+        .review-card {
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 15px;
+            padding: 25px;
+            height: 100%;
+        }
+        .review-stars {
+            color: #f1c40f;
+            margin-bottom: 15px;
+        }
+        .reviewer-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-footer);
+            color: #a0aabf;
+            padding: 60px 0 20px;
+        }
+        footer h5 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        footer a {
+            color: #a0aabf;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        footer a:hover {
+            color: white;
+        }
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left; }
+            .timeline-item.left { text-align: left; }
+            .timeline-item::after { left: 15px; right: auto; }
+            .timeline-item.right { left: 0; }
+            .timeline-item.right::after { left: 15px; }
+            .pricing-card.premium { transform: scale(1); margin-top: 30px; margin-bottom: 30px;}
+        }

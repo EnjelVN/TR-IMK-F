@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis - Surfing Adventure Bali</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="detailtour.css">
+    <link rel="stylesheet" href="/asset/navbar.css">
+</head>
+<script src="/asset/navbar.js"></script>
+
+<body>
+
+    <div id="navbar-container" data-component="/asset/navbar.html"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;">
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-2">Surfing Adventure Bali</h1>
+            <div class="d-flex align-items-center gap-4 mb-3 text-light">
+                <div><i class="fa-regular fa-clock me-2"></i> <span>5 Days</span></div>
+                <div><i class="fa-solid fa-users me-2"></i> <span>Up to 4 People</span></div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col-md-8">
+                    <p class="mb-0">Starting from</p>
+                    <div class="d-flex align-items-center gap-4">
+                        <span class="hero-price">IDR 3.200.000</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <button class="btn btn-custom-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <section class="container py-5 mt-n5 position-relative z-1">
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-clock"></i>
+                    <p class="text-muted mb-1 small">Duration</p>
+                    <h6 class="fw-bold mb-0">5 Days</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-solid fa-user-friends"></i>
+                    <p class="text-muted mb-1 small">Capacity</p>
+                    <h6 class="fw-bold mb-0">Up to 4 People</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-solid fa-water"></i>
+                    <p class="text-muted mb-1 small">Activity</p>
+                    <h6 class="fw-bold mb-0">Surf & Beach</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-star"></i>
+                    <p class="text-muted mb-1 small">Rating</p>
+                    <h6 class="fw-bold mb-0">4.8 (278)</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Categories -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold text-primary mb-5" style="color: var(--primary-blue) !important;">Select Your Wave Camp</h3>
+        <div class="row g-4 align-items-center justify-content-center">
+            <!-- Beginner Package -->
+            <div class="col-md-5">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Beginner Surf School</h5>
+                    <p class="text-muted small mb-4">Perfect for absolute beginners looking to catch their very first wave safely</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 3.200.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> Foam Surfboard Rental (Soft top)</li>
+                        <li><i class="fa-regular fa-circle-check"></i> 1-on-1 Certified ISA Instructor</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Basic Ocean Safety & Paddling Lessons</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Cozy Surf Hostel Stay (AC Room)</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Intermediate Package -->
+            <div class="col-md-5">
+                <div class="pricing-card premium">
+                    <span class="badge-popular">POPULAR</span>
+                    <h5 class="fw-bold">Reef Break Explorer</h5>
+                    <p class="text-muted small mb-4">For intermediate surfers wanting to ride Bali's famous reef breaks</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 4.500.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> Premium Hardtop/Fiber Surfboard Rental</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Guided Surf Guiding to Uluwatu & Canggu</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Video Analysis & Photo Session</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Private Beachside Bungalow</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Provided -->
+    <section class="facilities-section">
+        <div class="container">
+            <h5 class="fw-bold mb-4">Facilities Provided</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Top-Tier Surf Gear</h6>
+                            <p class="text-muted small mb-0">High-quality boards (all sizes), zinc sunscreen, rash guards, and safety leashes provided.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-user-check"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">ISA Certified Coaches</h6>
+                            <p class="text-muted small mb-0">Learn directly from professional instructors with International Surfing Association licenses.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-camera"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">GoPro & Drone Documentation</h6>
+                            <p class="text-muted small mb-0">High-res surf photography and drone footage to capture your best rides and analyze form.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-truck-pickup"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Surf Spot Transfers</h6>
+                            <p class="text-muted small mb-0">Daily boat or car shuttle to the spots with the absolute best wave conditions of the day.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-house-flood-water"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Beachside Lodging</h6>
+                            <p class="text-muted small mb-0">Stay at premium surf camps or hostels located just walking distance from the shoreline.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-kit-medical"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">First Aid & Insurance</h6>
+                            <p class="text-muted small mb-0">Full coverage medical kit on-site with basic ocean rescue and local water sports protection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Itinerary -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">5-Day Surf Camp Itinerary</h3>
+        <div class="timeline">
+            <div class="timeline-item left" data-day="1">
+                <p class="text-muted small mb-0">Day 1</p>
+                <h6 class="fw-bold">Welcome to Camp & Theory Briefing</h6>
+                <p class="text-muted small">Airport pickup, check-in at the surf camp, board matching session, followed by an evening dry-land briefing on ocean safety and pop-up mechanics.</p>
+            </div>
+            <div class="timeline-item right" data-day="2">
+                <p class="text-muted small mb-0">Day 2</p>
+                <h6 class="fw-bold">First Splash: Kintamani/Kuta Beach Break</h6>
+                <p class="text-muted small">Morning surf session on soft sandy breaks to practice paddling, catching white water waves, and nailing the basic pop-up stance with coaches.</p>
+            </div>
+            <div class="timeline-item left" data-day="3">
+                <p class="text-muted small mb-0">Day 3</p>
+                <h6 class="fw-bold">Canggu Sunset Cruise & Green Wave Hype</h6>
+                <p class="text-muted small">Moving on to catch uninterrupted green waves. Afternoon video analysis to review riding postures, followed by sunset chilling at Batu Bolong beach.</p>
+            </div>
+            <div class="timeline-item right" data-day="4">
+                <p class="text-muted small mb-0">Day 4</p>
+                <h6 class="fw-bold">Uluwatu Road Trip & Drone Shooting</h6>
+                <p class="text-muted small">Epic trip to the southern cliffs. Watch pros or try out intermediate points around Padang Padang or Balangan with drone footage rolling.</p>
+            </div>
+            <div class="timeline-item left" data-day="5">
+                <p class="text-muted small mb-0">Day 5</p>
+                <h6 class="fw-bold">Graduation Surf & Departure Logistics</h6>
+                <p class="text-muted small">Final dawn-patrol surf session to show off your progress, certificate distribution, media file transfers, and afternoon airport shuttle.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendation Our Guide -->
+    <section class="guide-section">
+        <div class="container text-center text-md-start">
+            <h3 class="fw-bold mb-5 text-center">Recommendation Our Instructor</h3>
+            <div class="row align-items-center justify-content-center bg-white p-4 p-md-5 rounded shadow-sm mx-2 mx-md-5">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Instructor Made" class="guide-img" style="border-radius: 20px; width: 100%; max-width: 250px;">
+                </div>
+                <div class="col-md-8 px-md-4">
+                    <p class="guide-tag mb-1" style="background: #e0f2fe; color: #0369a1; display: inline-block; padding: 2px 10px; border-radius: 4px; font-weight: bold; font-size: 12px;">PRO SURFER & COACH</p>
+                    <h3 class="fw-bold">Meet your coach, Bli Made</h3>
+                    <div class="text-warning mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span class="text-muted small ms-2 text-dark">4.9 (278 Reviews)</span>
+                    </div>
+                    <p class="text-muted small mb-4">
+                        Made grew up riding the legendary breaks of Uluwatu. He's extremely patient with beginners, exceptional at reading daily ocean swells, and guarantees you'll stand up on your board within your very first lesson.
+                    </p>
+                    <div class="d-flex gap-4 mb-4 justify-content-center justify-content-md-start">
+                        <div>
+                            <p class="text-muted small mb-0">Certifications</p>
+                            <h6 class="fw-bold fs-6">ISA Level 2, Surf Lifesaving</h6>
+                        </div>
+                        <div>
+                            <p class="text-muted small mb-0">Experience</p>
+                            <h6 class="fw-bold fs-6">12+ Years Coaching</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-blue">More Instructors</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What They Say -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">What They Say?</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Awalnya takut banget sama ombak dalam, tapi Bli Made sabar banget ngajarin teorinya di darat dulu. Hari kedua udah bisa berdiri seimbang di papan! Seru parah!"</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="reviewer-img" alt="Jessica" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Jessica Milner</h6>
+                            <p class="text-muted small mb-0">Beginner Surfer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Fasilitas fotonya juara! Dapat video drone pas lagi take-off di Canggu, keren banget buat diposting. Camp-nya bersih dan vibes teman-teman di sini asik abis."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/62.jpg" class="reviewer-img" alt="Rian" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Rian Ardiansyah</h6>
+                            <p class="text-muted small mb-0">Intermediate Pack</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Harganya affordable banget buat paket komplit 5 hari udah dapet penginapan, alat, plus guide lokal yang tahu spot-spot ombak rahasia yang gak terlalu ramai turis."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/28.jpg" class="reviewer-img" alt="Nadia" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Nadia Putri</h6>
+                            <p class="text-muted small mb-0">Solo Backpacker</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-blue">More Reviews</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold d-flex align-items-center text-white">
+                        <i class="fa-solid fa-location-arrow me-2"></i>Artemis
+                    </h5>
+                    <p class="small mt-3 pe-4">Experience exceptional travel, authentic cultural immersions, and unforgettable adventures. Let your dream destination become a reality.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Explore</h5>
+                    <a href="../index.html">Home</a>
+                    <a href="../destination/destination.html">Destination</a>
+                    <a href="../tour/tour.html">Tour Package</a>
+                    <a href="../guide/guide.html">Tour Guide</a>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Support</h5>
+                    <a href="../faq/contact.html">Contact Us</a>
+                    <a href="../faq/faq.html">FAQ</a>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Legal</h5>
+                    <a href="../Legal/privacy.html">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="../Legal/cookie.html">Cookie Policy</a>
+                    <a href="../Legal/disclamer.html">Disclaimer</a>
+                </div>
+            </div>
+            <hr class="mt-4 border-secondary">
+            <div class="text-center small mt-4">
+                © 2024 Skytianton Travel Marketplace. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

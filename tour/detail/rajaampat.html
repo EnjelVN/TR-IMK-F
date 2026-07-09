@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis - Raja Ampat Diving Adventure</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="detailtour.css">
+    <link rel="stylesheet" href="/asset/navbar.css">
+</head>
+<script src="/asset/navbar.js"></script>
+
+<body>
+
+    <div id="navbar-container" data-component="/asset/navbar.html"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('https://images.unsplash.com/photo-1583212292454-1fe6229603b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;">
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-2">Raja Ampat Diving Adventure</h1>
+            <div class="d-flex align-items-center gap-4 mb-3 text-light">
+                <div><i class="fa-regular fa-clock me-2"></i> <span>8 Days</span></div>
+                <div><i class="fa-solid fa-user-group me-2"></i> <span>Up to 6 People</span></div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col-md-8">
+                    <p class="mb-0">Starting from</p>
+                    <div class="d-flex align-items-center gap-4">
+                        <span class="hero-price">IDR 8.500.000</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <button class="btn btn-custom-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <section class="container py-5 mt-n5 position-relative z-1">
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-clock"></i>
+                    <p class="text-muted mb-1 small">Duration</p>
+                    <h6 class="fw-bold mb-0">8 Days</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-solid fa-users"></i>
+                    <p class="text-muted mb-1 small">Capacity</p>
+                    <h6 class="fw-bold mb-0">Up to 6 People</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-solid fa-water"></i>
+                    <p class="text-muted mb-1 small">Type Tour</p>
+                    <h6 class="fw-bold mb-0">Marine Exploration</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-star"></i>
+                    <p class="text-muted mb-1 small">Rating</p>
+                    <h6 class="fw-bold mb-0">4.9 (189)</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Categories -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold text-primary mb-5" style="color: var(--primary-blue) !important;">Select An Adventure Category</h3>
+        <div class="row g-4 align-items-center">
+            <!-- Homestay Explorer -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Island Homestay Eco</h5>
+                    <p class="text-muted small mb-4">Authentic local living for passionate snorkelers & divers</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 8.500.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> Traditional Overwater Homestay</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Daily Shared Boat Snorkeling</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Piaynemo Viewpoint Excursion</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Fullboard Local Village Meals</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Deluxe Resort -->
+            <div class="col-md-4">
+                <div class="pricing-card premium">
+                    <span class="badge-popular">POPULAR</span>
+                    <h5 class="fw-bold">Deluxe Dive Resort</h5>
+                    <p class="text-muted small mb-4">Perfect balance of pristine nature and comfort</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 14.200.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> Premium Eco-Resort Stay</li>
+                        <li><i class="fa-regular fa-circle-check"></i> 6x Guided Boat Dives + Gear</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Wayag & Piaynemo Island Hopping</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Airport Speedboat Transfers</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Luxury Liveaboard -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Luxury Phinisi Liveaboard</h5>
+                    <p class="text-muted small mb-4">The ultimate sailing and deep-sea diving fantasy</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 26.500.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> Luxury Phinisi Ship En-suite Cabin</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Unlimited Guided Diving (Nitrox avail.)</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Remote Uncharted Dive Spots Access</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Onboard Chef Gourmet Dining</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Provided -->
+    <section class="facilities-section">
+        <div class="container">
+            <h5 class="fw-bold mb-4">Facilities Provided</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-swatchbook"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Full Diving Equipment</h6>
+                            <p class="text-muted small mb-0">High-grade tanks, BCDs, regulators, fins, and wetsuits tailored to your size.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-anchor"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Island-Hopping Speedboat</h6>
+                            <p class="text-muted small mb-0">Twin-engine high-speed boat to cruise swiftly between islands and dive spots.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-id-card"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Raja Ampat Marine PIN</h6>
+                            <p class="text-muted small mb-0">Official environment conservation permit tag required for entries included.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-person-swimming"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Certified Dive Master</h6>
+                            <p class="text-muted small mb-0">Expert local guides showing you pygmy seahorses, manta rays, and pristine corals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-shuttle-space"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Sorong Port Logistics</h6>
+                            <p class="text-muted small mb-0">Hassle-free meet-and-greet service at Sorong Airport straight to the harbor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-bowl-food"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Fullboard Meals (3x Daily)</h6>
+                            <p class="text-muted small mb-0">Freshly prepared local seafood catch, tropical fruits, and energy-boosting snacks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Itinerary -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">8-Day Expedition Itinerary</h3>
+        <div class="timeline">
+            <div class="timeline-item left" data-day="1">
+                <p class="text-muted small mb-0">Day 1</p>
+                <h6 class="fw-bold">Sorong Arrival & Marine Transit to Waisai</h6>
+                <p class="text-muted small">Pickup at Sorong Airport (SOQ), board the VIP ferry or private speedboat to Waisai, settle into your accommodation, and prepare dive logs.</p>
+            </div>
+            <div class="timeline-item right" data-day="2">
+                <p class="text-muted small mb-0">Day 2</p>
+                <h6 class="fw-bold">Check-dive & Dampier Strait Marine Life</h6>
+                <p class="text-muted small">Orientation dive at Friwen Wall. Followed by an incredible drift dive at Cape Kri to witness one of the highest fish biodiversity counts on Earth.</p>
+            </div>
+            <div class="timeline-item left" data-day="3">
+                <p class="text-muted small mb-0">Day 3</p>
+                <h6 class="fw-bold">Manta Sandy Station & Arborek Village</h6>
+                <p class="text-muted small">Dive with majestic reef manta rays at Manta Sandy cleaning station. Spend the afternoon taking a cultural walk around the beautiful Arborek Tourism Village.</p>
+            </div>
+            <div class="timeline-item right" data-day="4">
+                <p class="text-muted small mb-0">Day 4</p>
+                <h6 class="fw-bold">The Iconic Piaynemo Karst & Star Lagoon</h6>
+                <p class="text-muted small">Hike up the wooden stairs to view the legendary emerald karst island panorama of Piaynemo. Swim around the crystal-clear hidden Telaga Bintang.</p>
+            </div>
+            <div class="timeline-item left" data-day="5">
+                <p class="text-muted small mb-0">Day 5</p>
+                <h6 class="fw-bold">Deep Adventure to Wayag Island Cluster</h6>
+                <p class="text-muted small">An early long-range cruise to Wayag. Climb the challenging peak for the ultimate post-card view of Raja Ampat, and swim with friendly blacktip reef sharks at the beach.</p>
+            </div>
+            <div class="timeline-item right" data-day="6">
+                <p class="text-muted small mb-0">Day 6</p>
+                <h6 class="fw-bold">Blue Magic & Sardine Reef Deep Dive</h6>
+                <p class="text-muted small">Advanced pinnacle diving at Blue Magic and Sardine Reef to spot schooling barracudas, jacks, grey reef sharks, and the unique Wobbegong shark.</p>
+            </div>
+            <div class="timeline-item left" data-day="7">
+                <p class="text-muted small mb-0">Day 7</p>
+                <h6 class="fw-bold">Pasir Timbul Sandbar & Return to Sorong</h6>
+                <p class="text-muted small">Visit the magical floating sandbar of Pasir Timbul for photos, catch the afternoon ferry back to Sorong city, and celebrate with a farewell dinner.</p>
+            </div>
+            <div class="timeline-item right" data-day="8">
+                <p class="text-muted small mb-0">Day 8</p>
+                <h6 class="fw-bold">Souvenir Shopping & Airport Departure</h6>
+                <p class="text-muted small">Shop for local Papuan handwoven bags (Noken) or traditional snacks, and transfer back to Sorong Airport for your flight home. End of paradise tour.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendation Our Guide -->
+    <section class="guide-section">
+        <div class="container text-center text-md-start">
+            <h3 class="fw-bold mb-5 text-center">Recommendation Our Guide</h3>
+            <div class="row align-items-center justify-content-center bg-white p-4 p-md-5 rounded shadow-sm mx-2 mx-md-5">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Guide Christo" class="guide-img" style="border-radius: 20px; width: 100%; max-width: 250px;">
+                </div>
+                <div class="col-md-8 px-md-4">
+                    <p class="guide-tag mb-1" style="background: #e0f7fa; color: #006064; display: inline-block; padding: 2px 10px; border-radius: 4px; font-weight: bold; font-size: 12px;">PADI MASTER DIVER</p>
+                    <h3 class="fw-bold">Meet your host, Kak Christo</h3>
+                    <div class="text-warning mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span class="text-muted small ms-2 text-dark">4.9 (189 Reviews)</span>
+                    </div>
+                    <p class="text-muted small mb-4">
+                        Christo is a Sorong-born master diver who has spent over 1,500 hours exploring the underwater matrix of Raja Ampat. He knows the exact tidal shifts and current safety windows for flawless macro photography.
+                    </p>
+                    <div class="d-flex gap-4 mb-4 justify-content-center justify-content-md-start">
+                        <div>
+                            <p class="text-muted small mb-0">Languages</p>
+                            <h6 class="fw-bold fs-6">English, Indonesian, Papuan Malay</h6>
+                        </div>
+                        <div>
+                            <p class="text-muted small mb-0">Experience</p>
+                            <h6 class="fw-bold fs-6">7+ Years Dive Expedition</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-blue">More Guide</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What They Say -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">What They Say?</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Pengalaman diving terbaik seumur hidup saya! Terumbu karangnya luar biasa sehat. Cape Kri bener-bener dipenuhi jutaan ikan melintas, magis banget!"</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/62.jpg" class="reviewer-img" alt="Denny" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Denny Setiawan</h6>
+                            <p class="text-muted small mb-0">Rescue Diver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Meskipun saya cuma ikut paket snorkeling, kapten dan Kak Christo perhatian banget ngejaga kelompok kecil kami pas ada arus di Manta Sandy. Pemandangan Wayag tiada dua."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" class="reviewer-img" alt="Elena" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Elena & Group</h6>
+                            <p class="text-muted small mb-0">Nature Lover</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Sangat puas dengan fasilitas makanan fullboard-nya, seafood-nya selalu segar setiap hari. Logistik penyeberangan kapal dari Sorong ke pulau diatur sangat rapi."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/25.jpg" class="reviewer-img" alt="Aris" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Aris Munandar</h6>
+                            <p class="text-muted small mb-0">Advance Scuba Diver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-blue">More Review</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold d-flex align-items-center text-white">
+                        <i class="fa-solid fa-location-arrow me-2"></i>Artemis
+                    </h5>
+                    <p class="small mt-3 pe-4">Experience exceptional travel, authentic cultural immersions, and unforgettable adventures. Let your dream destination become a reality.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Explore</h5>
+                    <a href="../index.html">Home</a>
+                    <a href="../destination/destination.html">Destination</a>
+                    <a href="../tour/tour.html">Tour Package</a>
+                    <a href="../guide/guide.html">Tour Guide</a>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Support</h5>
+                    <a href="../faq/contact.html">Contact Us</a>
+                    <a href="../faq/faq.html">FAQ</a>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Legal</h5>
+                    <a href="../Legal/privacy.html">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="../Legal/cookie.html">Cookie Policy</a>
+                    <a href="../Legal/disclamer.html">Disclaimer</a>
+                </div>
+            </div>
+            <hr class="mt-4 border-secondary">
+            <div class="text-center small mt-4">
+                © 2024 Skytianton Travel Marketplace. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

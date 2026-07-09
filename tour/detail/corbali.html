@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis - Corporate Retreat Bali</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="corporate.css">
+    <link rel="stylesheet" href="/asset/navbar.css">
+</head>
+<script src="/asset/navbar.js"></script>
+
+<body>
+
+    <div id="navbar-container" data-component="/asset/navbar.html"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;">
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-2">Corporate Retreat Bali</h1>
+            <div class="d-flex align-items-center gap-4 mb-3 text-light">
+                <div><i class="fa-regular fa-clock me-2"></i> <span>5 Days</span></div>
+                <div><i class="fa-solid fa-users me-2"></i> <span>10–20 People</span></div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col-md-8">
+                    <p class="mb-0">Starting from</p>
+                    <div class="d-flex align-items-center gap-4">
+                        <span class="hero-price">IDR 12.500.000</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <button class="btn btn-custom-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <section class="container py-5 mt-n5 position-relative z-1">
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-clock"></i>
+                    <p class="text-muted mb-1 small">Duration</p>
+                    <h6 class="fw-bold mb-0">5 Days</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-user"></i>
+                    <p class="text-muted mb-1 small">Capacity</p>
+                    <h6 class="fw-bold mb-0">10–20 People</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <p class="text-muted mb-1 small">Type Tour</p>
+                    <h6 class="fw-bold mb-0">Corporate/Team</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-star"></i>
+                    <p class="text-muted mb-1 small">Rating</p>
+                    <h6 class="fw-bold mb-0">4.6 (95)</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Categories -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold text-primary mb-5" style="color: var(--primary-blue) !important;">Select A Travel Category</h3>
+        <div class="row g-4 align-items-center">
+            <!-- Basic Package -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Team Bonding Starter</h5>
+                    <p class="text-muted small mb-4">Essential team workshop & gathering</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 12.500.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> 4-Star Business Hotel Stay</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Half-Day Meeting Room Facilities</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Half-Day Team Building Activity</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Coordinated Bus Transportation</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Premium Package -->
+            <div class="col-md-4">
+                <div class="pricing-card premium">
+                    <span class="badge-popular">POPULAR</span>
+                    <h5 class="fw-bold">Executive Innovation</h5>
+                    <p class="text-muted small mb-4">The ultimate balance of strategy & relaxation</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 16.200.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> 5-Star Beachfront Resort Stay</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Full-Day Premium Ballroom Access</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Custom Team Building & Culture Trip</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Gala Dinner with Seafood BBQ</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Luxury Package -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Elite Leadership Summit</h5>
+                    <p class="text-muted small mb-4">High-end luxury private estate retreat</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 24.000.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> Private Luxury Villa Complex Blockout</li>
+                        <li><i class="fa-regular fa-circle-check"></i> VIP Airport Fast-Track Handling</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Private Yacht Sunset Cruise Meeting</li>
+                        <li><i class="fa-regular fa-circle-check"></i> All-Inclusive Fine Dining Experience</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Provided -->
+    <section class="facilities-section">
+        <div class="container">
+            <h5 class="fw-bold mb-4">Facilities Provided</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Fully Equipped Meeting Room</h6>
+                            <p class="text-muted small mb-0">High-speed Wi-Fi, modern projectors, audio sound systems, and stationery.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-people-group"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Professional Team Facilitator</h6>
+                            <p class="text-muted small mb-0">Expert coaches to lead indoor or outdoor ice-breaking and alignment games.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-bus"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Dedicated Group Fleet</h6>
+                            <p class="text-muted small mb-0">Private air-conditioned tour bus available exclusively for your team throughout the trip.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-pepper-hot"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Catering & Coffee Breaks</h6>
+                            <p class="text-muted small mb-0">Customized group buffet menus and premium coffee break snacks during workshops.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-video"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Documentation Team</h6>
+                            <p class="text-muted small mb-0">Full coverage of your company activities including highlight videos and photos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-award"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Custom Merchandise</h6>
+                            <p class="text-muted small mb-0">Complimentary customized company event polo shirts and corporate gift bags.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Itinerary -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">Retreat Itinerary</h3>
+        <div class="timeline">
+            <div class="timeline-item left" data-day="1">
+                <p class="text-muted small mb-0">Day 1</p>
+                <h6 class="fw-bold">Arrival & Welcoming Dinner</h6>
+                <p class="text-muted small">Airport reception, check-in to your resort, followed by a casual welcoming briefing and sunset dinner to kick off the corporate trip.</p>
+            </div>
+            <div class="timeline-item right" data-day="2">
+                <p class="text-muted small mb-0">Day 2</p>
+                <h6 class="fw-bold">Strategy Workshop & Brainstorming Session</h6>
+                <p class="text-muted small">Full-day conference in the main ballroom, complete with morning/afternoon coffee breaks and focused team collaborative discussions.</p>
+            </div>
+            <div class="timeline-item left" data-day="3">
+                <p class="text-muted small mb-0">Day 3</p>
+                <h6 class="fw-bold">Outdoor Team Building & Amazing Race</h6>
+                <p class="text-muted small">Fun and engaging character-building group dynamic challenges around cultural venues to enhance collaboration and alignment.</p>
+            </div>
+            <div class="timeline-item right" data-day="4">
+                <p class="text-muted small mb-0">Day 4</p>
+                <h6 class="fw-bold">Cultural Exploration & Gala Dinner Celebration</h6>
+                <p class="text-muted small">Visit scenic landmarks for group photo sessions, followed by an elegant corporate milestone appreciation gala dinner with live entertainment.</p>
+            </div>
+            <div class="timeline-item left" data-day="5">
+                <p class="text-muted small mb-0">Day 5</p>
+                <h6 class="fw-bold">Souvenir Shopping & Departure</h6>
+                <p class="text-muted small">Leisure morning wrap-up session, checkout, stopover at local cultural handicraft hubs for souvenir hunting, and airport check-in.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendation Our Guide -->
+    <section class="guide-section">
+        <div class="container text-center text-md-start">
+            <h3 class="fw-bold mb-5 text-center">Recommendation Our Guide</h3>
+            <div class="row align-items-center justify-content-center bg-white p-4 p-md-5 rounded shadow-sm mx-2 mx-md-5">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Guide Made" class="guide-img" style="border-radius: 20px; width: 100%; max-width: 250px;">
+                </div>
+                <div class="col-md-8 px-md-4">
+                    <p class="guide-tag mb-1" style="background: #e3f2fd; color: #0d47a1; display: inline-block; padding: 2px 10px; border-radius: 4px; font-weight: bold; font-size: 12px;">MICE COORDINATOR</p>
+                    <h3 class="fw-bold">Meet your coordinator, Made Sukarta</h3>
+                    <div class="text-warning mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        <span class="text-muted small ms-2 text-dark">4.8 (95 Reviews)</span>
+                    </div>
+                    <p class="text-muted small mb-4">
+                        Made is an experienced corporate event manager in Bali. He specializes in handling complex group logistics, managing ballroom setups, and organizing massive outdoor outbound schedules seamlessly.
+                    </p>
+                    <div class="d-flex gap-4 mb-4 justify-content-center justify-content-md-start">
+                        <div>
+                            <p class="text-muted small mb-0">Languages</p>
+                            <h6 class="fw-bold fs-6">English, Indonesian</h6>
+                        </div>
+                        <div>
+                            <p class="text-muted small mb-0">Experience</p>
+                            <h6 class="fw-bold fs-6">8+ Years Corporate Events</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-blue">More Guide</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What They Say -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">What They Say?</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Koordinasi tim lapangan luar biasa. Pengaturan dari penjemputan bandara hingga technical meeting room sangat profesional. Karyawan kami sangat puas!"</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="reviewer-img" alt="Yusuf" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Yusuf Mansur</h6>
+                            <p class="text-muted small mb-0">HR Director, Tech Corp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Acara amazing race dan outbound-nya seru banget dan berhasil merekatkan kerja sama tim kami. Sangat recommended untuk gathering kantor."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="reviewer-img" alt="Siti" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Siti Rahma</h6>
+                            <p class="text-muted small mb-0">Operation Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Gala dinner dan sesi foto bersamanya berkesan sekali. Layanan katering tepat waktu dan akomodasi hotel bintang 5-nya mewah."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/81.jpg" class="reviewer-img" alt="Denny" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Denny H.</h6>
+                            <p class="text-muted small mb-0">VP Executive</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-blue">More Review</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold d-flex align-items-center text-white">
+                        <i class="fa-solid fa-location-arrow me-2"></i>Artemis
+                    </h5>
+                    <p class="small mt-3 pe-4">Experience exceptional travel, authentic cultural immersions, and unforgettable adventures. Let your dream destination become a reality.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Explore</h5>
+                    <a href="../index.html">Home</a>
+                    <a href="../destination/destination.html">Destination</a>
+                    <a href="../tour/tour.html">Tour Package</a>
+                    <a href="../guide/guide.html">Tour Guide</a>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Support</h5>
+                    <a href="../faq/contact.html">Contact Us</a>
+                    <a href="../faq/faq.html">FAQ</a>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Legal</h5>
+                    <a href="../Legal/privacy.html">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="../Legal/cookie.html">Cookie Policy</a>
+                    <a href="../Legal/disclamer.html">Disclaimer</a>
+                </div>
+            </div>
+            <hr class="mt-4 border-secondary">
+            <div class="text-center small mt-4">
+                © 2024 Skytianton Travel Marketplace. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

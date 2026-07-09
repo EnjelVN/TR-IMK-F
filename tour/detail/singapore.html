@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis - Family Fun in Singapore</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="detailtour.css">
+    <link rel="stylesheet" href="/asset/navbar.css">
+</head>
+<script src="/asset/navbar.js"></script>
+
+<body>
+
+    <div id="navbar-container" data-component="/asset/navbar.html"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;">
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-2">Family Fun in Singapore</h1>
+            <div class="d-flex align-items-center gap-4 mb-3 text-light">
+                <div><i class="fa-regular fa-clock me-2"></i> <span>5 Days</span></div>
+                <div><i class="fa-solid fa-users me-2"></i> <span>Up to 6 People</span></div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col-md-8">
+                    <p class="mb-0">Starting from</p>
+                    <div class="d-flex align-items-center gap-4">
+                        <span class="hero-price">IDR 6.200.000</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <button class="btn btn-custom-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <section class="container py-5 mt-n5 position-relative z-1">
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-clock"></i>
+                    <p class="text-muted mb-1 small">Duration</p>
+                    <h6 class="fw-bold mb-0">5 Days</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-user"></i>
+                    <p class="text-muted mb-1 small">Participant</p>
+                    <h6 class="fw-bold mb-0">Up to 6 People</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-map"></i>
+                    <p class="text-muted mb-1 small">Type Tour</p>
+                    <h6 class="fw-bold mb-0">Family Private</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-star"></i>
+                    <p class="text-muted mb-1 small">Rating</p>
+                    <h6 class="fw-bold mb-0">4.8 (156)</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Categories -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold text-primary mb-5" style="color: var(--primary-blue) !important;">Select A Travel Category</h3>
+        <div class="row g-4 align-items-center">
+            <!-- Basic Package -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Basic Package</h5>
+                    <p class="text-muted small mb-4">Standard family city explorer</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 6.200.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> 3-Star Hotel (Fragrance/Value)</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Public Transport Card (EZ-Link)</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Jewel Changi & Merlion Park</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Up to 4 Participants</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Premium Package -->
+            <div class="col-md-4">
+                <div class="pricing-card premium">
+                    <span class="badge-popular">POPULAR</span>
+                    <h5 class="fw-bold">Premium Package</h5>
+                    <p class="text-muted small mb-4">The ultimate fun & comfortable holiday</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 8.500.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> 4-Star Hotel near Orchard/Marina</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Universal Studios Singapore Ticket</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Gardens by the Bay Entry</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Up to 6 Participants</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Luxury Package -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Luxury Package</h5>
+                    <p class="text-muted small mb-4">Ultimate premium private luxury</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 12.900.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> Marina Bay Sands / 5-Star Stay</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Private Alphard Car & Driver</li>
+                        <li><i class="fa-regular fa-circle-check"></i> VIP Pass Universal Studios</li>
+                        <li><i class="fa-regular fa-circle-check"></i> All Fine Dining Included</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Provided -->
+    <section class="facilities-section">
+        <div class="container">
+            <h5 class="fw-bold mb-4">Facilities Provided</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-hotel"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Family Friendly Hotel</h6>
+                            <p class="text-muted small mb-0">Comfortable rooms tailored for families with children.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-train-subway"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Easy Connectivity</h6>
+                            <p class="text-muted small mb-0">Preloaded EZ-Link cards or private transfers for easy transit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-ticket"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">All-In Attraction Passes</h6>
+                            <p class="text-muted small mb-0">Direct access tickets to Singapore's top world-class destinations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Local Tour Companion</h6>
+                            <p class="text-muted small mb-0">Friendly multi-lingual local host to guide your city walks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-camera"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Family Photo Session</h6>
+                            <p class="text-muted small mb-0">Professional documentation at Merlion Park and Marina Bay.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">International Insurance</h6>
+                            <p class="text-muted small mb-0">Full safety coverage for peace of mind during your stay.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Itinerary -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">Travel Itinerary</h3>
+        <div class="timeline">
+            <div class="timeline-item left" data-day="1">
+                <p class="text-muted small mb-0">Day 1</p>
+                <h6 class="fw-bold">Welcome to Singapore & Jewel Exploration</h6>
+                <p class="text-muted small">Arrive at Changi, explore the HSBC Rain Vortex at Jewel, check-in to your hotel, and enjoy a night walk at Clarke Quay.</p>
+            </div>
+            <div class="timeline-item right" data-day="2">
+                <p class="text-muted small mb-0">Day 2</p>
+                <h6 class="fw-bold">Universal Studios Singapore (USS) Full Day</h6>
+                <p class="text-muted small">Spend an exciting all-day adventure exploring the movie-themed rides and shows at Sentosa Island.</p>
+            </div>
+            <div class="timeline-item left" data-day="3">
+                <p class="text-muted small mb-0">Day 3</p>
+                <h6 class="fw-bold">City Landmarks & Gardens by the Bay</h6>
+                <p class="text-muted small">Visit Merlion Park, snap family photos, then head over to the spectacular Flower Dome and Supertree Grove light show.</p>
+            </div>
+            <div class="timeline-item right" data-day="4">
+                <p class="text-muted small mb-0">Day 4</p>
+                <h6 class="fw-bold">Science Centre & Orchard Road Shopping</h6>
+                <p class="text-muted small">Interactive science fun for children in the morning, followed by retail shopping and local culinary treats at Orchard Road.</p>
+            </div>
+            <div class="timeline-item left" data-day="5">
+                <p class="text-muted small mb-0">Day 5</p>
+                <h6 class="fw-bold">Souvenir Hunting & Departure</h6>
+                <p class="text-muted small">Explore Bugis Street or Chinatown for unique souvenirs before transferring back to Changi Airport for departure.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendation Our Guide -->
+    <section class="guide-section">
+        <div class="container text-center text-md-start">
+            <h3 class="fw-bold mb-5 text-center">Recommendation Our Guide</h3>
+            <div class="row align-items-center justify-content-center bg-white p-4 p-md-5 rounded shadow-sm mx-2 mx-md-5">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Guide Elaine" class="guide-img" style="border-radius: 20px; width: 100%; max-width: 250px;">
+                </div>
+                <div class="col-md-8 px-md-4">
+                    <p class="guide-tag mb-1" style="background: #ede7f6; color: #4a148c; display: inline-block; padding: 2px 10px; border-radius: 4px; font-weight: bold; font-size: 12px;">TOP RATED COMPANION</p>
+                    <h3 class="fw-bold">Meet your host, Elaine Tan</h3>
+                    <div class="text-warning mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span class="text-muted small ms-2 text-dark">4.9 (156 Reviews)</span>
+                    </div>
+                    <p class="text-muted small mb-4">
+                        Elaine is born and raised in Singapore. She specializes in crafting kid-friendly urban tours and finding hidden culinary gems that the whole family can enjoy.
+                    </p>
+                    <div class="d-flex gap-4 mb-4 justify-content-center justify-content-md-start">
+                        <div>
+                            <p class="text-muted small mb-0">Languages</p>
+                            <h6 class="fw-bold fs-6">English, Malay, Mandarin</h6>
+                        </div>
+                        <div>
+                            <p class="text-muted small mb-0">Experience</p>
+                            <h6 class="fw-bold fs-6">6+ Years Professional</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-blue">More Guide</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What They Say -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">What They Say?</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Bawa anak-anak dan orang tua pakai paket premium ini praktis sekali. Masuk USS lancar tanpa ribet antre tiket fisik!"</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="reviewer-img" alt="Hendra W." style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Dewi S.</h6>
+                            <p class="text-muted small mb-0">Family Trip</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Elaine ramah banget dan sabar nungguin rombongan kami yang bawa stroller. Anak-anak happy banget!"</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/52.jpg" class="reviewer-img" alt="Budi" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Budi K.</h6>
+                            <p class="text-muted small mb-0">Parents of 2 Kids</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Sangat recommended untuk liburan keluarga perdana ke luar negeri. Semua itinerary tertata rapi dan informatif."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/22.jpg" class="reviewer-img" alt="Rina" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Rina T.</h6>
+                            <p class="text-muted small mb-0">Family Group</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-blue">More Review</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold d-flex align-items-center text-white">
+                        <i class="fa-solid fa-location-arrow me-2"></i>Artemis
+                    </h5>
+                    <p class="small mt-3 pe-4">Experience exceptional travel, authentic cultural immersions, and unforgettable adventures. Let your dream destination become a reality.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Explore</h5>
+                    <a href="../index.html">Home</a>
+                    <a href="../destination/destination.html">Destination</a>
+                    <a href="../tour/tour.html">Tour Package</a>
+                    <a href="../guide/guide.html">Tour Guide</a>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Support</h5>
+                    <a href="../faq/contact.html">Contact Us</a>
+                    <a href="../faq/faq.html">FAQ</a>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Legal</h5>
+                    <a href="../Legal/privacy.html">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="../Legal/cookie.html">Cookie Policy</a>
+                    <a href="../Legal/disclamer.html">Disclaimer</a>
+                </div>
+            </div>
+            <hr class="mt-4 border-secondary">
+            <div class="text-center small mt-4">
+                © 2024 Skytianton Travel Marketplace. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

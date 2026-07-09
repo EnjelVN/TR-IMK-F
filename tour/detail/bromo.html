@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis - Bromo Volcanic Adventure</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="detailtour.css">
+    <link rel="stylesheet" href="/asset/navbar.css">
+</head>
+<script src="/asset/navbar.js"></script>
+
+<body>
+
+    <div id="navbar-container" data-component="/asset/navbar.html"></div>
+
+    <section class="hero-section">
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-2">Bromo Volcanic Adventure</h1>
+            <div class="d-flex align-items-center gap-4 mb-3 text-light">
+                <div><i class="fa-regular fa-clock me-2"></i> <span>1 Days</span></div>
+                <div><i class="fa-solid fa-users me-2"></i> <span>10 - 20 People</span></div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col-md-8">
+                    <p class="mb-0">Starting from</p>
+                    <div class="d-flex align-items-center gap-4">
+                        <span class="hero-price">IDR 350.000</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <button class="btn btn-custom-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 mt-n5 position-relative z-1">
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-clock"></i>
+                    <p class="text-muted mb-1 small">Duration</p>
+                    <h6 class="fw-bold mb-0">1 Days</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-user"></i>
+                    <p class="text-muted mb-1 small">participant</p>
+                    <h6 class="fw-bold mb-0">10 - 20 People</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-map"></i>
+                    <p class="text-muted mb-1 small">Type Tour</p>
+                    <h6 class="fw-bold mb-0">Open Trip</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-star"></i>
+                    <p class="text-muted mb-1 small">Rating</p>
+                    <h6 class="fw-bold mb-0">4.9</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h3 class="text-center fw-bold text-primary mb-5" style="color: var(--primary-blue) !important;">Select A Travel Category</h3>
+        <div class="row g-4 align-items-center">
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Basic Package</h5>
+                    <p class="text-muted small mb-4">Shared Transportation</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 3.400.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> 1-Night Accommodation</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Shared Transportation</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Bromo Entrance Ticket</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Up to 12 Participants</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card premium">
+                    <span class="badge-popular">POPULAR</span>
+                    <h5 class="fw-bold">Premium Package</h5>
+                    <p class="text-muted small mb-4">The best and most comfortable experience</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 4.800.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> Professional Photographer</li>
+                        <li><i class="fa-regular fa-circle-check"></i> All Entrance Tickets</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Drone Photography & Videography</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Up to 20 Participants</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Luxury Package</h5>
+                    <p class="text-muted small mb-4">Complete privacy and luxury</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 8.900.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> 5-Star Hotel (1 Night)</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Professional Tour Leader</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Private AC Transportation</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Up to 15 Participants</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="facilities-section">
+        <div class="container">
+            <h5 class="fw-bold mb-4">Facilities Provided</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-hotel"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">1 Night Accommodation</h6>
+                            <p class="text-muted small mb-0">Stay in a strategic location near Mount Bromo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-car"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Air-Conditioned Transportation</h6>
+                            <p class="text-muted small mb-0">Modern vehicles equipped with air conditioning for a comfortable journey.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-ticket"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">All Entrance Tickets</h6>
+                            <p class="text-muted small mb-0">All admission tickets to Bromo Tengger Semeru National Park.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Professional Tour Guide</h6>
+                            <p class="text-muted small mb-0">Friendly and experienced guides who speak English and Indonesian.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-truck-monster"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Bromo 4x4 Jeep Tour</h6>
+                            <p class="text-muted small mb-0">Experience the thrilling jeep adventure across the Sea of Sand.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Travel Insurance</h6>
+                            <p class="text-muted small mb-0">Comprehensive coverage throughout the tour program.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">Travel Itinerary</h3>
+        <div class="timeline">
+            <div class="timeline-item left" data-day="1">
+                <p class="text-muted small mb-0">Day 1</p>
+                <h6 class="fw-bold">Departure & Sunrise Tour</h6>
+                <p class="text-muted small">Meet up at hotel/airport, midnight departure to Bromo, witness the spectacular sunrise from Penanjakan.</p>
+            </div>
+            <div class="timeline-item right" data-day="2">
+                <p class="text-muted small mb-0">Day 2</p>
+                <h6 class="fw-bold">Bromo Crater & Savanna Exploration</h6>
+                <p class="text-muted small">Explore Bromo Crater, Whispering Sands, and Savanna (Teletubbies Hill). Return to hotel and check out.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="guide-section">
+        <div class="container text-center text-md-start">
+            <h3 class="fw-bold mb-5 text-center">Recommendation Our Guide</h3>
+            <div class="row align-items-center justify-content-center bg-white p-4 p-md-5 rounded shadow-sm mx-2 mx-md-5">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Guide Calvin" class="guide-img" style="border-radius: 20px; width: 100%; max-width: 250px;">
+                </div>
+                <div class="col-md-8 px-md-4">
+                    <p class="guide-tag mb-1" style="background: #e3f2fd; color: #0d47a1; display: inline-block; padding: 2px 10px; border-radius: 4px; font-weight: bold; font-size: 12px;">BEST GUIDE</p>
+                    <h3 class="fw-bold">Meet your host, Calvin Chen</h3>
+                    <div class="text-warning mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span class="text-muted small ms-2 text-dark">5.0 (150 Reviews)</span>
+                    </div>
+                    <p class="text-muted small mb-4">
+                        Calvin has over 8 years of experience guiding tours in East Java, specializing in volcano trekking and landscape photography.
+                    </p>
+                    <div class="d-flex gap-4 mb-4 justify-content-center justify-content-md-start">
+                        <div>
+                            <p class="text-muted small mb-0">Languages</p>
+                            <h6 class="fw-bold fs-6">English, Mandarin, Indonesian</h6>
+                        </div>
+                        <div>
+                            <p class="text-muted small mb-0">Experience</p>
+                            <h6 class="fw-bold fs-6">8+ Years Professional</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-blue">More Guide</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">What They Say?</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Witnessing the sunrise over Bromo was an unforgettable experience! Our guide was super helpful and took amazing photos. Highly recommended!"</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" class="reviewer-img" alt="Sarah L." style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Sarah L.</h6>
+                            <p class="text-muted small mb-0">Solo Traveler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Amazing service! Everything was well-arranged from the jeep to the hotel. Highly recommend this tour."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" class="reviewer-img" alt="Rendy H." style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Rendy H.</h6>
+                            <p class="text-muted small mb-0">Family Traveler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Friendly guide, professional driver, and stunning views. Definitely worth it!"</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" class="reviewer-img" alt="Alex" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Alex</h6>
+                            <p class="text-muted small mb-0">Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-blue">More Review</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold d-flex align-items-center text-white">
+                        <i class="fa-solid fa-location-arrow me-2"></i>Artemis
+                    </h5>
+                    <p class="small mt-3 pe-4">Experience exceptional travel, authentic cultural immersions, and unforgettable adventures. Let your dream destination become a reality.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Explore</h5>
+                    <a href="../index.html">Home</a>
+                    <a href="../destination/destination.html">Destination</a>
+                    <a href="../tour/tour.html">Tour Package</a>
+                    <a href="../guide/guide.html">Tour Guide</a>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Support</h5>
+                    <a href="../faq/contact.html">Contact Us</a>
+                    <a href="../faq/faq.html">FAQ</a>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Legal</h5>
+                    <a href="../Legal/privacy.html">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="../Legal/cookie.html">Cookie Policy</a>
+                    <a href="../Legal/disclamer.html">Disclaimer</a>
+                </div>
+            </div>
+            <hr class="mt-4 border-secondary">
+            <div class="text-center small mt-4">
+                © 2024 Skytianton Travel Marketplace. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

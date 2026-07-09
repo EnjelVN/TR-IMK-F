@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis - Executive Retreat Lombok</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="detailtour.css">
+    <link rel="stylesheet" href="/asset/navbar.css">
+</head>
+<script src="/asset/navbar.js"></script>
+
+<body>
+
+    <div id="navbar-container" data-component="/asset/navbar.html"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1515238153691-3b4258f96e48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;">
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-2">Executive Retreat Lombok</h1>
+            <div class="d-flex align-items-center gap-4 mb-3 text-light">
+                <div><i class="fa-regular fa-clock me-2"></i> <span>6 Days</span></div>
+                <div><i class="fa-solid fa-users me-2"></i> <span>8-15 People</span></div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col-md-8">
+                    <p class="mb-0">Starting from</p>
+                    <div class="d-flex align-items-center gap-4">
+                        <span class="hero-price">IDR 15.000.000</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <button class="btn btn-custom-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <section class="container py-5 mt-n5 position-relative z-1">
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-clock"></i>
+                    <p class="text-muted mb-1 small">Duration</p>
+                    <h6 class="fw-bold mb-0">6 Days</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-solid fa-users-gear"></i>
+                    <p class="text-muted mb-1 small">Capacity</p>
+                    <h6 class="fw-bold mb-0">8-15 People</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-solid fa-ship"></i>
+                    <p class="text-muted mb-1 small">Type Tour</p>
+                    <h6 class="fw-bold mb-0">Premium Corporate</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-star"></i>
+                    <p class="text-muted mb-1 small">Rating</p>
+                    <h6 class="fw-bold mb-0">4.7 (67)</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Categories -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold text-primary mb-5" style="color: var(--primary-blue) !important;">Select A Retreat Category</h3>
+        <div class="row g-4 align-items-center">
+            <!-- Silver Package -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Corporate Bonding</h5>
+                    <p class="text-muted small mb-4">Essential premium comfort for group dynamics</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 15.000.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> 4-Star Beachfront Resort Stay</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Shared Catamaran Gili Tour</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Fullboard Catering & Gala Dinner</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Half-day Team Building Facilitator</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Gold Package -->
+            <div class="col-md-4">
+                <div class="pricing-card premium">
+                    <span class="badge-popular">POPULAR</span>
+                    <h5 class="fw-bold">Executive Suite Elite</h5>
+                    <p class="text-muted small mb-4">Highly recommended for premium leadership retreats</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 18.500.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> 5-Star Luxury Resort (Senggigi)</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Private Luxury Yacht Charter</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Exclusive Beachside Seafood BBQ</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Dedicated VIP Transport Fleet</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Diamond Package -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Presidential Board VIP</h5>
+                    <p class="text-muted small mb-4">Ultimate luxury and total privacy for high boards</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 24.000.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> Ultra-Luxury Private Villa Estate</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Superyacht Sunset Cruise & DJ</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Fine Dining Wine Pairing Menu</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Premium Wellness & Spa Treatments</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Provided -->
+    <section class="facilities-section">
+        <div class="container">
+            <h5 class="fw-bold mb-4">Facilities Provided</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-ship"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Private Yacht Cruise</h6>
+                            <p class="text-muted small mb-0">Exclusive access to a luxury yacht to sail smoothly around the secret Gili islands.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Luxury Resort Grounds</h6>
+                            <p class="text-muted small mb-0">Premium beachfront accommodations ensuring high tranquility and security.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-people-group"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Team Building Coordination</h6>
+                            <p class="text-muted small mb-0">Fun, strategic team exercises managed by certified experienced facilitators.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-utensils"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Elite Fullboard Dining</h6>
+                            <p class="text-muted small mb-0">Five-star catering, beachside galas, and gourmet seafood menus daily.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-sheet-plastic"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Meeting & Lounge Amenities</h6>
+                            <p class="text-muted small mb-0">High-speed connectivity and modern AV presentation setups available.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-car-rear"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Premium Ground Fleet</h6>
+                            <p class="text-muted small mb-0">Comfortable executive Alphard or premium van transfers throughout the trip.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Itinerary -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">Retreat Itinerary</h3>
+        <div class="timeline">
+            <div class="timeline-item left" data-day="1">
+                <p class="text-muted small mb-0">Day 1</p>
+                <h6 class="fw-bold">VIP Arrival, Welcome Toast & Briefing</h6>
+                <p class="text-muted small">Airport welcome service, premium vehicle transfer to the resort, check-in, followed by an elegant ice-breaking dinner session.</p>
+            </div>
+            <div class="timeline-item right" data-day="2">
+                <p class="text-muted small mb-0">Day 2</p>
+                <h6 class="fw-bold">Strategic Team Bonding & Beachside Fun</h6>
+                <p class="text-muted small">Morning light stretching, highly engaging team building activities on the white sand, followed by a relaxed pool lounge networking night.</p>
+            </div>
+            <div class="timeline-item left" data-day="3">
+                <p class="text-muted small mb-0">Day 3</p>
+                <h6 class="fw-bold">Exclusive Private Yacht Cruise to Gilis</h6>
+                <p class="text-muted small">Boarding your private luxury yacht. Enjoy premium snorkeling, cruising past Gili Trawangan, Meno, and Air, with gourmet lunch served onboard.</p>
+            </div>
+            <div class="timeline-item right" data-day="4">
+                <p class="text-muted small mb-0">Day 4</p>
+                <h6 class="fw-bold">Lombok Culture Exploration & Sukarara Visit</h6>
+                <p class="text-muted small">Discover Lombok's rich traditional roots. Visit Sasak Sade Village and see local weaving masters in Sukarara, ending with a scenic hill sunset view.</p>
+            </div>
+            <div class="timeline-item left" data-day="5">
+                <p class="text-muted small mb-0">Day 5</p>
+                <h6 class="fw-bold">Leisure Morning & Grand Farewell Gala Dinner</h6>
+                <p class="text-muted small">Enjoy spa amenities at your own pace. In the evening, dress sharp for the spectacular beachside Grand Gala Dinner featuring live music entertainment.</p>
+            </div>
+            <div class="timeline-item right" data-day="6">
+                <p class="text-muted small mb-0">Day 6</p>
+                <h6 class="fw-bold">Souvenir Hunt & Airport Drop Off</h6>
+                <p class="text-muted small">Pack your bags, grab premium local Lombok coffee / pearls souvenirs, and head to Lombok International Airport with unified group memories.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendation Our Guide -->
+    <section class="guide-section">
+        <div class="container text-center text-md-start">
+            <h3 class="fw-bold mb-5 text-center">Recommendation Our Guide</h3>
+            <div class="row align-items-center justify-content-center bg-white p-4 p-md-5 rounded shadow-sm mx-2 mx-md-5">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Guide Made" class="guide-img" style="border-radius: 20px; width: 100%; max-width: 250px;">
+                </div>
+                <div class="col-md-8 px-md-4">
+                    <p class="guide-tag mb-1" style="background: #e0f2fe; color: #0369a1; display: inline-block; padding: 2px 10px; border-radius: 4px; font-weight: bold; font-size: 12px;">MICE & GROUPS EXPERT</p>
+                    <h3 class="fw-bold">Meet your host, Made Wijaya</h3>
+                    <div class="text-warning mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span class="text-muted small ms-2 text-dark">4.9 (67 Reviews)</span>
+                    </div>
+                    <p class="text-muted small mb-4">
+                        Made is well-regarded for coordinating seamless corporate functions and private island escapes. He values absolute punctuality, professional hospitality, and high-end group safety execution.
+                    </p>
+                    <div class="d-flex gap-4 mb-4 justify-content-center justify-content-md-start">
+                        <div>
+                            <p class="text-muted small mb-0">Languages</p>
+                            <h6 class="fw-bold fs-6">English, Indonesian</h6>
+                        </div>
+                        <div>
+                            <p class="text-muted small mb-0">Experience</p>
+                            <h6 class="fw-bold fs-6">8+ Years Professional</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-blue">More Guide</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What They Say -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">What They Say?</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Acara tahunan kantor kami sukses besar! Fasilitas yacht dan villa sangat privat, bener-bener meningkatkan moral tim kami sekembalinya kerja."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/36.jpg" class="reviewer-img" alt="Hendra" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Hendra Kurnia</h6>
+                            <p class="text-muted small mb-0">HR Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Koordinasi schedule dari tim Pak Made mantap sekali. Makan malam di pinggir pantai sangat eksklusif dan mewah sesuai ekspektasi management."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/28.jpg" class="reviewer-img" alt="Diana" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Diana Putri</h6>
+                            <p class="text-muted small mb-0">VP Operations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Sangat recommended untuk liburan premium grup. Pelayanan logistik sejak mendarat hingga pulang rapi tanpa hambatan."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/52.jpg" class="reviewer-img" alt="Agung" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Agung W.</h6>
+                            <p class="text-muted small mb-0">Board Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-blue">More Review</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold d-flex align-items-center text-white">
+                        <i class="fa-solid fa-location-arrow me-2"></i>Artemis
+                    </h5>
+                    <p class="small mt-3 pe-4">Experience exceptional travel, authentic cultural immersions, and unforgettable adventures. Let your dream destination become a reality.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Explore</h5>
+                    <a href="../index.html">Home</a>
+                    <a href="../destination/destination.html">Destination</a>
+                    <a href="../tour/tour.html">Tour Package</a>
+                    <a href="../guide/guide.html">Tour Guide</a>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Support</h5>
+                    <a href="../faq/contact.html">Contact Us</a>
+                    <a href="../faq/faq.html">FAQ</a>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Legal</h5>
+                    <a href="../Legal/privacy.html">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="../Legal/cookie.html">Cookie Policy</a>
+                    <a href="../Legal/disclamer.html">Disclaimer</a>
+                </div>
+            </div>
+            <hr class="mt-4 border-secondary">
+            <div class="text-center small mt-4">
+                © 2024 Skytianton Travel Marketplace. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

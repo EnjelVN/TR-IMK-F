@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis - Santorini Honeymoon Escape</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="detailtour.css">
+    <link rel="stylesheet" href="/asset/navbar.css">
+</head>
+<script src="/asset/navbar.js"></script>
+
+<body>
+
+    <div id="navbar-container" data-component="/asset/navbar.html"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;">
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-2">Santorini Honeymoon Escape</h1>
+            <div class="d-flex align-items-center gap-4 mb-3 text-light">
+                <div><i class="fa-regular fa-clock me-2"></i> <span>8 Days</span></div>
+                <div><i class="fa-solid fa-heart me-2"></i> <span>Couple Only</span></div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col-md-8">
+                    <p class="mb-0">Starting from</p>
+                    <div class="d-flex align-items-center gap-4">
+                        <span class="hero-price">IDR 18.500.000</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <button class="btn btn-custom-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <section class="container py-5 mt-n5 position-relative z-1">
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-clock"></i>
+                    <p class="text-muted mb-1 small">Duration</p>
+                    <h6 class="fw-bold mb-0">8 Days</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-solid fa-user-friends"></i>
+                    <p class="text-muted mb-1 small">Capacity</p>
+                    <h6 class="fw-bold mb-0">Couple Only</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-solid fa-champagne-glasses"></i>
+                    <p class="text-muted mb-1 small">Theme</p>
+                    <h6 class="fw-bold mb-0">Romantic Getaway</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-solid fa-star"></i>
+                    <p class="text-muted mb-1 small">Rating</p>
+                    <h6 class="fw-bold mb-0">5.0 (523)</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Categories -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold text-primary mb-5" style="color: var(--primary-blue) !important;">Choose Your Romantic Package</h3>
+        <div class="row g-4 align-items-center justify-content-center">
+            <!-- Classic Romance -->
+            <div class="col-md-5">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Classic Romance Escape</h5>
+                    <p class="text-muted small mb-4">A beautiful and memorable getaway featuring essential romantic highlights</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 18.500.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> 4-Star Authentic Caldera View Hotel</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Semi-Private Sunset Catamaran Cruise</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Romantic 3-Course Dinner in Oia</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Daily Mediterranean Breakfast & Champagne</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Luxury Infinity Premium -->
+            <div class="col-md-5">
+                <div class="pricing-card premium">
+                    <span class="badge-popular">POPULAR</span>
+                    <h5 class="fw-bold">Luxury Infinity Bliss</h5>
+                    <p class="text-muted small mb-4">Ultimate luxury with an upgrade to private pool cave villas and VIP perks</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 27.000.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> 5-Star Luxury Cave Villa with Private Pool</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Private Yacht Cruise with Seafood BBQ</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Floating Breakfast Service in Your Pool</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Professional Flying Dress Photo Session</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Provided -->
+    <section class="facilities-section">
+        <div class="container">
+            <h5 class="fw-bold mb-4">Facilities Provided</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-hotel"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Caldera View Lodging</h6>
+                            <p class="text-muted small mb-0">7 nights in premium accommodations overlooking the iconic volcano and deep blue sea.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-ship"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Sunset Luxury Cruise</h6>
+                            <p class="text-muted small mb-0">Sail across the caldera, swim in hot springs, and enjoy a delicious meal onboard at sunset.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-wine-glass-half"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Wine Tasting & Tour</h6>
+                            <p class="text-muted small mb-0">Exclusive visit to traditional volcanic vineyards with a guided tasting of famous Assyrtiko wines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-camera-retro"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Honeymoon Photoshoot</h6>
+                            <p class="text-muted small mb-0">A 2-hour private photo session with a professional photographer to capture your love story.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-car-side"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Private VIP Transfers</h6>
+                            <p class="text-muted small mb-0">Private airport/port greeting and high-comfort vehicle transfers for all itinerary items.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Special Room Setup</h6>
+                            <p class="text-muted small mb-0">Welcome flowers, customized greetings, premium chocolates, and a bottle of fine local wine upon arrival.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Itinerary -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">8-Day Romantic Itinerary</h3>
+        <div class="timeline">
+            <div class="timeline-item left" data-day="1">
+                <p class="text-muted small mb-0">Day 1</p>
+                <h6 class="fw-bold">Arrival & Welcome Wine Service</h6>
+                <p class="text-muted small">VIP pick-up from Santorini Airport, check-in to your cliffside accommodation, followed by a relaxing welcome drink as you watch the evening sea views.</p>
+            </div>
+            <div class="timeline-item right" data-day="2">
+                <p class="text-muted small mb-0">Day 2</p>
+                <h6 class="fw-bold">Exploring Fira & Scenic Cliff Walk</h6>
+                <p class="text-muted small">A leisurely guided walk through the white pathways of Fira and Firostefani, visiting local boutiques and catching spectacular panoramic photos.</p>
+            </div>
+            <div class="timeline-item left" data-day="3">
+                <p class="text-muted small mb-0">Day 3</p>
+                <h6 class="fw-bold">Luxury Catamaran Sunset Cruise</h6>
+                <p class="text-muted small">Board a luxury catamaran in the afternoon. Swim near the Red Beach, soak in volcanic hot springs, and enjoy a fresh BBQ dinner on deck under the sunset.</p>
+            </div>
+            <div class="timeline-item right" data-day="4">
+                <p class="text-muted small mb-0">Day 4</p>
+                <h6 class="fw-bold">Honeymoon Photoshoot & Volcanic Wine Tour</h6>
+                <p class="text-muted small">Morning private photoshoot around Oia's blue domes. In the afternoon, indulge in a gourmet wine tasting tour across 3 historical estate cellars.</p>
+            </div>
+            <div class="timeline-item left" data-day="5">
+                <p class="text-muted small mb-0">Day 5</p>
+                <h6 class="fw-bold">Akrotiri Prehistoric City & Black Sand Beach</h6>
+                <p class="text-muted small">Discover the ancient ruins of Akrotiri (the Greek Pompeii), followed by a laid-back afternoon lounging at a private beach club on Perivolos black sand beach.</p>
+            </div>
+            <div class="timeline-item right" data-day="6">
+                <p class="text-muted small mb-0">Day 6</p>
+                <h6 class="fw-bold">Free Day for Private Relaxation</h6>
+                <p class="text-muted small">Enjoy a late morning floating breakfast, relax with an in-villa couple's spa treatment, or simply unwind together next to your private infinity pool.</p>
+            </div>
+            <div class="timeline-item left" data-day="7">
+                <p class="text-muted small mb-0">Day 7</p>
+                <h6 class="fw-bold">Traditional Village Pyrgos & Candlelit Gala Dinner</h6>
+                <p class="text-muted small">Explore the quiet, medieval village of Pyrgos at the highest point of the island. Celebrate your final night with an exclusive candlelit dinner at a cliffside restaurant.</p>
+            </div>
+            <div class="timeline-item right" data-day="8">
+                <p class="text-muted small mb-0">Day 8</p>
+                <h6 class="fw-bold">Farewell Santorini & Departure</h6>
+                <p class="text-muted small">Soak in the final morning views over the caldera, pick up local delicacies, and check-out for your private transfer to the airport/port.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendation Our Guide -->
+    <section class="guide-section">
+        <div class="container text-center text-md-start">
+            <h3 class="fw-bold mb-5 text-center">Recommendation Our Specialist</h3>
+            <div class="row align-items-center justify-content-center bg-white p-4 p-md-5 rounded shadow-sm mx-2 mx-md-5">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Specialist Eleni" class="guide-img" style="border-radius: 20px; width: 100%; max-width: 250px;">
+                </div>
+                <div class="col-md-8 px-md-4">
+                    <p class="guide-tag mb-1" style="background: #fdf2f8; color: #be185d; display: inline-block; padding: 2px 10px; border-radius: 4px; font-weight: bold; font-size: 12px;">SENIOR HONEYMOON CONCIERGE</p>
+                    <h3 class="fw-bold">Meet your coordinator, Eleni Georgiou</h3>
+                    <div class="text-warning mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span class="text-muted small ms-2 text-dark">5.0 (523 Reviews)</span>
+                    </div>
+                    <p class="text-muted small mb-4">
+                        Eleni is a true island expert who crafts flawless itineraries for newlyweds. She is dedicated to setting up hidden viewpoints, booking the best tables at high-demand seaside spots, and taking care of every little detail behind the scenes.
+                    </p>
+                    <div class="d-flex gap-4 mb-4 justify-content-center justify-content-md-start">
+                        <div>
+                            <p class="text-muted small mb-0">Specialty</p>
+                            <h6 class="fw-bold fs-6">Luxury VIP Arrangements</h6>
+                        </div>
+                        <div>
+                            <p class="text-muted small mb-0">Experience</p>
+                            <h6 class="fw-bold fs-6">10+ Years Creating Memories</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-blue">More Specialists</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What They Say -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">What Couples Say?</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Bulan madu yang betul-betul magis! Kamar cave villa kami menghadap ke laut lepas dan sangat privat. Sesi pemotretan dengan gaun terbang di Oia beneran bikin istri saya bahagia banget."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/15.jpg" class="reviewer-img" alt="Aditya" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Aditya & Clarissa</h6>
+                            <p class="text-muted small mb-0">Jakarta, Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Pelayanan dari Eleni luar biasa ramah dan detail. Makan malam romantis kami diatur tepat waktu di spot terbaik tanpa antre sama sekali. Kapal catamaran-nya bersih dan krunya sangat seru."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" class="reviewer-img" alt="Nadia" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Nadia & Reynaldi</h6>
+                            <p class="text-muted small mb-0">Surabaya, Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Worth every single penny! Floating breakfast-nya enak, pemandangannya tidak ada tandingan. Ini adalah keputusan terbaik kami mempercayakan bulan madu 8 hari ini di Artemis."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/47.jpg" class="reviewer-img" alt="Devi" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Devi & Anton</h6>
+                            <p class="text-muted small mb-0">Medan, Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-blue">More Reviews</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold d-flex align-items-center text-white">
+                        <i class="fa-solid fa-location-arrow me-2"></i>Artemis
+                    </h5>
+                    <p class="small mt-3 pe-4">Experience exceptional travel, authentic cultural immersions, and unforgettable adventures. Let your dream destination become a reality.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Explore</h5>
+                    <a href="../index.html">Home</a>
+                    <a href="../destination/destination.html">Destination</a>
+                    <a href="../tour/tour.html">Tour Package</a>
+                    <a href="../guide/guide.html">Tour Guide</a>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Support</h5>
+                    <a href="../faq/contact.html">Contact Us</a>
+                    <a href="../faq/faq.html">FAQ</a>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Legal</h5>
+                    <a href="../Legal/privacy.html">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="../Legal/cookie.html">Cookie Policy</a>
+                    <a href="../Legal/disclamer.html">Disclaimer</a>
+                </div>
+            </div>
+            <hr class="mt-4 border-secondary">
+            <div class="text-center small mt-4">
+                © 2026 Skytianton Travel Marketplace. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

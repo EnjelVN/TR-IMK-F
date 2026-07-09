@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis - Mount Rinjani Trekking</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Diubah seragam menjadi detailtour.css -->
+    <link rel="stylesheet" href="detailtour.css">
+    <!-- Navbar CSS tetap -->
+    <link rel="stylesheet" href="/asset/navbar.css">
+</head>
+<script src="/asset/navbar.js"></script>
+
+<body>
+
+    <div id="navbar-container" data-component="/asset/navbar.html"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1627063162791-76450630fc6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;">
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-2">Mount Rinjani Trekking</h1>
+            <div class="d-flex align-items-center gap-4 mb-3 text-light">
+                <div><i class="fa-regular fa-clock me-2"></i> <span>4 Days</span></div>
+                <div><i class="fa-solid fa-users me-2"></i> <span>Up to 8 People</span></div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col-md-8">
+                    <p class="mb-0">Starting from</p>
+                    <div class="d-flex align-items-center gap-4">
+                        <span class="hero-price">IDR 2.500.000</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <button class="btn btn-custom-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <section class="container py-5 mt-n5 position-relative z-1">
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-clock"></i>
+                    <p class="text-muted mb-1 small">Duration</p>
+                    <h6 class="fw-bold mb-0">4 Days</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-user"></i>
+                    <p class="text-muted mb-1 small">Participant</p>
+                    <h6 class="fw-bold mb-0">Up to 8 People</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-solid fa-mountain"></i>
+                    <p class="text-muted mb-1 small">Type Tour</p>
+                    <h6 class="fw-bold mb-0">Mountain Hiking</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-star"></i>
+                    <p class="text-muted mb-1 small">Rating</p>
+                    <h6 class="fw-bold mb-0">4.7 (412)</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Categories -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold text-primary mb-5" style="color: var(--primary-blue) !important;">Select A Travel Category</h3>
+        <div class="row g-4 align-items-center">
+            <!-- Basic Package -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Sharing Package</h5>
+                    <p class="text-muted small mb-4">Standard sharing group trekking</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 2.500.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> Standard Tent & Sleeping Bag</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Shared Porter for Equipment</li>
+                        <li><i class="fa-regular fa-circle-check"></i> National Park Entrance Ticket</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Up to 8 Participants</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Premium Package -->
+            <div class="col-md-4">
+                <div class="pricing-card premium">
+                    <span class="badge-popular">POPULAR</span>
+                    <h5 class="fw-bold">Premium Private Package</h5>
+                    <p class="text-muted small mb-4">Comfortable and completely private crew</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 4.200.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> High Quality Tent & Air Mattress</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Dedicated Porter & Mountain Chef</li>
+                        <li><i class="fa-regular fa-circle-check"></i> 1-Night Hotel in Senaru (Before Hike)</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Private Transport Pick Up</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Luxury Package -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Luxury Glamping Package</h5>
+                    <p class="text-muted small mb-4">Ultimate mountain luxury experience</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 6.800.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> Large Dome Glamping Tent</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Warm Bedding & Pillow</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Premium Mountain Culinary (Barbeque)</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Portable Toilet Tent Provided</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Provided -->
+    <section class="facilities-section">
+        <div class="container">
+            <h5 class="fw-bold mb-4">Facilities Provided</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-campground"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Full Camping Gears</h6>
+                            <p class="text-muted small mb-0">Double-layer tents, thick sleeping bags, mattresses, and cooking utensils.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-person-hiking"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Experienced Porter Crew</h6>
+                            <p class="text-muted small mb-0">Lombok professional porters who carry all heavy logistics and camping essentials.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-utensils"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Mountain Meals (3x Daily)</h6>
+                            <p class="text-muted small mb-0">Freshly cooked food on the mountain including warm tea, coffee, and fresh fruits.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-ticket"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Rinjani National Park License</h6>
+                            <p class="text-muted small mb-0">Official e-Rinjani climbing tickets and health checking registration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-van-shuttle"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Airport/Harbor Pick Up</h6>
+                            <p class="text-muted small mb-0">Comfortable transport to drop you safely at the Semaru/Sembalun base camp.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-kit-medical"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Safety First Aid Kit</h6>
+                            <p class="text-muted small mb-0">Standard outdoor medicines, emergency blankets, and oximeter available.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Itinerary -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">Climbing Itinerary</h3>
+        <div class="timeline">
+            <div class="timeline-item left" data-day="1">
+                <p class="text-muted small mb-0">Day 1</p>
+                <h6 class="fw-bold">Sembalun Basecamp to Sembalun Crater Rim</h6>
+                <p class="text-muted small">Briefing at Sembalun village, trek through savanna trails, and camp overnight at Sembalun Crater Rim with a view of Segara Anak lake.</p>
+            </div>
+            <div class="timeline-item right" data-day="2">
+                <p class="text-muted small mb-0">Day 2</p>
+                <h6 class="fw-bold">Summit Attack (3,726m) & Descent to Lake</h6>
+                <p class="text-muted small">Wake up at 2:00 AM for the summit climb to see the epic sunrise over Lombok and Bali. Trek down to Segara Anak lake and enjoy the natural hot springs.</p>
+            </div>
+            <div class="timeline-item left" data-day="3">
+                <p class="text-muted small mb-0">Day 3</p>
+                <h6 class="fw-bold">Lake to Senaru Crater Rim</h6>
+                <p class="text-muted small">Trek back up from the lake towards Senaru Crater Rim, capture photos of the active Baru Jari volcano, and rest for the final camping night.</p>
+            </div>
+            <div class="timeline-item right" data-day="4">
+                <p class="text-muted small mb-0">Day 4</p>
+                <h6 class="fw-bold">Descent via Senaru Tropical Forest & Transfer Out</h6>
+                <p class="text-muted small">Walk down through the peaceful and shady Senaru rainforest, arrive at Senaru Village, and take your private transport transfer back to the airport.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendation Our Guide -->
+    <section class="guide-section">
+        <div class="container text-center text-md-start">
+            <h3 class="fw-bold mb-5 text-center">Recommendation Our Guide</h3>
+            <div class="row align-items-center justify-content-center bg-white p-4 p-md-5 rounded shadow-sm mx-2 mx-md-5">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1607990283143-e81e7a2c93ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Guide Made" class="guide-img" style="border-radius: 20px; width: 100%; max-width: 250px;">
+                </div>
+                <div class="col-md-8 px-md-4">
+                    <p class="guide-tag mb-1" style="background: #efebe9; color: #4e342e; display: inline-block; padding: 2px 10px; border-radius: 4px; font-weight: bold; font-size: 12px;">LICENSED TREKKING GUIDE</p>
+                    <h3 class="fw-bold">Meet your host, Made Wijaya</h3>
+                    <div class="text-warning mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span class="text-muted small ms-2 text-dark">4.9 (412 Reviews)</span>
+                    </div>
+                    <p class="text-muted small mb-4">
+                        Made has climbed Mount Rinjani more than 300 times. He leads professional climbs with safety as the primary standard and loves to share local Sasak tribal stories.
+                    </p>
+                    <div class="d-flex gap-4 mb-4 justify-content-center justify-content-md-start">
+                        <div>
+                            <p class="text-muted small mb-0">Languages</p>
+                            <h6 class="fw-bold fs-6">English, Indonesian, Sasak Language</h6>
+                        </div>
+                        <div>
+                            <p class="text-muted small mb-0">Experience</p>
+                            <h6 class="fw-bold fs-6">9+ Years Guide</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-blue">More Guide</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What They Say -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">What They Say?</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Pendakian yang melelahkan tapi terbayar lunas pas sampe puncak 3726 mdpl! Porternya luar biasa kuat, makanan di gunung pun mewah-mewah cooked fresh!"</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="reviewer-img" alt="Irfan M." style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Irfan M.</h6>
+                            <p class="text-muted small mb-0">Hiker Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Pelayanan mantap dari tim Bli Made. Tenda dome kokoh, dapet kasur tiup empuk jadi pinggang aman buat tidur di rim."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" class="reviewer-img" alt="Siti Aminah" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Siti A.</h6>
+                            <p class="text-muted small mb-0">Climber</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Pemandangan Segara Anak malam hari bertabur bintang indah banget. Sangat rekomendasi beli paket privat lewat website ini."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/11.jpg" class="reviewer-img" alt="Kevin J" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Kevin J.</h6>
+                            <p class="text-muted small mb-0">International Tourist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-blue">More Review</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold d-flex align-items-center text-white">
+                        <i class="fa-solid fa-location-arrow me-2"></i>Artemis
+                    </h5>
+                    <p class="small mt-3 pe-4">Experience exceptional travel, authentic cultural immersions, and unforgettable adventures. Let your dream destination become a reality.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Explore</h5>
+                    <a href="../index.html">Home</a>
+                    <a href="../destination/destination.html">Destination</a>
+                    <a href="../tour/tour.html">Tour Package</a>
+                    <a href="../guide/guide.html">Tour Guide</a>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Support</h5>
+                    <a href="../faq/contact.html">Contact Us</a>
+                    <a href="../faq/faq.html">FAQ</a>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Legal</h5>
+                    <a href="../Legal/privacy.html">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="../Legal/cookie.html">Cookie Policy</a>
+                    <a href="../Legal/disclamer.html">Disclaimer</a>
+                </div>
+            </div>
+            <hr class="mt-4 border-secondary">
+            <div class="text-center small mt-4">
+                © 2024 Skytianton Travel Marketplace. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

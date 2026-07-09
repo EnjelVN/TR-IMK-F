@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis - Java Overland Open Trip</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="detailtour.css">
+    <link rel="stylesheet" href="/asset/navbar.css">
+</head>
+<script src="/asset/navbar.js"></script>
+
+<body>
+
+    <div id="navbar-container" data-component="/asset/navbar.html"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;">
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-2">Java Overland Open Trip</h1>
+            <div class="d-flex align-items-center gap-4 mb-3 text-light">
+                <div><i class="fa-regular fa-clock me-2"></i> <span>7 Days 6 Nights</span></div>
+                <div><i class="fa-solid fa-mountain-sun me-2"></i> <span>Open Trip</span></div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col-md-8">
+                    <p class="mb-0">Starting from</p>
+                    <div class="d-flex align-items-center gap-4">
+                        <span class="hero-price">IDR 5.200.000</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <button class="btn btn-custom-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <section class="container py-5 mt-n5 position-relative z-1">
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-clock"></i>
+                    <p class="text-muted mb-1 small">Duration</p>
+                    <h6 class="fw-bold mb-0">7 Days</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-user"></i>
+                    <p class="text-muted mb-1 small">Participant</p>
+                    <h6 class="fw-bold mb-0">Open Trip</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-solid fa-route"></i>
+                    <p class="text-muted mb-1 small">Type Tour</p>
+                    <h6 class="fw-bold mb-0">Nature Adventure</h6>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="quick-info-card">
+                    <i class="fa-regular fa-star"></i>
+                    <p class="text-muted mb-1 small">Rating</p>
+                    <h6 class="fw-bold mb-0">4.8 (223)</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Categories -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold text-primary mb-5" style="color: var(--primary-blue) !important;">Select A Travel Category</h3>
+        <div class="row g-4 align-items-center">
+            <!-- Explorer Package -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Backpacker Explorer</h5>
+                    <p class="text-muted small mb-4">Great value sharing for solo adventurers</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 5.200.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> Cozy Guest Houses / Homestays</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Coaster/HiAce Shared Transport</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Standard Entrance Tickets</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Mineral Water & Daily Breakfast</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Adventurer Package -->
+            <div class="col-md-4">
+                <div class="pricing-card premium">
+                    <span class="badge-popular">POPULAR</span>
+                    <h5 class="fw-bold">Comfort Adventurer</h5>
+                    <p class="text-muted small mb-4">The sweet spot between exploration and comfort</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 6.900.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> 3-Star Hotels & Bromo Lodges</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Premium HiAce / Ertiga Fleet</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Tumpak Sewu Local Ranger</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Bromo Jeep Tour Included</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+            <!-- Executive Package -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h5 class="fw-bold">Executive Suite Tour</h5>
+                    <p class="text-muted small mb-4">Premium semi-private overland experience</p>
+                    <h4 class="text-primary mb-4" style="color: var(--primary-blue) !important;">IDR 9.800.000</h4>
+                    <ul class="feature-list">
+                        <li><i class="fa-regular fa-circle-check"></i> 4-Star Premium Accommodations</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Private Row Seats in Transport</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Ijen Blue Fire Gas Mask + Guide</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Fullboard Heritage Culinary Meals</li>
+                    </ul>
+                    <button class="btn btn-outline-custom mt-4">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Provided -->
+    <section class="facilities-section">
+        <div class="container">
+            <h5 class="fw-bold mb-4">Facilities Provided</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-van-shuttle"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Cross-City Transport</h6>
+                            <p class="text-muted small mb-0">Full AC Premium Executive HiAce for comfort during long journeys.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-mountain"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Bromo 4x4 Jeep</h6>
+                            <p class="text-muted small mb-0">Dedicated off-road jeep to catch the sunrise at Penanjakan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-ticket"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">All Destination Passes</h6>
+                            <p class="text-muted small mb-0">Includes Tumpak Sewu, Bromo National Park, and Ijen Crater tickets.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-user-ninja"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Experienced Tour Leader</h6>
+                            <p class="text-muted small mb-0">Professional licensed guide guiding you safely across high altitudes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-mask-ventilator"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Hiking & Safety Gear</h6>
+                            <p class="text-muted small mb-0">Standard respirator gas masks for Ijen sulfur gas and trekking poles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <div class="facility-icon"><i class="fa-solid fa-mug-hot"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Daily Breakfast & Coffee</h6>
+                            <p class="text-muted small mb-0">Energizing local morning meals and hot drinks before early hikes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Itinerary -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">7-Day Overland Itinerary</h3>
+        <div class="timeline">
+            <div class="timeline-item left" data-day="1">
+                <p class="text-muted small mb-0">Day 1</p>
+                <h6 class="fw-bold">Yogyakarta Gathering & Heritage Walk</h6>
+                <p class="text-muted small">Meeting point in Yogyakarta, brief briefing, exploring Malioboro heritage corners, and welcome dinner with fellow travelers.</p>
+            </div>
+            <div class="timeline-item right" data-day="2">
+                <p class="text-muted small mb-0">Day 2</p>
+                <h6 class="fw-bold">Borobudur Temple & Transit to Malang</h6>
+                <p class="text-muted small">Catch the glorious morning architecture of Borobudur Temple, followed by a scenic cross-province overland drive to Malang city.</p>
+            </div>
+            <div class="timeline-item left" data-day="3">
+                <p class="text-muted small mb-0">Day 3</p>
+                <h6 class="fw-bold">The Majestic Tumpak Sewu Waterfall</h6>
+                <p class="text-muted small">Full day exploring the massive amphitheater drop of Tumpak Sewu waterfall. Hike down to the pristine canyon pool for epic view angles.</p>
+            </div>
+            <div class="timeline-item right" data-day="4">
+                <p class="text-muted small mb-0">Day 4</p>
+                <h6 class="fw-bold">Malang Cultural City Walk & Bromo Transit</h6>
+                <p class="text-muted small">Relaxed stroll around Kampung Warna-Warni Jodipan, local culinary hunting, then moving up towards the misty foothills of Bromo.</p>
+            </div>
+            <div class="timeline-item left" data-day="5">
+                <p class="text-muted small mb-0">Day 5</p>
+                <h6 class="fw-bold">Bromo Sunrise Adventure & Sea of Sand</h6>
+                <p class="text-muted small">Midnight 4x4 Jeep ride to Mt. Penanjakan for a magical sunrise, crossing the whispering sea of sand, and climbing up the active Bromo crater rim.</p>
+            </div>
+            <div class="timeline-item right" data-day="6">
+                <p class="text-muted small mb-0">Day 6</p>
+                <h6 class="fw-bold">Banyuwangi Transit & Ijen Midnight Midnight Hike</h6>
+                <p class="text-muted small">Drive towards the easternmost edge of Java. Rest early in Banyuwangi before starting the midnight ascent up Mount Ijen.</p>
+            </div>
+            <div class="timeline-item left" data-day="7">
+                <p class="text-muted small mb-0">Day 7</p>
+                <h6 class="fw-bold">Ijen Blue Fire, Turquoise Acid Lake & Drop Off</h6>
+                <p class="text-muted small">Witness the rare electric Blue Fire phenomenon, view the massive green turquoise acid crater lake at sunrise, head down, and finish at Ketapang Port / Banyuwangi Airport.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendation Our Guide -->
+    <section class="guide-section">
+        <div class="container text-center text-md-start">
+            <h3 class="fw-bold mb-5 text-center">Recommendation Our Guide</h3>
+            <div class="row align-items-center justify-content-center bg-white p-4 p-md-5 rounded shadow-sm mx-2 mx-md-5">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Guide Bagus" class="guide-img" style="border-radius: 20px; width: 100%; max-width: 250px;">
+                </div>
+                <div class="col-md-8 px-md-4">
+                    <p class="guide-tag mb-1" style="background: #efebe9; color: #4e342e; display: inline-block; padding: 2px 10px; border-radius: 4px; font-weight: bold; font-size: 12px;">OVERLAND VETERAN</p>
+                    <h3 class="fw-bold">Meet your host, Mas Bagus</h3>
+                    <div class="text-warning mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span class="text-muted small ms-2 text-dark">4.9 (223 Reviews)</span>
+                    </div>
+                    <p class="text-muted small mb-4">
+                        Bagus has driven and guided travelers across the Trans-Java routes for nearly a decade. He knows the safest hiking times, best local volcanic viewpoints, and hidden traditional warungs.
+                    </p>
+                    <div class="d-flex gap-4 mb-4 justify-content-center justify-content-md-start">
+                        <div>
+                            <p class="text-muted small mb-0">Languages</p>
+                            <h6 class="fw-bold fs-6">English, Indonesian, Javanese</h6>
+                        </div>
+                        <div>
+                            <p class="text-muted small mb-0">Experience</p>
+                            <h6 class="fw-bold fs-6">9+ Years Guide</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-blue">More Guide</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What They Say -->
+    <section class="container py-5">
+        <h3 class="text-center fw-bold mb-5">What They Say?</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Rute 7 hari yang sangat padat tapi memuaskan! Pemandangan Tumpak Sewu megah banget mirip Jurassic Park asli. Sangat teratur koordinasinya."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="reviewer-img" alt="Reza" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Reza Prasetyo</h6>
+                            <p class="text-muted small mb-0">Adventure Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Awalnya ragu ikutan open trip sendirian, tapi krunya Mas Bagus asik banget. Dapat teman baru, info mitos lokal, plus bonus foto-foto Bromo keren!"</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="reviewer-img" alt="Nadia" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Nadia Utama</h6>
+                            <p class="text-muted small mb-0">Solo Traveler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card">
+                    <div class="review-stars text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-muted small fst-italic flex-grow-1">"Melihat Blue Fire Ijen secara langsung terbayar lunas setelah capek nanjak. Masker gas yang disediain tebal dan bersih. Top jasanya!"</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/81.jpg" class="reviewer-img" alt="Viktor" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <div>
+                            <h6 class="fw-bold mb-0">Viktor L.</h6>
+                            <p class="text-muted small mb-0">Nature Photographer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-blue">More Review</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold d-flex align-items-center text-white">
+                        <i class="fa-solid fa-location-arrow me-2"></i>Artemis
+                    </h5>
+                    <p class="small mt-3 pe-4">Experience exceptional travel, authentic cultural immersions, and unforgettable adventures. Let your dream destination become a reality.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Explore</h5>
+                    <a href="../index.html">Home</a>
+                    <a href="../destination/destination.html">Destination</a>
+                    <a href="../tour/tour.html">Tour Package</a>
+                    <a href="../guide/guide.html">Tour Guide</a>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Support</h5>
+                    <a href="../faq/contact.html">Contact Us</a>
+                    <a href="../faq/faq.html">FAQ</a>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Legal</h5>
+                    <a href="../Legal/privacy.html">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="../Legal/cookie.html">Cookie Policy</a>
+                    <a href="../Legal/disclamer.html">Disclaimer</a>
+                </div>
+            </div>
+            <hr class="mt-4 border-secondary">
+            <div class="text-center small mt-4">
+                © 2024 Skytianton Travel Marketplace. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
