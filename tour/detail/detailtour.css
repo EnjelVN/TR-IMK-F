@@ -9,21 +9,7 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             color: var(--text-main);
-            padding-top: 80px;
-        }
-
-        /* Navbar */
-        .navbar-brand img {
-            height: 30px;
-        }
-        .nav-link {
-            font-weight: 500;
-            color: var(--text-main);
-            margin: 0 10px;
-        }
-        .nav-link.active {
-            color: var(--primary-blue);
-            border-bottom: 2px solid var(--primary-blue);
+            padding-top: 70px;
         }
 
         /* Hero Section */
@@ -250,37 +236,6 @@
             border-radius: 50%;
             object-fit: cover;
             margin-right: 15px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-footer);
-            color: #a0aabf;
-            padding: 60px 0 20px;
-        }
-        footer h5 {
-            color: white;
-            margin-bottom: 20px;
-        }
-        footer a {
-            color: #a0aabf;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 10px;
-        }
-        footer a:hover {
-            color: white;
-        }
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 35px;
-            height: 35px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            margin-right: 10px;
-            color: white;
         }
 
         @media (max-width: 768px) {

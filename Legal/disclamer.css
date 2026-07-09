@@ -11,7 +11,7 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-dark);
-    padding-top: 70px;
+    padding-top: 70px; /* Ditambahkan sedikit spasi agar tidak mentok ke fixed-navbar */
 }
 
 /* GRADIENT BIRU DI BAGIAN ATAS */
@@ -31,71 +31,68 @@ body {
     font-size: 1.05rem;
 }
 
-
-/* Main Content Container */
-.disclaimer-container {
+/* PERBAIKAN 1: Menyelaraskan nama class dengan HTML (Mendukung .cookie-container dan .disclaimer-container) */
+.cookie-container, .disclaimer-container {
     max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-1ndex: 2; /* Menjamin posisi konten teks selalu berada di lapisan atas */
 }
 
 /* Back Button */
-.btn-back{
-    position:absolute;
-    top:0;
-    left:0;
-
-    width:132px;
-    height:132px;
-
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    border:none;
-    background:transparent;
-
-    color:var(--text-dark);
-
-    font-size:4.2rem;
-
-    padding:0;
-    text-decoration:none;
-    cursor:pointer;
-    z-index:3;
-    transition:color .2s ease, transform .2s ease;
+.btn-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 132px;
+    height: 132px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--text-dark);
+    font-size: 4.2rem;
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 3;
+    transition: color .2s ease, transform .2s ease;
 }
 
-.btn-back:hover{
-    color:var(--primary-color);
-    transform:translateX(-4px);
+.btn-back:hover {
+    color: var(--primary-color);
+    transform: translateX(-4px);
 }
 
-@media (max-width:992px){
-    .btn-back{
-        position:static;
-        width:96px;
-        height:96px;
-        font-size:3rem;
-        margin-bottom:1.5rem;
+@media (max-width: 992px) {
+    .btn-back {
+        position: static;
+        width: 96px;
+        height: 96px;
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
     }
 }
 
-.disclaimer-container ul {
+.cookie-container ul, .disclaimer-container ul {
     padding-left: 1.5rem;
 }
 
-.disclaimer-container ul li {
+.cookie-container ul li, .disclaimer-container ul li {
     margin-bottom: 0.5rem;
 }
 
-/* Background Watermark Abstrak */
-.disclaimer-watermark {
+/* PERBAIKAN 2: Mengamankan Watermark agar tidak menutupi teks */
+.cookie-watermark, .disclaimer-watermark {
     position: absolute;
     top: 25%;
     right: -10%;
     width: 700px;
     height: 700px;
     background: radial-gradient(circle, rgba(4,107,130,0.04) 0%, rgba(250,251,252,0) 60%);
-    z-index: 0;
+    z-index: -1; /* DIUBAH JADI -1: Dipaksa mundur ke belakang agar tidak menutupi tulisan */
     pointer-events: none;
     transform: rotate(15deg);
 }
