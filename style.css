@@ -43,6 +43,31 @@
             color: #6edbf6;
         }
 
+                    #destinationsGrid > *,
+            #originsGrid > * {
+                background: transparent !important;
+                color: inherit !important;
+                box-shadow: none !important;
+                border: none !important;
+                padding: 0.5rem 0 !important;
+            }
+
+            #destinationsGrid a, #destinationsGrid button,
+            #originsGrid a, #originsGrid button {
+                background: transparent !important;
+                color: inherit !important;
+                box-shadow: none !important;
+                border: none !important;
+            }
+
+            #destinationModal .modal-close,
+            #originModal .modal-close {
+                background: transparent !important;
+                color: var(--dark-color) !important;
+                border: none !important;
+                box-shadow: none !important;
+                font-size: 1.5rem !important;
+            }
         
         .btn, button, a.btn, .btn-outline-custom, .btn-find, .btn-outline-light, .premier-book-btn {
             background: var(--teal-dark) !important;
