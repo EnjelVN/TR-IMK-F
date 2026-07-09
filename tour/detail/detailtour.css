@@ -29,7 +29,7 @@
         .hero-section {
             position: relative;
             height: 60vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://i.pinimg.com/736x/32/51/01/3251015c433a50507bced494f730b9d8.jpg') center/cover no-repeat;
             color: white;
             display: flex;
             align-items: flex-end;
