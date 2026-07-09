@@ -20,7 +20,7 @@
             color: inherit;
         }
 
-        /* --- Hero Section --- */
+        
         .hero-section {
             height: 550px;
             background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../asset/img/Destination.png') center/cover;
@@ -54,7 +54,7 @@
             color: white;
         }
 
-        /* --- Tabs & Filters --- */
+        
         .tab-menu a {
             color: var(--primary-blue);
             font-weight: 700;
@@ -76,7 +76,7 @@
             color: white;
         }
 
-        /* --- Cards Customization --- */
+        
         .card-custom {
             border-radius: 12px;
             border: 1px solid #e5e7eb;
@@ -126,7 +126,7 @@
             background: white; color: #ef4444;
         }
 
-        /* --- Rating Overlap --- */
+        
         .rating-bg {
             background-color: var(--teal-dark);
             padding: 60px 0 140px;
@@ -147,7 +147,7 @@
             background-color: var(--teal-dark);
         }
 
-        /* --- Footer --- */
+        
         footer {
             background-color: var(--footer-bg);
             color: #9ca3af;
@@ -172,4 +172,5 @@
         .footer-link:hover {
             color: white;
         }
+
 

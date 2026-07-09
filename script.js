@@ -1,6 +1,5 @@
-        document.addEventListener('DOMContentLoaded', function () {
-            // Data
-            const destinations = {
+﻿        document.addEventListener('DOMContentLoaded', function () {
+                        const destinations = {
                 'Asia': ['Tokyo, Japan', 'Bali, Indonesia', 'Bangkok, Thailand', 'Seoul, South Korea', 'Singapore', 'Hong Kong'],
                 'Europe': ['Paris, France', 'Rome, Italy', 'London, UK', 'Barcelona, Spain', 'Amsterdam, Netherlands', 'Prague, Czech Republic'],
                 'Africa': ['Cairo, Egypt', 'Cape Town, South Africa', 'Marrakech, Morocco', 'Nairobi, Kenya', 'Lagos, Nigeria', 'Accra, Ghana'],
@@ -42,8 +41,7 @@
                 ],
             };
 
-            // Round-trip / One-way toggle
-            const tripTabs = document.querySelectorAll('.trip-tab');
+                        const tripTabs = document.querySelectorAll('.trip-tab');
             const widgetInputs = document.querySelector('.widget-inputs-container');
             const returnDateField = document.getElementById('returnDateField');
             tripTabs.forEach(tab => {
@@ -55,12 +53,10 @@
                     returnDateField.classList.toggle('visible', isRoundTrip);
                 });
             });
-            // Date picker trigger - klik seluruh area kotak untuk buka kalender
-            document.querySelectorAll('.date-trigger').forEach(group => {
+                        document.querySelectorAll('.date-trigger').forEach(group => {
                 const input = group.querySelector('input[type="date"]');
                 group.addEventListener('click', (e) => {
-                    // Hindari double trigger saat input itu sendiri diklik
-                    if (e.target !== input) {
+                                        if (e.target !== input) {
                         try {
                             input.showPicker();
                         } catch (err) {
@@ -70,8 +66,7 @@
                 });
             });
 
-            // Destination Modal
-            const destinationModal = document.getElementById('destinationModal');
+                        const destinationModal = document.getElementById('destinationModal');
             const destinationInput = document.querySelector('.destination-input');
             const destinationModalClose = document.getElementById('destinationModalClose');
             const destinationRegionStep = document.getElementById('destinationRegionStep');
@@ -79,14 +74,12 @@
             const destinationsGrid = document.getElementById('destinationsGrid');
             const destinationTrigger = document.querySelector('.destination-trigger');
             destinationTrigger.addEventListener('click', (e) => {
-                // Don't open if the user clicks somewhere else (e.g. the modal is already open)
-                if (!destinationModal.classList.contains('active')) {
+                                if (!destinationModal.classList.contains('active')) {
                     destinationModal.classList.add('active');
                 }
             });
             destinationModalClose.addEventListener('click', () => destinationModal.classList.remove('active'));
-            // Close modal when clicking outside content
-            destinationModal.addEventListener('click', (e) => {
+                        destinationModal.addEventListener('click', (e) => {
                 if (e.target === destinationModal) {
                     destinationModal.classList.remove('active');
                 }
@@ -122,8 +115,7 @@
                 });
             }
 
-            // Origin Modal
-            const originModal = document.getElementById('originModal');
+                        const originModal = document.getElementById('originModal');
             const originInput = document.querySelector('.origin-input');
             const originModalClose = document.getElementById('originModalClose');
             const originRegionStep = document.getElementById('originRegionStep');
@@ -136,8 +128,7 @@
                 }
             });
             originModalClose.addEventListener('click', () => originModal.classList.remove('active'));
-            // Close modal when clicking outside content
-            originModal.addEventListener('click', (e) => {
+                        originModal.addEventListener('click', (e) => {
                 if (e.target === originModal) {
                     originModal.classList.remove('active');
                 }
@@ -173,8 +164,7 @@
                 });
             }
 
-            // Heart icon toggle on Top Travel Packages
-            document.querySelectorAll('.heart-icon').forEach(heartBtn => {
+                        document.querySelectorAll('.heart-icon').forEach(heartBtn => {
                 heartBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
                     heartBtn.classList.toggle('liked');
@@ -187,8 +177,7 @@
                 });
             });
 
-            // Like button on testimonials
-            document.querySelectorAll('.like-btn').forEach(btn => {
+                        document.querySelectorAll('.like-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
                     btn.classList.toggle('liked');
                     const icon = btn.querySelector('i');
@@ -201,8 +190,7 @@
             });
 
 
-            // ===== Atur tanggal minimal =====
-            const departureDate = document.getElementById("departureDate");
+                        const departureDate = document.getElementById("departureDate");
             const returnDate = document.getElementById("returnDate");
 
             const today = new Date().toISOString().split("T")[0];

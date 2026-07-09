@@ -23,7 +23,7 @@
             text-decoration: none;
         }
 
-        /* --- Hero Section --- */
+        
         .hero-tour {
             height: 450px;
             background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
@@ -53,7 +53,7 @@
             margin-bottom: 40px;
         }
 
-        /* --- Booking Widget --- */
+        
         .booking-widget {
             background: white;
             border-radius: 16px;
@@ -209,7 +209,7 @@
             color: var(--primary-blue);
         }
 
-        /* --- Category Cards --- */
+        
         .category-card {
             border: 1px solid #e5e7eb;
             border-radius: 12px;
@@ -289,7 +289,7 @@
             color: #0b6e8d;
         }
 
-        /* --- Tour Cards --- */
+        
         .tour-card {
             border: 1px solid #e5e7eb;
             border-radius: 16px;
@@ -351,7 +351,7 @@
             color: #ff4757;
         }
 
-        /* --- Package Grid Container --- */
+        
         .package-grid-container {
             min-height: 400px;
             transition: all 0.4s ease;
@@ -361,7 +361,7 @@
             transition: all 0.4s ease;
         }
 
-        /* Empty state */
+        
         .empty-state {
             text-align: center;
             padding: 60px 20px;
@@ -378,7 +378,7 @@
             color: #6b7280;
         }
 
-        /* --- Family Favorites --- */
+        
         .family-favorites-bg {
             background-color: var(--bg-light);
             padding: 60px 0;
@@ -415,7 +415,7 @@
             color: white;
         }
 
-        /* --- CTA Banner --- */
+        
         .cta-banner {
             background-color: var(--teal-dark);
             border-radius: 20px;
@@ -426,7 +426,7 @@
             max-width: 1100px;
         }
 
-        /* --- Slider --- */
+        
         #bottomSlider {
             width: 100%;
             overflow: hidden;
@@ -471,7 +471,7 @@
             transform: scale(1.08);
         }
 
-        /* --- Responsive --- */
+        
         @media (max-width: 991px) {
             .navbar-collapse {
                 text-align: center;

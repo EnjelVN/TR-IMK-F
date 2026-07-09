@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -62,7 +62,7 @@
     align-items:start;
   }
 
-  /* ---------- LEFT COLUMN ---------- */
+  
   .left-column{
     display:flex;
     flex-direction:column;
@@ -342,7 +342,7 @@
     height:18px;
   }
 
-  /* ---------- RIGHT COLUMN (Reserve panel) ---------- */
+  
   .reserve{
     background: var(--panel);
     border:1px solid var(--border);
@@ -465,7 +465,7 @@
     letter-spacing:0.2px;
   }
 
-  /* Payment Methods - Radio Style */
+  
   .pay-methods {
     margin-top: 18px;
     display: flex;
@@ -576,7 +576,7 @@
     transform: none;
   }
 
-  /* ---------- MODAL / POPUP ---------- */
+  
   .overlay{
     position:fixed;
     inset:0;
@@ -696,7 +696,7 @@
     background: var(--accent-hover);
   }
 
-  /* success modal */
+  
   .success-modal{ text-align:center; max-width:360px; }
   .check-badge{
     width:72px;
@@ -780,7 +780,7 @@
 </style>
 </head>
 <body>
-    <!-- ===== BACK BUTTON ===== -->
+    
     <div class="top">
         <button class="back-btn" onclick="handleBackClick()" aria-label="Kembali">
             <i class="fas fa-arrow-left"></i>
@@ -788,7 +788,7 @@
     </div>
 
 <div class="layout">
-  <!-- LEFT COLUMN -->
+  
   <div class="left-column">
     <div class="hero-card">
       <div class="hero-img" style="background-image:url('https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?q=80&w=800&auto=format&fit=crop')"></div>
@@ -874,7 +874,7 @@
     </section>
   </div>
 
-  <!-- RIGHT COLUMN - Reserve -->
+  
   <div class="reserve">
     <h2>Reserve</h2>
     <div class="field-row">
@@ -893,7 +893,7 @@
       <div class="total-row"><span>Total Amount :</span><span class="amt" id="totalAmt">4.455.000</span></div>
     </div>
 
-    <!-- PAYMENT METHODS - RADIO BUTTONS -->
+    
     <div class="pay-methods" id="paymentMethods">
       <label class="pay-method selected">
         <input type="radio" name="payment" value="Credit Card" checked>
@@ -925,7 +925,7 @@
   </div>
 </div>
 
-<!-- Payment Confirmation Modal -->
+
 <div class="overlay" id="confirmOverlay">
   <div class="modal" id="confirmModal">
     <div class="modal-header">
@@ -975,7 +975,7 @@
   </div>
 </div>
 
-<!-- Success Modal -->
+
 <div class="overlay" id="successOverlay">
   <div class="modal success-modal">
     <div class="check-badge"><i class="fas fa-check"></i></div>
@@ -985,10 +985,10 @@
   </div>
 </div>
 
-    <!-- ===== TOAST ===== -->
+    
     <div class="toast" id="toast"></div>
 
-    <!-- ===== JAVASCRIPT ===== -->
+    
     <script src="../asset/back-button.js"></script>
 
     <script>
@@ -1001,8 +1001,7 @@
 }
     </script>
 <script>
-  // ---------- STATE ----------
-  let state = {
+    let state = {
     package: { name: 'Standard Cabin (Shared)', price: 3800000 },
     guideEnabled: true,
     guide: { name: 'Captain Fajar', fee: 250000 },
@@ -1011,8 +1010,7 @@
 
   const fmt = n => n.toLocaleString('id-ID');
 
-  // Helper: radio change handler
-  function setupRadioGroup(container, stateKey) {
+    function setupRadioGroup(container, stateKey) {
     container.querySelectorAll('input[type="radio"]').forEach(radio => {
       radio.addEventListener('change', () => {
         container.querySelectorAll('.pay-method').forEach(el => el.classList.remove('selected'));
@@ -1022,12 +1020,10 @@
     });
   }
 
-  // Setup radio groups
-  setupRadioGroup(document.getElementById('paymentMethods'), 'paymentMethod');
+    setupRadioGroup(document.getElementById('paymentMethods'), 'paymentMethod');
   setupRadioGroup(document.getElementById('modalPayMethods'), 'paymentMethod');
 
-  // ---------- PACKAGE SELECT ----------
-  document.querySelectorAll('#packageGrid .package-card').forEach(card => {
+    document.querySelectorAll('#packageGrid .package-card').forEach(card => {
     card.addEventListener('click', () => {
       document.querySelectorAll('#packageGrid .package-card').forEach(c => {
         c.classList.remove('selected');
@@ -1040,8 +1036,7 @@
     });
   });
 
-  // ---------- TOUR GUIDE TOGGLE ----------
-  const noGuideOpt = document.getElementById('noGuideOpt');
+    const noGuideOpt = document.getElementById('noGuideOpt');
   const useGuideOpt = document.getElementById('useGuideOpt');
   const guideGrid = document.getElementById('guideGrid');
 
@@ -1076,8 +1071,7 @@
     });
   });
 
-  // ---------- SUMMARY ----------
-  function updateSummary(){
+    function updateSummary(){
     const packageAmt = state.package.price;
     const guideAmt = state.guideEnabled ? state.guide.fee : 0;
     const subtotal = packageAmt + guideAmt;
@@ -1094,8 +1088,7 @@
   }
   updateSummary();
 
-  // ---------- BOOK NOW -> open confirmation modal ----------
-  const confirmOverlay = document.getElementById('confirmOverlay');
+    const confirmOverlay = document.getElementById('confirmOverlay');
   const successOverlay = document.getElementById('successOverlay');
 
   document.getElementById('bookBtn').addEventListener('click', () => {
@@ -1108,8 +1101,7 @@
     document.getElementById('confSub').textContent = `${state.package.name} · ${state.guideEnabled ? 'with guide' : 'no guide'}`;
     document.getElementById('confAmount').textContent = `IDR ${fmt(state.total)}`;
     
-    // Sync radio selection to modal
-    const modalRadios = document.querySelectorAll('#modalPayMethods input[type="radio"]');
+        const modalRadios = document.querySelectorAll('#modalPayMethods input[type="radio"]');
     modalRadios.forEach(r => {
       const isChecked = r.value === state.paymentMethod || 
                        (state.paymentMethod.startsWith('E-wallet') && r.value === 'E-wallet');

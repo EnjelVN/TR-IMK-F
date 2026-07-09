@@ -1,8 +1,8 @@
-/* Variables */
+﻿
 :root {
-    --primary-color: #046b82;      /* Biru gelap Artemis */
-    --gradient-start: #e1f4f8;     /* Biru muda untuk gradasi atas */
-    --bg-color: #fafbfc;           /* Background abu-abu sangat terang */
+    --primary-color: #046b82;      
+    --gradient-start: #e1f4f8;     
+    --bg-color: #fafbfc;           
     --text-dark: #1f2937;
     --text-muted: #525a65;
 }
@@ -11,16 +11,16 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-dark);
-    padding-top: 70px; /* Ditambahkan sedikit spasi agar tidak mentok ke fixed-navbar */
+    padding-top: 70px; 
 }
 
-/* GRADIENT BIRU DI BAGIAN ATAS */
+
 .top-gradient-bg {
     background: linear-gradient(180deg, var(--gradient-start) 0%, var(--bg-color) 100%);
     padding-bottom: 3rem;
 }
 
-/* Utilities */
+
 .text-primary-custom {
     color: var(--primary-color) !important;
 }
@@ -31,16 +31,16 @@ body {
     font-size: 1.05rem;
 }
 
-/* PERBAIKAN 1: Menyelaraskan nama class dengan HTML (Mendukung .cookie-container dan .disclaimer-container) */
+
 .cookie-container, .disclaimer-container {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    z-1ndex: 2; /* Menjamin posisi konten teks selalu berada di lapisan atas */
+    z-1ndex: 2; 
 }
 
-/* Back Button */
+
 .btn-back {
     position: absolute;
     top: 0;
@@ -84,7 +84,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* PERBAIKAN 2: Mengamankan Watermark agar tidak menutupi teks */
+
 .cookie-watermark, .disclaimer-watermark {
     position: absolute;
     top: 25%;
@@ -92,7 +92,7 @@ body {
     width: 700px;
     height: 700px;
     background: radial-gradient(circle, rgba(4,107,130,0.04) 0%, rgba(250,251,252,0) 60%);
-    z-index: -1; /* DIUBAH JADI -1: Dipaksa mundur ke belakang agar tidak menutupi tulisan */
+    z-index: -1; 
     pointer-events: none;
     transform: rotate(15deg);
 }

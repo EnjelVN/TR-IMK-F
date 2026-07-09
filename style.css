@@ -1,4 +1,4 @@
-        :root {
+﻿        :root {
             --primary-color: #007c9c;
             --secondary-color: #3bb2d0;
             --dark-color: #1a2530;
@@ -18,7 +18,7 @@
             overflow-x: hidden;
             padding-top: 70px;
         }
-        /* Hero Section */
+        
         .hero-section {
             position: relative;
             height: 550px;
@@ -29,7 +29,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 120px;
-            /* Space for absolute search box */
+            
         }
 
         .hero-title {
@@ -43,7 +43,7 @@
             color: #6edbf6;
         }
 
-        /* --- Booking Widget --- */
+        
         .booking-widget {
             background: white;
             border-radius: 16px;
@@ -52,7 +52,7 @@
             width: 90%;
             position: absolute;
             bottom: -60px;
-            /* Overlap the hero section */
+            
             left: 50%;
             transform: translateX(-50%);
             padding: 20px 30px;
@@ -143,7 +143,7 @@
             outline: none;
         }
 
-        /* Style ikon kalender di input date (tampilkan kembali, bisa diklik) */
+        
         .widget-input-group input[type="date"]::-webkit-calendar-picker-indicator {
             opacity: 0;
             position: absolute;
@@ -189,7 +189,7 @@
             font-weight: 500;
         }
 
-        /* --- Destination Modal --- */
+        
         .destination-modal {
             display: none;
             position: fixed;
@@ -405,12 +405,12 @@
             color: var(--primary-blue);
         }
 
-        /* Spacer under hero to accommodate absolute widget */
+        
         .hero-spacer {
             height: 220px;
         }
 
-        /* --- Horizontal Scrollers (Hide Scrollbar) --- */
+        
         .scroll-horizontal {
             display: flex;
             overflow-x: auto;
@@ -419,16 +419,16 @@
             scroll-behavior: smooth;
             scroll-snap-type: x proximity;
             scrollbar-width: none;
-            /* Firefox */
+            
         }
 
         .scroll-horizontal::-webkit-scrollbar {
             display: none;
         }
 
-        /* Chrome */
+        
 
-        /* --- Popular Destinations --- */
+        
         .popular-destinations {
             width: 100vw;
             padding-top: 50px;
@@ -519,7 +519,7 @@
             box-shadow: 0 10px 24px rgba(0, 136, 255, 0.16);
         }
 
-        /* --- Overlapping Image Section --- */
+        
         .overlap-imgs {
             position: relative;
             height: 450px;
@@ -549,7 +549,7 @@
             z-index: 2;
         }
 
-        /* Packages */
+        
         .card-custom {
             border: 1px solid var(--border-color);
             border-radius: 16px;
@@ -640,7 +640,7 @@
             box-shadow: 0 8px 22px rgba(0, 136, 255, 0.22);
         }
 
-        /* --- btn-find (Book This Guide / See More) --- */
+        
         .btn-find {
             background: linear-gradient(135deg, var(--primary-blue), var(--secondary-color, #3bb2d0));
             color: #fff;
@@ -663,7 +663,7 @@
             box-shadow: 0 10px 28px rgba(0, 136, 255, 0.22);
         }
 
-        /* --- Find Tickets button in widget --- */
+        
         .btn.btn-primary.fw-bold.rounded-pill {
             transition: all 0.3s ease;
         }
@@ -676,7 +676,7 @@
             box-shadow: 0 8px 22px rgba(0, 136, 255, 0.2);
         }
 
-        /* Tour Guides */
+        
         .guide-section {
             background-color: #fafbfc;
             padding: 60px 0;
@@ -769,7 +769,7 @@
             font-weight: 600;
         }
 
-        /* Testimonials */
+        
         .review-card {
             border: 1px solid var(--border-color);
             border-radius: 16px;

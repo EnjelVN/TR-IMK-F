@@ -1,8 +1,6 @@
-/* ==========================================
-   BACK BUTTON COMPONENT - CSS (No Border)
-   ========================================== */
+﻿
 
-/* --- Back Button - Tanpa Border & Background --- */
+
 .top {
     max-width: 1180px;
     margin: 0 auto 24px;
@@ -38,7 +36,7 @@
     line-height: 1;
 }
 
-/* --- Toast Notification --- */
+
 .toast {
     position: fixed;
     bottom: 24px;
@@ -64,7 +62,7 @@
     transform: translateX(-50%) translateY(0);
 }
 
-/* --- Responsive --- */
+
 @media (max-width: 768px) {
     .back-btn {
         width: 38px;

@@ -1,9 +1,6 @@
-/* ==========================================
-   NAVBAR COMPONENT - CSS
-   File: assets/css/navbar.css
-   ========================================== */
+﻿
 
-/* 1. INJEKSI UTAMA: Memastikan seluruh elemen di dalam navbar menggunakan Plus Jakarta Sans */
+
 .navbar,
 .navbar-brand,
 .navbar-nav,
@@ -14,10 +11,10 @@
 }
 
 .navbar {
-    position: fixed !important; /* Mengunci posisi agar tidak ikut ke gulir */
-    top: 0;                     /* Menempel tepat di paling atas */
-    width: 100%;                /* Memastikan lebar navbar penuh dari kiri ke kanan */
-    z-index: 1030;              /* Memastikan navbar berada di lapisan paling depan dari konten lain */
+    position: fixed !important; 
+    top: 0;                     
+    width: 100%;                
+    z-index: 1030;              
     
     background: #ffffff;
     padding: 14px 0;
@@ -36,14 +33,14 @@
 }
 
 .navbar-nav {
-    gap: 4px; /* ← DIKECILKAN dari 10px */
+    gap: 4px; 
 }
 
 .nav-link {
     color: #1a2530 !important;
-    font-weight: 600; /* ← DIKECILKAN dari 700 */
-    font-size: 0.95rem; /* ← DIKECILKAN dari 1.2rem */
-    padding: 8px 14px !important; /* ← DIKECILKAN */
+    font-weight: 600; 
+    font-size: 0.95rem; 
+    padding: 8px 14px !important; 
     border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
     border-radius: 8px;
@@ -87,11 +84,9 @@
     height: 24px;
 }
 
-/* ==========================================
-   RESPONSIVE
-   ========================================== */
 
-/* Tablet & Mobile */
+
+
 @media (max-width: 991px) {
     .navbar {
         padding: 12px 0;
@@ -141,7 +136,7 @@
     }
 }
 
-/* Mobile Kecil */
+
 @media (max-width: 576px) {
     .navbar {
         padding: 10px 0;
