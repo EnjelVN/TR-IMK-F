@@ -3,7 +3,6 @@
     --accent-blue: #38bdf8;
     /* Warna biru muda terang */
     --teal-dark: #0c5974;
-    --footer-bg: #2b3543;
     --bg-light: #f8fcfc;
     --faq-bg: #e2e8f0;
     /* Warna abu-abu kotak FAQ */
@@ -17,6 +16,7 @@ body {
     background-color: white;
     color: var(--text-dark);
     overflow-x: hidden;
+    padding-top: 70px;
 }
 
 /* --- Full-bleed helper: bikin section mepet ke tepi layar tapi tetep ada padding responsif --- */
@@ -26,30 +26,6 @@ body {
     padding-left: clamp(12px, 4vw, 60px);
     padding-right: clamp(12px, 4vw, 60px);
     box-sizing: border-box;
-}
-
-/* --- Navbar --- */
-.navbar-brand .logo-icon {
-    background-color: var(--primary-blue);
-    color: white;
-    width: 35px;
-    height: 35px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-link {
-    font-weight: 600;
-    color: #333 !important;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: var(--primary-blue) !important;
-    border-bottom-color: var(--primary-blue);
 }
 
 /* --- Hero Section --- */
@@ -188,47 +164,6 @@ body {
 
 .btn-accent:hover {
     background-color: #0284c7;
-    color: white;
-}
-
-/* --- Footer --- */
-footer {
-    background-color: var(--footer-bg);
-    color: #9ca3af;
-    margin-top: 50px;
-}
-
-footer h5 {
-    color: white;
-    font-weight: 700;
-}
-
-.social-circle {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #d1d5db;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.social-circle:hover {
-    background: var(--primary-blue);
-    color: white;
-}
-
-.footer-link {
-    text-decoration: none;
-    color: #9ca3af;
-    transition: 0.3s;
-}
-
-.footer-link:hover {
     color: white;
 }
 
@@ -444,22 +379,4 @@ footer h5 {
 .btn-accent:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(56, 189, 248, 0.35);
-}
-
-.social-circle {
-    transition: all 0.3s ease;
-}
-
-.social-circle:hover {
-    transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 136, 255, 0.3);
-}
-
-.footer-link {
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.footer-link:hover {
-    transform: translateX(5px);
 }

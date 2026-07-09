@@ -1,14 +1,8 @@
 /* ==========================================
    COMPONENT LOADER - JavaScript
-   File: assets/js/components.js
+   File: asset/navbar.js (Bisa kamu rename jadi components.js jika mau)
    ========================================== */
 
-/**
- * Load HTML component ke dalam elemen target
- * @param {string} componentPath - Path ke file komponen HTML
- * @param {string} targetId - ID elemen target tempat komponen akan dimuat
- * @param {function} callback - Fungsi callback setelah komponen dimuat (opsional)
- */
 function loadComponent(componentPath, targetId, callback) {
     const target = document.getElementById(targetId);
     if (!target) {
@@ -26,8 +20,13 @@ function loadComponent(componentPath, targetId, callback) {
         .then(html => {
             target.innerHTML = html;
             
-            // Set active link berdasarkan halaman saat ini
-            setActiveNavLink();
+            /* DI SINI KUNCINYA:
+               Kita cek, jika ID kontainernya adalah 'navbar-container', 
+               baru jalankan fungsi active link. Kalau footer, abaikan saja.
+            */
+            if (targetId === 'navbar-container') {
+                setActiveNavLink();
+            }
             
             if (callback && typeof callback === 'function') {
                 callback();
@@ -40,33 +39,28 @@ function loadComponent(componentPath, targetId, callback) {
 }
 
 /**
- * Set active class pada nav link berdasarkan URL saat ini
+ * Set active class pada nav link (Hanya untuk Navbar)
  */
 function setActiveNavLink() {
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-link');
     
     navLinks.forEach(link => {
-        // Hapus class active dari semua link
         link.classList.remove('active');
-        
-        // Ambil href dari link
         const href = link.getAttribute('href');
         if (!href) return;
         
-        // Bandingkan dengan path saat ini
-        // Cek apakah href cocok dengan currentPath
         if (currentPath.endsWith(href) || 
             currentPath === href || 
             currentPath === '/' + href) {
+            
             link.classList.add('active');
         }
     });
 }
 
 /**
- * Load semua komponen di halaman
- * Komponen ditandai dengan atribut data-component
+ * Mendeteksi semua tag HTML yang punya atribut [data-component]
  */
 function loadAllComponents() {
     const components = document.querySelectorAll('[data-component]');
@@ -77,7 +71,7 @@ function loadAllComponents() {
     });
 }
 
-// Auto-load komponen saat DOM siap
+// Jalankan otomatis
 document.addEventListener('DOMContentLoaded', function() {
     loadAllComponents();
 });

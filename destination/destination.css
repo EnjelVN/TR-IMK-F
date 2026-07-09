@@ -8,6 +8,7 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #f8fcfc;
             color: #333;
+            padding-top: 70px;
         }
 
         html {
@@ -17,29 +18,6 @@
         a {
             text-decoration: none;
             color: inherit;
-        }
-
-        /* --- Navbar --- */
-        .navbar-brand .logo-icon {
-            background-color: #0088ff;
-            color: white;
-            width: 35px;
-            height: 35px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .nav-link {
-            font-weight: 600;
-            color: #333 !important;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            color: var(--primary-blue) !important;
-            border-bottom-color: var(--primary-blue);
         }
 
         /* --- Hero Section --- */
