@@ -21,6 +21,18 @@
     <link rel="stylesheet" href="/asset/navbar.css">
     <link rel="stylesheet" href="/asset/footer.css">
     <script src="script.js"></script>
+    <style>
+        /* Page-specific: make all buttons match the tour package color */
+        .btn, button, a.btn, .btn-outline-custom, .btn-find, .btn-outline-light, .premier-book-btn {
+            background: var(--teal-dark) !important;
+            border: none !important;
+            color: #fff !important;
+        }
+        /* Keep outline buttons visually consistent when they rely on text color */
+        .btn-outline-light {
+            color: #fff !important;
+        }
+    </style>
 </head>
 <script src="/asset/navbar.js"></script>
 
@@ -80,7 +92,7 @@
                 <small class="price-guarantee fw-semibold"><i class="fas fa-check-circle me-1"></i>Best price guarantee
                     for
                     your nature adventure!</small>
-                <button class="btn btn-primary fw-bold px-4 rounded-pill">Find Tickets</button>
+                <button class="btn btn-primary fw-bold px-4 rounded-pill" style="background: var(--teal-dark); border: none;">Find Tickets</button>
             </div>
         </div>
     </section>
@@ -247,7 +259,7 @@
                 </div>
 
                 <a href="about-us/about.html"
-                    class="btn btn-primary fw-bold rounded-pill px-5 py-2 mt-2 premier-book-btn">Book Now</a>
+                    class="btn btn-primary fw-bold rounded-pill px-5 py-2 mt-2 premier-book-btn" style="background: var(--teal-dark); border: none;">Book Now</a>
             </div>
         </div>
     </div>
