@@ -276,7 +276,7 @@
                                     <h5 class="fw-bold mb-1">${pkg.title}</h5>
                                     <div class="mb-3" style="font-size: 0.8rem;">
                                         <span style="color: #f59e0b;">${getStars(pkg.rating)}</span>
-                                        <span class="text-muted"> ${pkg.rating} (${pkg.reviews} Komentar)</span>
+                                        <span class="text-muted"> ${pkg.rating} (${pkg.reviews} Comment)</span>
                                     </div>
                                     <div class="text-muted small mb-4">
                                         <div class="mb-1"><i class="far fa-clock me-2"></i> ${pkg.duration}</div>
