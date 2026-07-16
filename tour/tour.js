@@ -226,13 +226,13 @@
                 corporate: []
             };
 
-                        packagesData.all.forEach(pkg => {
+                packagesData.all.forEach(pkg => {
                 if (packagesData[pkg.category]) {
                     packagesData[pkg.category].push(pkg);
                 }
             });
 
-                                                const packageGrid = document.getElementById('packageGrid');
+            const packageGrid = document.getElementById('packageGrid');
             const emptyState = document.getElementById('emptyState');
 
             function renderPackages(category) {
@@ -246,7 +246,7 @@
 
                 emptyState.style.display = 'none';
 
-                                function getStars(rating) {
+                    function getStars(rating) {
                     let html = '';
                     const fullStars = Math.floor(rating);
                     const halfStar = rating % 1 >= 0.5 ? 1 : 0;
@@ -299,7 +299,7 @@
 
                 packageGrid.innerHTML = html;
 
-                                document.querySelectorAll('.heart-icon').forEach(icon => {
+                    document.querySelectorAll('.heart-icon').forEach(icon => {
                     icon.addEventListener('click', function(e) {
                         e.stopPropagation();
                         this.classList.toggle('liked');
@@ -313,7 +313,7 @@
                 });
             }
 
-                                                const categoryCards = document.querySelectorAll('.category-card');
+            const categoryCards = document.querySelectorAll('.category-card');
 
             categoryCards.forEach(card => {
                 card.addEventListener('click', function() {
@@ -325,7 +325,7 @@
                 });
             });
 
-                                                const tripTabs = document.querySelectorAll('.trip-tab');
+            const tripTabs = document.querySelectorAll('.trip-tab');
             const returnDateField = document.getElementById('returnDateField');
 
             tripTabs.forEach(tab => {
@@ -337,7 +337,7 @@
                 });
             });
 
-                                                document.querySelectorAll('.date-trigger').forEach(group => {
+                document.querySelectorAll('.date-trigger').forEach(group => {
                 const input = group.querySelector('input[type="date"]');
                 if (input) {
                     group.addEventListener('click', function(e) {
@@ -352,7 +352,7 @@
                 }
             });
 
-                                                const today = new Date().toISOString().split('T')[0];
+            const today = new Date().toISOString().split('T')[0];
             const departureDate = document.getElementById('departureDate');
             const returnDate = document.getElementById('returnDate');
 
@@ -371,6 +371,6 @@
                 returnDate.min = today;
             }
 
-                                                renderPackages('all');
+            renderPackages('all');
 
         });
